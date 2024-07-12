@@ -2,7 +2,7 @@ import gulp from 'gulp';
 import sass from 'gulp-sass';
 import * as dartSass from 'sass';
 import autoprefixer from 'gulp-autoprefixer';
-import cssnano from 'gulp-cssnano';
+import cleanCSS from 'gulp-clean-css';
 import babel from 'gulp-babel';
 import uglify from 'gulp-uglify';
 import del from 'del';
@@ -33,7 +33,7 @@ function style() {
     return gulp.src(paths.styles.src)
         .pipe(sassCompiler({outputStyle: 'expanded'}).on('error', sassCompiler.logError))
         .pipe(autoprefixer())
-        .pipe(cssnano())
+        .pipe(cleanCSS())
         .pipe(gulp.dest(paths.styles.dest))
         .pipe(browserSync.stream());
 }
