@@ -5,13 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>理想の小顔を実現します | NOMOKOTSU</title>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <header>
         <nav>
             <a class="logo" href="/">
-                <img src="https://nomokotsu.com/wp-content/themes/blankslate/assets/images/logo_header.png" width="100%" height="100%" alt="NOMOKOTSU鍼灸・整骨院グループ">
+                <img src="/img/logo.png" width="100%" height="100%" alt="NOMOKOTSU鍼灸・整骨院グループ">
             </a>
             <ul class="nav-links">
                 <li><a href="#home">ホーム</a></li>
@@ -21,80 +20,156 @@
             </ul>
             <div class="contact-info">
                 <a href="#contact" class="contact-button">
-                    <img src="/src/cta.png" alt="">
+                    <img src="/img/cta.png" alt="">
                 </a>
             </div>
         </nav>
     </header>
 
     <main>
-        <div class="container">
-            <img src="/src/fv_pc.jpg" width="1920" height="1122">
+        <div class="fv">
+            <div class="fv-container">
+                <h1>
+                    <picture>
+                        <source srcset="/img/fv_pc.webp"  media="(min-width: 768px)">
+                        <img src="/img/fv_sp.webp" alt="">
+                    </picture>
+                </h1>    
+            </div>
         </div>
 
         <section id="cta">
-            <a href="#" class="cta-button"><img src="/src/cta02.png" alt=""></a>
-        </section>
-
-        <!-- <section id="issues">
-            <h2>(例) こんなお悩みはありませんか？</h2>
-            <ul>
-                <li>顔のゆがみ・むくみ・たるみ</li>
-                <li>顔の左右のアンバランス</li>
-                <li>エラのハリが気になる</li>
-                <li>頭痛や眼精疲労が気になる</li>
-                <li>エイジングケアをしたいけど、何から始めたらいいか分からない</li>
-                <li>美しくなりたいけど、整形手術まではしたくない</li>
-            </ul>
-            <div class="issue-images">
-                <img src="https://cdn.pixabay.com/photo/2015/09/05/21/51/woman-925461_960_720.jpg" alt="悩む女性の画像">
-                <img src="https://cdn.pixabay.com/photo/2016/11/29/03/53/man-1867009_960_720.jpg" alt="悩む男性の画像">
+            <div class="cta-price">
+                <img src="/img/cta-price.webp" alt="1回 体験価格 税込3,300円">
             </div>
-        </section> -->
-
-        <!-- <section id="features">
-            <h2>特徴</h2>
-            <div class="feature-container">
-                <div class="feature-item">
-                    <i class="fas fa-heart"></i>
-                    <h3>痛みのない施術</h3>
-                    <p>快適な施術で、リラックスしながら理想の小顔へ</p>
-                </div>
-                <div class="feature-item">
-                    <i class="fas fa-clock"></i>
-                    <h3>短時間で効果を実感</h3>
-                    <p>わずか60分の施術で、即効性のある結果を体感</p>
-                </div>
-                <div class="feature-item">
-                    <i class="fas fa-comments"></i>
-                    <h3>個別カウンセリング</h3>
-                    <p>お客様一人ひとりに合わせたカスタマイズプラン</p>
-                </div>
+            <div class="cta-btn">
+                <div class="cta-btn__txt">＼ LINEでカンタン体験予約！ ／</div>
+                <a href="#" class="cta-btn__el"><img src="/img/cta.png" alt="まずはお近くの店舗を検索する"></a>
             </div>
         </section>
 
-        <section id="services">
-            <h2>サービス詳細</h2>
-            <div class="service-steps">
-                <div class="step">
-                    <img src="images/step1.jpg" alt="カウンセリング">
-                    <h3>Step 1: カウンセリング</h3>
-                    <p>お客様のお悩みやご要望をしっかりとヒアリングします。</p>
-                </div>
-                <div class="step">
-                    <img src="images/step2.jpg" alt="施術">
-                    <h3>Step 2: 施術</h3>
-                    <p>最先端の技術を用いて、丁寧に施術を行います。</p>
-                </div>
-                <div class="step">
-                    <img src="images/step3.jpg" alt="アフターケア">
-                    <h3>Step 3: アフターケア</h3>
-                    <p>施術後のケア方法やアドバイスをご提供します。</p>
+        <section id="issues">
+            <div class="issues-frame">
+                <div class="sp-circle"></div>
+                <h2>こんな<span>お悩み</span>は<br/>ありませんか？</h2>
+                <div class="issue_box-container">
+                    <div class="issue_box">
+                        <label class="check-box">
+                        <input type="checkbox" name="sample">
+                        <span class="check-box__text">顔のゆがみ・むくみ・たるみ</span> </label>
+                    </div>
+                    <div class="issue_box">
+                        <label class="check-box">
+                        <input type="checkbox" name="sample">
+                        <span class="check-box__text">顔の左右がアンバランス</span> </label>
+                    </div>
+                    <div class="issue_box">
+                        <label class="check-box">
+                        <input type="checkbox" name="sample">
+                        <span class="check-box__text">エラのハリが気になる</span> </label>
+                    </div>
+                    <div class="issue_box">
+                        <label class="check-box">
+                        <input type="checkbox" name="sample">
+                        <span class="check-box__text">頭痛や眼精疲労で悩んでいる</span> </label>
+                    </div>
+                    <div class="issue_box">
+                        <label class="check-box">
+                        <input type="checkbox" name="sample">
+                        <span class="check-box__text">エイジングケアをしたいけど、何から始めたらいいか分からない</span> </label>
+                    </div>
+                    <div class="issue_box">
+                        <label class="check-box">
+                        <input type="checkbox" name="sample">
+                        <span class="check-box__text">美しくなりたいけど、整形手術まではしたくない</span> </label>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section id="testimonials">
+        <section id="features">
+            <h2><img class="features-recommend" src="/img/features-recommend.webp" alt="1つでも当てはまる方には整顔矯正がおすすめです！"></h2>
+            <div class="features-woman">
+                <img src="/img/features-woman.webp" alt="お顔の悩みを解消し、若々しく健康な毎日に！">
+            </div>
+            <div class="features-effect">
+                <img src="/img/features-effect.webp" alt="整顔矯正で様々な効果が期待できます">
+            </div>
+        </section>
+
+        <section id="effects">
+            <div class="effects-container">
+                <h3 class="effects-ttl"><span>スッキリとしたフェイスライン</span></h3>
+                <div class="effects-lower">
+                    <div class="effects-txt">即効性のあるマッサージや最新の美顔器による特別な施術で、輪郭線の引き締めやお顔のシルエットを明確にし、美しさや若々しさを引き立てます。</div>
+                    <div class="effects-img">
+                        <img src="/img/effects-01.webp" alt="">
+                    </div>    
+                </div>
+            </div>
+            <div class="effects-container">
+                <h3 class="effects-ttl"><span>ニキビ・シワ・肌質改善</span></h3>
+                <div class="effects-lower">
+                    <div class="effects-img">
+                        <img src="/img/effects-02.webp" alt="">
+                    </div>
+                    <div class="effects-txt">整顔矯正で肌の深層へとアプローチすることで、肌トラブルを改善し、ハリ・ツヤのある健康で美しい肌を引き出します。</div>    
+                </div>
+            </div>
+            <div class="effects-container">
+                <h3 class="effects-ttl"><span>くすみ軽減・トーンアップ</span></h3>
+                <div class="effects-lower">
+                    <div class="effects-txt">保湿成分たっぷりのスキンケア用品を施術に用いることで、肌に透明感と自然な輝きを与えます。</div> 
+                    <div class="effects-img">
+                        <img src="/img/effects-03.webp" alt="">
+                    </div>   
+                </div>
+            </div>
+            <div class="effects-container">
+                <h3 class="effects-ttl"><span>若々しく明るい印象へ</span></h3>
+                <div class="effects-lower">
+                    <div class="effects-img">
+                        <img src="/img/effects-04.webp" alt="">
+                    </div>
+                    <div class="effects-txt">毎日をポジティブな気持ちで笑顔に過ごせるよう、整顔矯正で内面・外見ともに健康的で美しい理想のお顔へと導きます。</div>    
+                </div>
+            </div>
+            <div class="effects-beauty">
+                <h2 class="effects-beauty__ttl">顔のバランスと美しい顔とは？</h2>
+                <div class="effects-beauty__fv">
+                    <img src="/img/beauty-fv.webp" alt="">
+                </div>
+                <div class="effects-beauty__txt"><span>顔の左右が整っているほど美しい</span>とされています。</div>
+                <div class="effects-beauty__detail">
+                    <p>骨格を調整し表情筋のバランスを整えて、顔の左右差を無くすことで小顔効果を促し、若々しい印象を与えることが出来ます。</p>
+                    <!-- <img src="/img/beauty-detail.webp" alt=""> -->
+                </div>
+            </div>
+        </section>
+
+        <section id="explanations">
+            <div class="explanations-container">
+                <div class="explanations-container__ttl">整顔矯正ってどんな矯正？</div>
+                <div class="explanations-container__img">
+                    <img src="/img/explanations-img.webp" alt="">
+                </div>
+                <div class="explanations-container__txt">
+                    生活する中で<span>変化してしまったお顔</span>を<br/>
+                    <span>整える</span>ことで<span class="marker">印象アップへ！</span>
+                </div>
+                <p class="explanations-container__detail">
+                    整顔矯正とは「<span>自分本来の顔に戻ること</span>」。<br/>
+                    明るく前向きな思考で人生を送るために、<br/>
+                    お顔を整えることは大切です。<br/>
+                    <br/>
+                    整顔矯正では、まず首・肩・頭皮の筋肉をほぐし、<br/>
+                    脳脊髄液や血液の流れを促進。<br/>
+                    顔周りの筋骨格を調整することでゆがみを正していきます。<br/>
+                </p>
+            </div>
+        </section>
+
+        <!-- <section id="testimonials">
             <h2>お客様の声</h2>
             <div class="testimonial-carousel">
                 <div class="testimonial-item">
@@ -103,9 +178,9 @@
                     <span>- 田中さん（30代）</span>
                 </div>
             </div>
-        </section>
+        </section> -->
 
-        <section id="contact">
+        <!-- <section id="contact">
             <h2>お問い合わせ</h2>
             <form id="contact-form">
                 <input type="text" name="name" placeholder="お名前" required>

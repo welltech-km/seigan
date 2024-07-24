@@ -17,3 +17,24 @@
 @mixin button-style {
   text-decoration: none;
 }
+
+@mixin sp{
+  @media screen and (max-width:767px) {
+    @content;
+  }
+}
+@mixin pc{
+  @media screen and (min-width:768px) {
+    @content;
+  }
+}
+@mixin pc-large{
+  @media screen and (min-width:1441px) {
+    @content;
+  }
+}
+@mixin monitor{
+  @media screen and (min-width:1921px) {
+    @content;
+  }
+}
