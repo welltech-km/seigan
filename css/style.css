@@ -60,7 +60,7 @@ header .logo {
 }
 header .logo img {
   margin-right: 10px;
-  width: 90%;
+  max-width: 300px;
 }
 header nav {
   display: flex;
