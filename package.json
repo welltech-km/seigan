@@ -4,9 +4,7 @@
   "main": "gulpfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "gulp watch",
-  "build": "gulp build",
-  "watch": "gulp watch"
+    "start": "gulp watch"
   },
   "keywords": [],
   "author": "",
