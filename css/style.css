@@ -98,7 +98,7 @@ header nav .contact-info .contact-button img {
 
 .fv {
   width: 100%;
-  background: url("img/bg_pc.webp");
+  background: url("https://welltech-km.github.io/seigan/img/bg_pc.webp");
   background-size: cover;
   background-repeat: no-repeat;
   user-select: none; /* CSS3 */
@@ -131,7 +131,7 @@ header nav .contact-info .contact-button img {
   background-size: cover;
   padding-top: 1em;
   width: 100%;
-  background-image: url("img/bg-cta.webp");
+  background-image: url("https://welltech-km.github.io/seigan/img/bg-cta.webp");
   background-repeat: no-repeat;
   max-height: 452px;
   position: relative;
@@ -144,7 +144,7 @@ header nav .contact-info .contact-button img {
 #cta .cta-price {
   background-size: cover;
   width: 100%;
-  background-image: url("img/cta-price-bg.webp");
+  background-image: url("https://welltech-km.github.io/seigan/img/cta-price-bg.webp");
   background-repeat: no-repeat;
 }
 #cta .cta-price img {
@@ -190,7 +190,7 @@ header nav .contact-info .contact-button img {
 }
 
 #issues {
-  background: url("img/bg-issues.webp");
+  background: url("https://welltech-km.github.io/seigan/img/bg-issues.webp");
   aspect-ratio: 480/343;
   text-align: center;
   background-repeat: no-repeat;
@@ -221,7 +221,7 @@ header nav .contact-info .contact-button img {
   position: relative;
   max-width: 1920px;
   margin: 0 auto;
-  background: url("img/issues-frame.webp");
+  background: url("https://welltech-km.github.io/seigan/img/issues-frame.webp");
   background-size: contain;
   background-repeat: no-repeat;
 }
@@ -402,7 +402,7 @@ header nav .contact-info .contact-button img {
     display: inline-block;
     width: 68%;
     height: auto;
-    background-image: url("img/issues-bgleft_sp.webp");
+    background-image: url("https://welltech-km.github.io/seigan/img/issues-bgleft_sp.webp");
     background-size: contain;
     vertical-align: middle;
     aspect-ratio: 1189/2055;
@@ -418,7 +418,7 @@ header nav .contact-info .contact-button img {
     display: inline-block;
     width: 68%;
     height: auto;
-    background-image: url("img/issues-bgright_sp.webp");
+    background-image: url("https://welltech-km.github.io/seigan/img/issues-bgright_sp.webp");
     background-size: contain;
     vertical-align: middle;
     aspect-ratio: 1189/2055;
@@ -495,7 +495,7 @@ header nav .contact-info .contact-button img {
 }
 
 #effects {
-  background: url("img/bg-effect.webp");
+  background: url("https://welltech-km.github.io/seigan/img/bg-effect.webp");
   aspect-ratio: 1920/4330;
   background-repeat: no-repeat;
   background-size: contain;
@@ -662,7 +662,7 @@ header nav .contact-info .contact-button img {
 #effects .effects-beauty {
   max-width: 1400px;
   aspect-ratio: 1400/1325;
-  background: url("img/beauty-bg.webp");
+  background: url("https://welltech-km.github.io/seigan/img/beauty-bg.webp");
   background-size: contain;
   margin: 0 auto;
 }
@@ -680,7 +680,7 @@ header nav .contact-info .contact-button img {
 }
 #effects .effects-beauty .effects-beauty__ttl::after {
   position: absolute;
-  content: url("img/beauty-title.png");
+  content: url("https://welltech-km.github.io/seigan/img/beauty-title.png");
   width: 958px;
   aspect-ratio: 958/57;
   top: 30px;
@@ -721,7 +721,7 @@ header nav .contact-info .contact-button img {
 }
 
 #explanations {
-  background: url("img/explanations-bg.webp") no-repeat;
+  background: url("https://welltech-km.github.io/seigan/img/explanations-bg.webp") no-repeat;
   background-size: contain;
   aspect-ratio: 1920/1813;
   margin-top: -10em;
@@ -733,7 +733,7 @@ header nav .contact-info .contact-button img {
   aspect-ratio: 1130/1310;
   margin: 0 auto;
   position: absolute;
-  background: url("img/explanations-container.webp") no-repeat center center;
+  background: url("https://welltech-km.github.io/seigan/img/explanations-container.webp") no-repeat center center;
   background-size: contain;
   top: 15em;
   left: 50%;
