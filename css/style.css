@@ -388,6 +388,7 @@ header nav .contact-info .contact-button img {
     font-size: 15px;
     line-height: 1.4;
     aspect-ratio: unset !important;
+    max-width: 100%;
   }
 }
 @media screen and (min-width: 768px) {
@@ -612,6 +613,11 @@ header nav .contact-info .contact-button img {
   border: 0;
   padding: 0;
   margin: 0 auto;
+}
+@media screen and (max-width: 767px) {
+  #features .features-woman img {
+    width: 100%;
+  }
 }
 #features .features-effect {
   aspect-ratio: 960/192;
