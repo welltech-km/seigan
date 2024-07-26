@@ -1441,7 +1441,7 @@ header nav .contact-info .contact-button img {
 #example .example-container .example-container__personal::after {
   position: absolute;
   content: "";
-  background: url("img/example-container-personal.png");
+  background: url("https://welltech-km.github.io/seigan/img/example-container-personal.png");
   background-size: contain;
   aspect-ratio: 143/4;
   display: inline-block;
