@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>理想の小顔を実現します | NOMOKOTSU</title>
-    <link rel="stylesheet" href="https://welltech-km.github.io/seigan/css/style.css">
-    <script async src="https://welltech-km.github.io/seigan/js/main.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- <script async src="https://welltech-km.github.io/seigan/js/main.js"></script> -->
 </head>
 <body>
     <header>
@@ -636,6 +636,44 @@
         </section>
     </main>
 
+<script>
+// アコーディオン
+document.addEventListener('DOMContentLoaded', function() {
+  var acc = document.getElementsByClassName("accordion");
+  for (var i = 0; i < acc.length; i++) {
+      acc[i].addEventListener("click", function() {
+          this.classList.toggle("accordion__active");
+          var panel = this.nextElementSibling;
+          if (panel.style.maxHeight) {
+              panel.style.maxHeight = null;
+              setTimeout(() => {
+                  panel.classList.remove("open");
+              }, 300); // match the duration of the transition
+          } else {
+              panel.classList.add("open");
+              panel.style.maxHeight = panel.scrollHeight + "px";
+          }
+      });
+  }
+});
+
+// チェックボックス
+document.addEventListener('DOMContentLoaded', function() {
+  const checkboxes = document.querySelectorAll('.checkbox-input');
+
+  checkboxes.forEach(function(checkbox) {
+      checkbox.addEventListener('change', function() {
+          const checkBoxLabel = checkbox.closest('.check-box');
+          if (checkbox.checked) {
+              checkBoxLabel.classList.add('check-box__checked');
+          } else {
+              checkBoxLabel.classList.remove('check-box__checked');
+          }
+      });
+  });
+});
+
+</script>
 </body>
 
 
