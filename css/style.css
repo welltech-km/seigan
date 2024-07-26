@@ -506,6 +506,13 @@ header nav .contact-info .contact-button img {
   width: 9px;
 }
 @media screen and (max-width: 767px) {
+  #issues .check-box__checked::after {
+    height: 15px;
+    left: 12px;
+    width: 8px;
+  }
+}
+@media screen and (max-width: 767px) {
   #issues .issues-frame::before {
     position: absolute;
     content: "";
