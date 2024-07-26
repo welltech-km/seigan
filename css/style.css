@@ -235,7 +235,7 @@ header nav .contact-info .contact-button img {
 }
 @media screen and (max-width: 767px) {
   #issues {
-    aspect-ratio: unset;
+    aspect-ratio: unset !important;
     background-repeat: repeat;
     background-size: auto;
     padding-top: 105px;
@@ -428,10 +428,9 @@ header nav .contact-info .contact-button img {
   }
 }
 #issues .issues-frame .check-box input {
-  display: none;
-}
-#issues .issues-frame .check-box input[type=checkbox]:checked + .check-box::after {
-  opacity: 1;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
 }
 #issues .issues-frame .check-box .check-box__text {
   padding-left: 35px;
@@ -489,15 +488,18 @@ header nav .contact-info .contact-button img {
     left: 10px;
   }
 }
-#issues .issues-frame .check-box::after {
+#issues .check-box__checked {
+  position: relative;
+}
+#issues .check-box__checked::after {
   border-right: 5px solid #B53938;
   border-bottom: 5px solid #B53938;
   content: "";
   display: block;
   height: 20px;
-  left: 7px;
+  left: 18px;
   margin-top: -16px;
-  opacity: 0;
+  opacity: 1;
   position: absolute;
   top: 50%;
   transform: rotate(45deg);
