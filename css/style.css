@@ -238,7 +238,7 @@ header nav .contact-info .contact-button img {
   #issues {
     aspect-ratio: unset !important;
     background-repeat: repeat;
-    background-size: auto;
+    background-size: cover;
     padding-top: 105px;
     padding-bottom: 75px;
     position: relative;
@@ -270,6 +270,8 @@ header nav .contact-info .contact-button img {
     background: #fff;
     filter: drop-shadow(8px 8px 10px rgba(216, 207, 223, 0.16));
     border-radius: 16px;
+    background-size: cover;
+    aspect-ratio: unset;
   }
 }
 #issues .issues-frame img {
