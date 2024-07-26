@@ -432,6 +432,8 @@ header nav .contact-info .contact-button img {
 @media screen and (max-width: 767px) {
   #issues .issues-frame .check-box {
     padding-left: 40px;
+    display: flex;
+    justify-content: flex-start;
   }
 }
 #issues .issues-frame .check-box input {
