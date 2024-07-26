@@ -386,6 +386,7 @@ header nav .contact-info .contact-button img {
   #issues .issues-frame .issue_box {
     font-size: 15px;
     line-height: 1.4;
+    aspect-ratio: unset !important;
   }
 }
 @media screen and (min-width: 768px) {
