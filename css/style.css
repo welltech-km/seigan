@@ -15,12 +15,6 @@ body {
   color: #282828;
   line-height: 1.6;
   background-color: #fcfafa;
-  padding-top: 60px;
-}
-@media screen and (max-width: 767px) {
-  body {
-    padding-top: 0;
-  }
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -135,7 +129,7 @@ header nav .contact-info .contact-button img {
 
 .fv {
   width: 100%;
-  background: url("https://welltech-km.github.io/seigan/img/bg_pc.webp");
+  background: url("/img/bg_pc.webp");
   background-size: cover;
   background-repeat: no-repeat;
   user-select: none; /* CSS3 */
@@ -168,7 +162,7 @@ header nav .contact-info .contact-button img {
   background-size: cover;
   padding-top: 1em;
   width: 100%;
-  background-image: url("https://welltech-km.github.io/seigan/img/bg-cta.webp");
+  background-image: url("/img/bg-cta.webp");
   background-repeat: no-repeat;
   max-height: 452px;
   position: relative;
@@ -182,7 +176,7 @@ header nav .contact-info .contact-button img {
 #cta .cta-price {
   background-size: cover;
   width: 100%;
-  background-image: url("https://welltech-km.github.io/seigan/img/cta-price-bg.webp");
+  background-image: url("/img/cta-price-bg.webp");
   background-repeat: no-repeat;
 }
 #cta .cta-price img {
@@ -221,18 +215,18 @@ header nav .contact-info .contact-button img {
 }
 @media screen and (max-width: 767px) {
   #cta .cta-btn .cta-btn__el {
-    width: 75%;
+    width: 90%;
   }
 }
 #cta .cta-btn .cta-btn__el img {
   width: 100%;
 }
 #cta .cta-footer {
-  background: url("https://welltech-km.github.io/seigan/img/bg-cta-footer.webp");
+  background: url("/img/bg-cta-footer.webp");
 }
 
 #issues {
-  background: url("https://welltech-km.github.io/seigan/img/bg-issues.webp");
+  background: url("/img/bg-issues.webp");
   aspect-ratio: 480/343;
   text-align: center;
   background-repeat: no-repeat;
@@ -263,7 +257,7 @@ header nav .contact-info .contact-button img {
   position: relative;
   max-width: 1920px;
   margin: 0 auto;
-  background: url("https://welltech-km.github.io/seigan/img/issues-frame.webp");
+  background: url("/img/issues-frame.webp");
   background-size: contain;
   background-repeat: no-repeat;
 }
@@ -516,7 +510,7 @@ header nav .contact-info .contact-button img {
     display: inline-block;
     width: 68%;
     height: auto;
-    background-image: url("https://welltech-km.github.io/seigan/img/issues-bgleft_sp.webp");
+    background-image: url("/img/issues-bgleft_sp.webp");
     background-size: contain;
     vertical-align: middle;
     aspect-ratio: 1189/2055;
@@ -532,7 +526,7 @@ header nav .contact-info .contact-button img {
     display: inline-block;
     width: 68%;
     height: auto;
-    background-image: url("https://welltech-km.github.io/seigan/img/issues-bgright_sp.webp");
+    background-image: url("/img/issues-bgright_sp.webp");
     background-size: contain;
     vertical-align: middle;
     aspect-ratio: 1189/2055;
@@ -581,6 +575,9 @@ header nav .contact-info .contact-button img {
     margin-top: 0;
   }
 }
+#features h2 img {
+  width: 100%;
+}
 #features .features-recommend {
   width: 100%;
   aspect-ratio: 1920/419;
@@ -609,7 +606,7 @@ header nav .contact-info .contact-button img {
 }
 
 #effects {
-  background: url("https://welltech-km.github.io/seigan/img/bg-effect.webp");
+  background: url("/img/bg-effect.webp");
   aspect-ratio: 1920/4330;
   background-repeat: no-repeat;
   background-size: contain;
@@ -712,7 +709,14 @@ header nav .contact-info .contact-button img {
   }
 }
 #effects .effects-container .effects-img img {
-  width: 100%;
+  width: 75%;
+  display: block;
+  margin: 0 auto;
+}
+@media screen and (max-width: 767px) {
+  #effects .effects-container .effects-img img {
+    width: 100%;
+  }
 }
 #effects .effects-container:not(:first-child) {
   padding-top: min(7.4vw, 180px);
@@ -778,7 +782,7 @@ header nav .contact-info .contact-button img {
 #effects .effects-beauty {
   max-width: 1400px;
   aspect-ratio: 1400/1325;
-  background: url("https://welltech-km.github.io/seigan/img/beauty-bg.webp");
+  background: url("/img/beauty-bg.webp");
   background-size: contain;
   margin: 0 auto;
 }
@@ -809,7 +813,7 @@ header nav .contact-info .contact-button img {
 }
 #effects .effects-beauty .effects-beauty__ttl::after {
   position: absolute;
-  content: url("https://welltech-km.github.io/seigan/img/beauty-title.png");
+  content: url("/img/beauty-title.png");
   width: 958px;
   aspect-ratio: 958/57;
   top: 30px;
@@ -819,7 +823,7 @@ header nav .contact-info .contact-button img {
 @media screen and (max-width: 767px) {
   #effects .effects-beauty .effects-beauty__ttl::after {
     content: "";
-    background: url("https://welltech-km.github.io/seigan/img/beauty-title.png");
+    background: url("/img/beauty-title.png");
     background-repeat: no-repeat;
     background-size: contain;
     width: 90%;
@@ -901,7 +905,7 @@ header nav .contact-info .contact-button img {
 }
 
 #explanations {
-  background: url("https://welltech-km.github.io/seigan/img/explanations-bg.webp") no-repeat;
+  background: url("/img/explanations-bg.webp") no-repeat;
   background-size: contain;
   aspect-ratio: 1920/1813;
   margin-top: -10em;
@@ -921,7 +925,7 @@ header nav .contact-info .contact-button img {
   aspect-ratio: 1130/1310;
   margin: 0 auto;
   position: absolute;
-  background: url("https://welltech-km.github.io/seigan/img/explanations-container.webp") no-repeat center center;
+  background: url("/img/explanations-container.webp") no-repeat center center;
   background-size: contain;
   top: 15em;
   left: 50%;
@@ -1039,7 +1043,7 @@ header nav .contact-info .contact-button img {
 }
 
 #step {
-  background: url("https://welltech-km.github.io/seigan/img/4step-bg.webp");
+  background: url("/img/4step-bg.webp");
   aspect-ratio: 1920/2016;
   margin-top: -210px;
 }
@@ -1069,7 +1073,7 @@ header nav .contact-info .contact-button img {
 }
 #step .step-ttl::after {
   position: absolute;
-  background: url("https://welltech-km.github.io/seigan/img/4step-ttl.png");
+  background: url("/img/4step-ttl.png");
   background-size: contain;
   content: "";
   display: inline-block;
@@ -1190,7 +1194,7 @@ header nav .contact-info .contact-button img {
 }
 #careful .careful-ttl::after {
   position: absolute;
-  background: url("https://welltech-km.github.io/seigan/img/4step-ttl.png");
+  background: url("/img/4step-ttl.png");
   background-size: contain;
   content: "";
   display: inline-block;
@@ -1281,7 +1285,7 @@ header nav .contact-info .contact-button img {
 }
 #careful .container__sub::after {
   position: absolute;
-  background: url("https://welltech-km.github.io/seigan/img/careful-sub.png");
+  background: url("/img/careful-sub.png");
   content: "";
   background-size: contain;
   display: inline-block;
@@ -1341,8 +1345,10 @@ header nav .contact-info .contact-button img {
 }
 
 #example {
-  background: url("https://welltech-km.github.io/seigan/img/example-bg.webp");
+  background: url("/img/example-bg.webp");
   aspect-ratio: 2965/4999;
+  background-size: cover;
+  background-repeat: no-repeat;
   margin-top: -15px;
   padding-top: 75px;
   padding-bottom: 150px;
@@ -1392,7 +1398,7 @@ header nav .contact-info .contact-button img {
   }
 }
 #example .example-container .example-container__case {
-  background: url("https://welltech-km.github.io/seigan/img/example-container-case.png");
+  background: url("/img/example-container-case.png");
   aspect-ratio: 110/7;
   background-size: contain;
   display: flex;
@@ -1426,7 +1432,7 @@ header nav .contact-info .contact-button img {
 #example .example-container .example-container__personal::after {
   position: absolute;
   content: "";
-  background: url("https://welltech-km.github.io/seigan/img/example-container-personal.png");
+  background: url("/img/example-container-personal.png");
   background-size: contain;
   aspect-ratio: 143/4;
   display: inline-block;
@@ -1550,12 +1556,12 @@ header nav .contact-info .contact-button img {
   }
 }
 #example .example-container .example-container__detail:nth-of-type(1)::after {
-  background: url("https://welltech-km.github.io/seigan/img/container-detail-img01.png");
+  background: url("/img/container-detail-img01.png");
   background-size: contain;
   background-repeat: no-repeat;
 }
 #example .example-container .example-container__detail:nth-of-type(2)::after {
-  background: url("https://welltech-km.github.io/seigan/img/container-detail-img02.png");
+  background: url("/img/container-detail-img02.png");
   background-size: contain;
   background-repeat: no-repeat;
 }
@@ -1571,7 +1577,8 @@ header nav .contact-info .contact-button img {
 @media screen and (max-width: 767px) {
   #example .example-container p {
     width: 90%;
-    font-size: 20px;
+    font-size: 16px;
+    margin: 25px auto 0;
   }
 }
 #example .example-container p span {
@@ -1583,6 +1590,11 @@ header nav .contact-info .contact-button img {
   display: flex;
   flex-direction: column;
   padding-bottom: 120px;
+}
+@media screen and (max-width: 767px) {
+  #qna {
+    padding-bottom: 20px;
+  }
 }
 #qna .qna-ttl {
   padding: 45px 0;
@@ -1615,7 +1627,7 @@ header nav .contact-info .contact-button img {
 @media screen and (max-width: 767px) {
   #qna .qna-ttl h2 {
     width: 90%;
-    font-size: 35px;
+    font-size: 30px;
   }
 }
 #qna .qna-ttl h2::after {
@@ -1749,12 +1761,12 @@ header nav .contact-info .contact-button img {
     font-size: 26px;
     width: 95%;
     line-height: 1.5;
-    padding-top: 90px;
+    padding-top: 40px;
   }
 }
 #believe .believe-ttl::after {
   position: absolute;
-  background: url("https://welltech-km.github.io/seigan/img/4step-ttl.png");
+  background: url("/img/4step-ttl.png");
   background-size: contain;
   content: "";
   display: inline-block;
@@ -1831,14 +1843,25 @@ header nav .contact-info .contact-button img {
   font-size: 19px;
   color: #5a3736;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
+  align-items: center;
 }
 @media screen and (max-width: 767px) {
   #believe .believe-content .believe-content__el .el-upper dl {
+    flex-direction: column;
     height: unset;
     padding: 15px 0 15px 30px;
     font-size: 16px;
+    justify-content: center;
+    align-items: baseline;
+  }
+}
+#believe .believe-content .believe-content__el .el-upper dd {
+  padding-left: 30px;
+}
+@media screen and (max-width: 767px) {
+  #believe .believe-content .believe-content__el .el-upper dd {
+    padding-left: 0;
   }
 }
 #believe .believe-content .believe-content__el .el-lower {
@@ -1847,20 +1870,19 @@ header nav .contact-info .contact-button img {
   font-size: 19px;
   line-height: 2;
   color: #5a3736;
-  width: 919px;
   padding-top: 45px;
 }
 @media screen and (max-width: 767px) {
   #believe .believe-content .believe-content__el .el-lower {
     padding-top: 30px;
     width: 100%;
-    font-size: 17px;
+    font-size: 16px;
   }
 }
 #believe .believe-content .believe-content__el:nth-of-type(1)::after {
   position: absolute;
   content: "";
-  background: url("https://welltech-km.github.io/seigan/img/believe-content-bg.png");
+  background: url("/img/believe-content-bg.png");
   background-size: contain;
   display: inline-block;
   width: 100%;
@@ -1916,7 +1938,7 @@ header nav .contact-info .contact-button img {
 }
 @media screen and (max-width: 767px) {
   #reservation .reservation-ttl h2 {
-    font-size: 35px;
+    font-size: 30px;
     width: 90%;
   }
 }
@@ -1963,6 +1985,12 @@ header nav .contact-info .contact-button img {
   background: #fff;
   position: relative;
 }
+@media screen and (max-width: 767px) {
+  #reservation .reservation-content {
+    width: 90%;
+    margin-top: 75px;
+  }
+}
 #reservation .reservation-content .reservation-content__ttl {
   position: absolute;
   aspect-ratio: 637/85;
@@ -1973,6 +2001,11 @@ header nav .contact-info .contact-button img {
   -webkit-transform: translateX(-50%);
   -ms-transform: translateX(-50%);
 }
+@media screen and (max-width: 767px) {
+  #reservation .reservation-content .reservation-content__ttl {
+    width: 90%;
+  }
+}
 #reservation .reservation-content .reservation-content__ttl img {
   width: 100%;
 }
@@ -1981,6 +2014,12 @@ header nav .contact-info .contact-button img {
   margin: 0 auto;
   padding-top: 90px;
   position: relative;
+}
+@media screen and (max-width: 767px) {
+  #reservation .reservation-content .reservation-content__upper {
+    width: 75%;
+    padding-top: 45px;
+  }
 }
 #reservation .reservation-content .reservation-content__upper img {
   width: 100%;
@@ -1995,9 +2034,15 @@ header nav .contact-info .contact-button img {
   text-decoration: underline;
   text-align: center;
 }
+@media screen and (max-width: 767px) {
+  #reservation .reservation-content .reservation-content__upper a {
+    font-size: 16px;
+    padding-right: 15px;
+  }
+}
 #reservation .reservation-content .reservation-content__upper::after {
   position: absolute;
-  background: url("https://welltech-km.github.io/seigan/img/reservation-content-icon.png");
+  background: url("/img/reservation-content-icon.png");
   background-size: contain;
   background-repeat: no-repeat;
   content: "";
@@ -2006,9 +2051,172 @@ header nav .contact-info .contact-button img {
   top: 55%;
   right: -50%;
 }
+@media screen and (max-width: 767px) {
+  #reservation .reservation-content .reservation-content__upper::after {
+    right: -20%;
+    top: 71%;
+  }
+}
 #reservation .reservation-content .reservation-content__step {
   width: 85.3636%;
   margin: 60px auto 0;
+  display: flex;
+  justify-content: space-between;
+}
+@media screen and (max-width: 767px) {
+  #reservation .reservation-content .reservation-content__step {
+    gap: 90px;
+  }
+}
+#reservation .reservation-content .reservation-content__step .step-el {
+  border-radius: 30px;
+  background: #b53938;
+  padding: 0 15px;
+}
+@media screen and (max-width: 767px) {
+  #reservation .reservation-content .reservation-content__step .step-el {
+    padding-bottom: 30px;
+  }
+}
+#reservation .reservation-content .reservation-content__step .step-el .step-el__ttl {
+  position: relative;
+  top: -15%;
+  margin: 0 auto;
+  width: 110px;
+}
+@media screen and (max-width: 767px) {
+  #reservation .reservation-content .reservation-content__step .step-el .step-el__ttl {
+    width: 100%;
+    top: -44px;
+  }
+}
+#reservation .reservation-content .reservation-content__step .step-el .step-el__ttl img {
+  width: 100%;
+  display: block;
+  margin: 0 auto;
+}
+@media screen and (max-width: 767px) {
+  #reservation .reservation-content .reservation-content__step .step-el .step-el__ttl img {
+    width: 50%;
+  }
+}
+#reservation .reservation-content .reservation-content__step .step-el .step-el__ttl::after {
+  position: absolute;
+  background: url("/img/reservation-step-dot.png");
+  content: "";
+  aspect-ratio: 617/8;
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: inline-block;
+  width: 90%;
+  height: auto;
+  aspect-ratio: 1100/113;
+  background-repeat: no-repeat;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+@media screen and (max-width: 767px) {
+  #reservation .reservation-content .reservation-content__step .step-el .step-el__ttl::after {
+    bottom: -15%;
+  }
+}
+#reservation .reservation-content .reservation-content__step .step-el .step-el__txt {
+  font-family: "Yu Gothic";
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 2;
+  text-align: center;
+  color: #fff;
+  width: 100%;
+  margin-top: -30px;
+}
+@media screen and (max-width: 767px) {
+  #reservation .reservation-content .reservation-content__step .step-el .step-el__txt {
+    margin-top: -25px;
+    margin-bottom: 10px;
+    width: 100%;
+    font-size: 19px;
+  }
+}
+#reservation .reservation-content .reservation-content__step .step-el .step-el__txt span {
+  color: #000;
+  background: #fff;
+  padding: 5px 0;
+}
+#reservation .reservation-content .reservation-content__step .step-el .step-el__icon {
+  max-width: 115px;
+  margin: 0 auto;
+}
+@media screen and (max-width: 767px) {
+  #reservation .reservation-content .reservation-content__step .step-el .step-el__icon {
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+#reservation .reservation-content .reservation-content__step .step-el .step-el__icon img {
+  width: 100%;
+}
+#reservation .reservation-content .reservation-content__step .step-el:nth-child(1) {
+  width: 22%;
+  position: relative;
+}
+@media screen and (max-width: 767px) {
+  #reservation .reservation-content .reservation-content__step .step-el:nth-child(1) {
+    width: 100%;
+  }
+}
+#reservation .reservation-content .reservation-content__step .step-el:not(:last-child)::after {
+  position: absolute;
+  content: "▲";
+  font-size: 30px;
+  color: #B53938;
+  top: 40%;
+  right: -34%;
+  transform: translateY(-40%);
+  transform: rotate(90deg);
+}
+@media screen and (max-width: 767px) {
+  #reservation .reservation-content .reservation-content__step .step-el:not(:last-child)::after {
+    top: 104%;
+    right: 41%;
+    transform: translateX(-41%) rotate(180deg);
+  }
+}
+#reservation .reservation-content .reservation-content__step .step-el:nth-child(2)::after {
+  top: 40%;
+  right: -27%;
+  transform: translateY(-40%);
+  transform: rotate(90deg);
+}
+@media screen and (max-width: 767px) {
+  #reservation .reservation-content .reservation-content__step .step-el:nth-child(2)::after {
+    top: 104%;
+    right: 41%;
+    transform: translateX(-41%) rotate(180deg);
+  }
+}
+#reservation .reservation-content .reservation-content__step .step-el:nth-child(2) {
+  width: 31%;
+  position: relative;
+}
+@media screen and (max-width: 767px) {
+  #reservation .reservation-content .reservation-content__step .step-el:nth-child(2) {
+    width: 100%;
+  }
+}
+#reservation .reservation-content .reservation-content__step .step-el:nth-child(3) {
+  width: 26%;
+}
+@media screen and (max-width: 767px) {
+  #reservation .reservation-content .reservation-content__step .step-el:nth-child(3) {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 767px) {
+  #reservation .reservation-content .reservation-content__step {
+    flex-direction: column;
+  }
 }
 #reservation .reservation-content .reservation-content__step img {
   width: 100%;
@@ -2018,8 +2226,18 @@ header nav .contact-info .contact-button img {
   background: #B53938;
   padding-bottom: 150px;
 }
+@media screen and (max-width: 767px) {
+  #tenpo {
+    padding-bottom: 20px;
+  }
+}
 #tenpo .tenpo-ttl {
   padding: 45px 0;
+}
+@media screen and (max-width: 767px) {
+  #tenpo .tenpo-ttl {
+    padding: 45px 0 75px;
+  }
 }
 #tenpo .tenpo-ttl .tenpo-ttl__sub {
   font-family: しっぽり明朝;
@@ -2036,11 +2254,17 @@ header nav .contact-info .contact-button img {
   margin: 0 auto;
   font-family: "Yu Gothic";
   font-weight: bold;
-  font-size: 48px;
+  font-size: 32px;
   letter-spacing: 0.03em;
   text-align: center;
   color: #fff;
   position: relative;
+}
+@media screen and (max-width: 767px) {
+  #tenpo .tenpo-ttl h2 {
+    width: 90%;
+    font-size: 30px;
+  }
 }
 #tenpo .tenpo-ttl h2::after {
   position: absolute;
@@ -2066,13 +2290,20 @@ header nav .contact-info .contact-button img {
   border: none;
   text-align: left;
   outline: none;
-  font-size: 15px;
   transition: background-color 0.4s;
   position: relative;
   font-weight: bold;
   font-size: 22px;
   margin-bottom: 45px;
   display: flex;
+}
+@media screen and (max-width: 767px) {
+  #tenpo .accordion {
+    width: 90%;
+    font-size: 16px;
+    padding-right: 105px;
+    justify-content: center;
+  }
 }
 #tenpo .accordion h3 {
   font-family: "Yu Gothic";
@@ -2093,12 +2324,18 @@ header nav .contact-info .contact-button img {
   align-items: center;
   justify-content: center;
 }
+@media screen and (max-width: 767px) {
+  #tenpo .accordion::after {
+    width: 40px;
+    font-size: 25px;
+  }
+}
 #tenpo .accordion__active::after {
   content: "－";
   transition: transform 0.3s;
 }
 #tenpo .accordion__panel {
-  padding: 30px 90px;
+  padding: 30px 0;
   display: none;
   flex-wrap: wrap;
   gap: 30px;
@@ -2111,6 +2348,16 @@ header nav .contact-info .contact-button img {
   margin: -45px auto 45px;
   position: relative;
 }
+@media screen and (max-width: 767px) {
+  #tenpo .accordion__panel {
+    width: 90%;
+    padding: 30px 0;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 0;
+  }
+}
 #tenpo .accordion__panel .accordion__panel-el {
   background-color: #FFF5F5;
   font-family: "Yu Gothic";
@@ -2119,6 +2366,12 @@ header nav .contact-info .contact-button img {
   width: 45.18%;
   color: #696969;
   padding: 30px;
+}
+@media screen and (max-width: 767px) {
+  #tenpo .accordion__panel .accordion__panel-el {
+    width: 100%;
+    padding: 20px;
+  }
 }
 #tenpo .accordion__panel .accordion__panel-el a {
   color: #696969;
@@ -2130,11 +2383,27 @@ header nav .contact-info .contact-button img {
   color: #9b1a19;
   line-height: 1.5;
 }
+@media screen and (max-width: 767px) {
+  #tenpo .accordion__panel .accordion__panel-el h4 {
+    font-size: 20px;
+    margin-bottom: 5px;
+  }
+}
+#tenpo .accordion__panel .accordion__panel-el p {
+  font-size: 16px;
+  width: 100%;
+}
+@media screen and (max-width: 767px) {
+  #tenpo .accordion__panel .accordion__panel-el p {
+    font-size: 14px;
+    width: 100%;
+  }
+}
 #tenpo .accordion__panel .accordion__panel-el .line-button {
   background: linear-gradient(#71ff75 0%, #1cf21c 40.22%, #11dd0a 100%);
   box-shadow: 0px 3px 10px rgba(122, 122, 122, 0.4);
   width: 70%;
-  margin: 30px auto 0;
+  margin: 20px auto 0;
   display: block;
   color: #fff;
   text-align: center;
@@ -2151,6 +2420,11 @@ header nav .contact-info .contact-button img {
   background: #fff;
   padding-top: 150px;
 }
+@media screen and (max-width: 767px) {
+  #company {
+    padding-top: 40px;
+  }
+}
 #company .company-ttl {
   font-family: "Yu Gothic";
   font-weight: bold;
@@ -2159,25 +2433,50 @@ header nav .contact-info .contact-button img {
   text-align: center;
   color: #9b1a19;
 }
+@media screen and (max-width: 767px) {
+  #company .company-ttl {
+    font-size: 30px;
+  }
+}
 #company .company-content {
   width: 57.29%;
   margin: 30px auto 0;
+  padding-bottom: 90px;
+}
+@media screen and (max-width: 767px) {
+  #company .company-content {
+    width: 90%;
+    padding-bottom: 120px;
+  }
 }
 #company .company-content .company-content__detail {
   border-bottom: 1px solid #707070;
   display: flex;
   font-family: "Yu Gothic";
   font-weight: 500;
-  font-size: 20px;
-  line-height: 90px;
+  font-size: 16px;
+  line-height: 70px;
   text-align: center;
   color: #707070;
   justify-content: space-between;
 }
+@media screen and (max-width: 767px) {
+  #company .company-content .company-content__detail {
+    font-size: 16px;
+    line-height: 2;
+    padding: 30px 0;
+  }
+}
 #company .company-content .company-content__detail dt {
-  width: 25%;
+  width: 35%;
   text-align: left;
   padding-left: 30px;
+}
+@media screen and (max-width: 767px) {
+  #company .company-content .company-content__detail dt {
+    width: 40%;
+    padding-left: 10px;
+  }
 }
 #company .company-content .company-content__detail dd {
   width: 70%;
@@ -2193,4 +2492,9 @@ footer {
   text-align: center;
   color: #fff;
   margin-top: 30px;
+}
+@media screen and (max-width: 767px) {
+  footer {
+    font-size: 12px;
+  }
 }
