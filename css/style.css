@@ -350,6 +350,7 @@ header nav .contact-info .contact-button img {
     position: initial;
     margin: 0 auto;
     padding: 75px 10px 30px;
+    aspect-ratio: unset;
   }
 }
 @media screen and (min-width: 768px) {
