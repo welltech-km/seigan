@@ -607,7 +607,7 @@ header nav .contact-info .contact-button img {
   display: block;
   border: 0;
   padding: 0;
-  margin: 0;
+  margin: 0 auto;
 }
 #features .features-effect {
   aspect-ratio: 960/192;
@@ -1923,6 +1923,12 @@ header nav .contact-info .contact-button img {
 #reservation {
   background: #FFF7F2;
   padding-bottom: 120px;
+  scroll-margin-top: 60px;
+}
+@media screen and (max-width: 767px) {
+  #reservation {
+    scroll-margin-top: 100px;
+  }
 }
 #reservation .reservation-ttl {
   padding: 45px 0;
@@ -2076,7 +2082,7 @@ header nav .contact-info .contact-button img {
 }
 @media screen and (max-width: 767px) {
   #reservation .reservation-content .reservation-content__step {
-    gap: 90px;
+    gap: 75px;
   }
 }
 #reservation .reservation-content .reservation-content__step .step-el {
@@ -2086,7 +2092,7 @@ header nav .contact-info .contact-button img {
 }
 @media screen and (max-width: 767px) {
   #reservation .reservation-content .reservation-content__step .step-el {
-    padding-bottom: 30px;
+    padding-bottom: 10px;
   }
 }
 #reservation .reservation-content .reservation-content__step .step-el .step-el__ttl {
@@ -2144,10 +2150,10 @@ header nav .contact-info .contact-button img {
 }
 @media screen and (max-width: 767px) {
   #reservation .reservation-content .reservation-content__step .step-el .step-el__txt {
-    margin-top: -25px;
-    margin-bottom: 10px;
+    margin-top: -35px;
     width: 100%;
     font-size: 19px;
+    line-height: 1.7;
   }
 }
 #reservation .reservation-content .reservation-content__step .step-el .step-el__txt span {
@@ -2166,7 +2172,9 @@ header nav .contact-info .contact-button img {
   }
 }
 #reservation .reservation-content .reservation-content__step .step-el .step-el__icon img {
-  width: 100%;
+  width: 75%;
+  display: block;
+  margin: 0 auto;
 }
 #reservation .reservation-content .reservation-content__step .step-el:nth-child(1) {
   width: 22%;
