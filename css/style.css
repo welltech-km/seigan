@@ -312,6 +312,18 @@ header nav .contact-info .contact-button img {
     -ms-transform: translateX(-50%);
   }
 }
+@media screen and (max-width: 767px) {
+  #issues .issues-frame .sp-check {
+    aspect-ratio: 210/170;
+    width: 45px;
+    position: absolute;
+    top: 33px;
+    left: 2%;
+    background: url("https://welltech-km.github.io/seigan/img/check_sp.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+}
 #issues .issues-frame h2 {
   font-family: DNPShueiMinPr6;
   font-weight: 500;
