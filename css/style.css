@@ -32,6 +32,15 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+.br-spntab {
+  display: none;
+}
+@media screen and (max-width: 1023px) {
+  .br-spntab {
+    display: block;
+  }
+}
+
 .section-title {
   font-size: 2.5rem;
   text-align: center;
@@ -208,6 +217,12 @@ header nav .contact-info .contact-button img {
     font-size: 1.15em;
   }
 }
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  #cta .cta-btn .cta-btn__txt {
+    width: 100%;
+    font-size: 1.35em;
+  }
+}
 #cta .cta-btn .cta-btn__el {
   display: block;
   width: min(35%, 738px);
@@ -217,6 +232,11 @@ header nav .contact-info .contact-button img {
 @media screen and (max-width: 767px) {
   #cta .cta-btn .cta-btn__el {
     width: 90%;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  #cta .cta-btn .cta-btn__el {
+    width: 50%;
   }
 }
 #cta .cta-btn .cta-btn__el img {
@@ -353,12 +373,12 @@ header nav .contact-info .contact-button img {
     aspect-ratio: unset;
   }
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1023px) {
   #issues .issues-frame .issue_box-container {
     left: 26.4%;
   }
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
   #issues .issues-frame .issue_box-container {
     left: 26.8%;
   }
@@ -391,19 +411,19 @@ header nav .contact-info .contact-button img {
     max-width: 100%;
   }
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1023px) {
   #issues .issues-frame .issue_box {
     font-size: min(1.35vw, 13.5px);
     line-height: 1.4;
   }
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1023px) {
   #issues .issues-frame .issue_box {
     font-size: min(1.32vw, 20px);
     line-height: 1.4;
   }
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
   #issues .issues-frame .issue_box {
     font-size: min(1.34vw, 21px);
   }
@@ -449,7 +469,7 @@ header nav .contact-info .contact-button img {
     padding-left: 0;
   }
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1023px) {
   #issues .issues-frame .check-box .check-box__text {
     padding-left: 15px;
   }
@@ -477,7 +497,7 @@ header nav .contact-info .contact-button img {
     top: 40%;
   }
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1023px) {
   #issues .issues-frame .check-box::before {
     width: min(1.8vw, 17px);
     height: min(1.8vw, 17px);
@@ -632,14 +652,18 @@ header nav .contact-info .contact-button img {
   background: url("https://welltech-km.github.io/seigan/img/bg-effect.webp");
   aspect-ratio: 1920/4330;
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
   margin-top: max(-3vw, -5em);
 }
 @media screen and (max-width: 767px) {
   #effects {
     margin-top: 0;
     aspect-ratio: 2217/5000;
-    background-size: cover;
+  }
+}
+@media screen and (min-width: 1920px) {
+  #effects {
+    aspect-ratio: unset;
   }
 }
 #effects .effects-container {
@@ -671,6 +695,11 @@ header nav .contact-info .contact-button img {
     padding: 15px 10px 15px 0;
   }
 }
+@media screen and (min-width: 1920px) {
+  #effects .effects-container .effects-ttl {
+    font-size: 57px;
+  }
+}
 #effects .effects-container .effects-ttl span {
   position: relative;
 }
@@ -690,6 +719,22 @@ header nav .contact-info .contact-button img {
     height: 20px;
     top: 2px;
     left: -25px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  #effects .effects-container .effects-ttl span::before {
+    width: 22px;
+    height: 22px;
+    top: 65%;
+    transform: translateY(-65%);
+  }
+}
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
+  #effects .effects-container .effects-ttl span::before {
+    width: 25px;
+    height: 25px;
+    top: 70%;
+    transform: translateY(-70%);
   }
 }
 #effects .effects-container .effects-lower {
@@ -720,6 +765,16 @@ header nav .contact-info .contact-button img {
     line-height: 2.2;
   }
 }
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  #effects .effects-container .effects-txt {
+    font-size: 22px;
+  }
+}
+@media screen and (min-width: 1920px) {
+  #effects .effects-container .effects-txt {
+    font-size: 24px;
+  }
+}
 #effects .effects-container .effects-img {
   aspect-ratio: 488/410;
   max-width: 488px;
@@ -729,6 +784,11 @@ header nav .contact-info .contact-button img {
   #effects .effects-container .effects-img {
     margin-top: 30px;
     max-width: 35%;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  #effects .effects-container .effects-img {
+    max-width: 380px;
   }
 }
 #effects .effects-container .effects-img img {
@@ -767,6 +827,11 @@ header nav .contact-info .contact-button img {
     max-width: 35%;
   }
 }
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  #effects .effects-container:nth-child(2) .effects-img {
+    max-width: 380px;
+  }
+}
 #effects .effects-container:nth-child(2) .effects-ttl span::before {
   background: #AFA1E5;
 }
@@ -781,6 +846,11 @@ header nav .contact-info .contact-button img {
   #effects .effects-container:nth-child(3) .effects-img {
     margin-top: 30px;
     max-width: 35%;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  #effects .effects-container:nth-child(3) .effects-img {
+    max-width: 380px;
   }
 }
 #effects .effects-container:nth-child(3) .effects-ttl span::before {
@@ -799,6 +869,11 @@ header nav .contact-info .contact-button img {
     max-width: 35%;
   }
 }
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  #effects .effects-container:nth-child(4) .effects-img {
+    max-width: 380px;
+  }
+}
 #effects .effects-container:nth-child(4) .effects-ttl span::before {
   background: #DBD06C;
 }
@@ -815,6 +890,18 @@ header nav .contact-info .contact-button img {
     padding-bottom: 240px;
   }
 }
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  #effects .effects-beauty {
+    background: unset;
+    padding-bottom: 240px;
+  }
+}
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
+  #effects .effects-beauty {
+    background: unset;
+    margin-top: -60px;
+  }
+}
 #effects .effects-beauty .effects-beauty__ttl {
   font-size: 60px;
   letter-spacing: 0.03em;
@@ -825,13 +912,24 @@ header nav .contact-info .contact-button img {
   position: relative;
   text-align: center;
   margin: 0 auto;
-  padding-top: 4.5em;
 }
 @media screen and (max-width: 767px) {
   #effects .effects-beauty .effects-beauty__ttl {
     margin-top: 0;
     font-size: 21px;
     padding-top: 240px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  #effects .effects-beauty .effects-beauty__ttl {
+    padding-top: 0;
+    font-size: 35px;
+  }
+}
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
+  #effects .effects-beauty .effects-beauty__ttl {
+    font-size: 45px;
+    padding-top: 0;
   }
 }
 #effects .effects-beauty .effects-beauty__ttl::after {
@@ -841,7 +939,6 @@ header nav .contact-info .contact-button img {
   aspect-ratio: 958/57;
   top: 30px;
   right: 0;
-  padding-top: 4.5em;
 }
 @media screen and (max-width: 767px) {
   #effects .effects-beauty .effects-beauty__ttl::after {
@@ -857,6 +954,34 @@ header nav .contact-info .contact-button img {
     top: 95%;
   }
 }
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  #effects .effects-beauty .effects-beauty__ttl::after {
+    content: "";
+    background: url("https://welltech-km.github.io/seigan/img/beauty-title.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding-top: 2em;
+    width: 80%;
+    margin: 0 auto;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 90%;
+  }
+}
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
+  #effects .effects-beauty .effects-beauty__ttl::after {
+    content: "";
+    background: url("https://welltech-km.github.io/seigan/img/beauty-title.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding-top: 2em;
+    width: 80%;
+    margin: 0 auto;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 90%;
+  }
+}
 #effects .effects-beauty .effects-beauty__fv {
   max-width: 476px;
   aspect-ratio: 476/262;
@@ -866,6 +991,18 @@ header nav .contact-info .contact-button img {
   #effects .effects-beauty .effects-beauty__fv {
     margin-top: 15px;
     aspect-ratio: unset;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  #effects .effects-beauty .effects-beauty__fv {
+    max-width: 350px;
+    margin: 3em auto 0;
+  }
+}
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
+  #effects .effects-beauty .effects-beauty__fv {
+    max-width: 380px;
+    margin: 3em auto 0;
   }
 }
 #effects .effects-beauty .effects-beauty__fv img {
@@ -891,6 +1028,22 @@ header nav .contact-info .contact-button img {
     line-height: 2;
   }
 }
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  #effects .effects-beauty .effects-beauty__txt {
+    font-size: 25px;
+    line-height: 1.8;
+    width: 80%;
+    margin: 15px auto 0;
+  }
+}
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
+  #effects .effects-beauty .effects-beauty__txt {
+    font-size: 29px;
+    line-height: 1.8;
+    width: 80%;
+    margin: 15px auto 0;
+  }
+}
 #effects .effects-beauty .effects-beauty__txt span {
   font-size: 1.25em;
 }
@@ -907,6 +1060,18 @@ header nav .contact-info .contact-button img {
     align-items: center;
   }
 }
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  #effects .effects-beauty .effects-beauty__detail {
+    width: 80%;
+    max-width: unset;
+  }
+}
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
+  #effects .effects-beauty .effects-beauty__detail {
+    width: 75%;
+    max-width: 830px;
+  }
+}
 #effects .effects-beauty .effects-beauty__detail p {
   font-size: 28px;
   color: #5a3736;
@@ -915,6 +1080,16 @@ header nav .contact-info .contact-button img {
   #effects .effects-beauty .effects-beauty__detail p {
     font-size: 15px;
     width: 95%;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  #effects .effects-beauty .effects-beauty__detail p {
+    font-size: 20px;
+  }
+}
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
+  #effects .effects-beauty .effects-beauty__detail p {
+    font-size: 20px;
   }
 }
 #effects .effects-beauty .effects-beauty__detail img {
@@ -926,12 +1101,22 @@ header nav .contact-info .contact-button img {
     width: 80%;
   }
 }
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  #effects .effects-beauty .effects-beauty__detail img {
+    width: 300px;
+  }
+}
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
+  #effects .effects-beauty .effects-beauty__detail img {
+    width: 300px;
+  }
+}
 
 #explanations {
   background: url("https://welltech-km.github.io/seigan/img/explanations-bg.webp") no-repeat;
   background-size: contain;
   aspect-ratio: 1920/1813;
-  margin-top: -10em;
+  margin-top: -25em;
   position: relative;
 }
 @media screen and (max-width: 767px) {
@@ -940,6 +1125,25 @@ header nav .contact-info .contact-button img {
     aspect-ratio: unset;
     padding-top: 210px;
     padding-bottom: 90px;
+    margin-top: -10em;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  #explanations {
+    background-size: auto;
+    aspect-ratio: unset;
+    padding-top: 290px;
+    padding-bottom: 90px;
+    margin-top: -15em;
+  }
+}
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
+  #explanations {
+    background-size: auto;
+    aspect-ratio: unset;
+    padding-top: 350px;
+    padding-bottom: 90px;
+    margin-top: -20em;
   }
 }
 #explanations .explanations-container {
@@ -967,6 +1171,43 @@ header nav .contact-info .contact-button img {
     padding-bottom: 60px;
   }
 }
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  #explanations .explanations-container {
+    width: 75%;
+    background-size: auto;
+    position: unset;
+    aspect-ratio: unset;
+    transform: unset;
+    position: relative;
+    top: 0;
+    left: 0;
+    padding-bottom: 60px;
+  }
+}
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
+  #explanations .explanations-container {
+    width: 66%;
+    background-size: auto;
+    position: unset;
+    aspect-ratio: unset;
+    transform: unset;
+    position: relative;
+    top: 0;
+    left: 0;
+    padding-bottom: 60px;
+  }
+}
+@media screen and (min-width: 1920px) {
+  #explanations .explanations-container {
+    top: 20em;
+    width: 40%;
+  }
+}
+@media screen and (min-width: 2150px) {
+  #explanations .explanations-container {
+    top: 25em;
+  }
+}
 #explanations .explanations-container .explanations-container__ttl {
   width: 87.545%;
   border-radius: 58px;
@@ -990,6 +1231,26 @@ header nav .contact-info .contact-button img {
     transform: translateX(-50%);
   }
 }
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  #explanations .explanations-container .explanations-container__ttl {
+    font-size: 35px;
+    line-height: 1.6;
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
+  #explanations .explanations-container .explanations-container__ttl {
+    font-size: 36px;
+    line-height: 1.6;
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
 #explanations .explanations-container .explanations-container__img {
   width: 48.636%;
   margin: 1em auto 0;
@@ -998,6 +1259,18 @@ header nav .contact-info .contact-button img {
   #explanations .explanations-container .explanations-container__img {
     width: 70%;
     padding-top: 50px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  #explanations .explanations-container .explanations-container__img {
+    width: 70%;
+    padding-top: 50px;
+  }
+}
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
+  #explanations .explanations-container .explanations-container__img {
+    width: 60%;
+    padding-top: 40px;
   }
 }
 #explanations .explanations-container .explanations-container__img img {
@@ -1019,10 +1292,39 @@ header nav .contact-info .contact-button img {
     margin-top: 15px;
   }
 }
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  #explanations .explanations-container .explanations-container__txt {
+    font-size: 25px;
+    width: 90%;
+    margin-top: 15px;
+  }
+}
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
+  #explanations .explanations-container .explanations-container__txt {
+    font-size: 27px;
+    width: 90%;
+    margin-top: 15px;
+  }
+}
+@media screen and (min-width: 1920px) {
+  #explanations .explanations-container .explanations-container__txt {
+    margin-top: 60px;
+  }
+}
 #explanations .explanations-container .explanations-container__txt span {
   font-size: 1.37em;
 }
 @media screen and (max-width: 767px) {
+  #explanations .explanations-container .explanations-container__txt span {
+    font-size: 1.25em;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  #explanations .explanations-container .explanations-container__txt span {
+    font-size: 1.25em;
+  }
+}
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
   #explanations .explanations-container .explanations-container__txt span {
     font-size: 1.25em;
   }
@@ -1047,6 +1349,16 @@ header nav .contact-info .contact-button img {
     height: 15px;
   }
 }
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  #explanations .explanations-container .explanations-container__txt .marker::before {
+    height: 15px;
+  }
+}
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
+  #explanations .explanations-container .explanations-container__txt .marker::before {
+    height: 15px;
+  }
+}
 #explanations .explanations-container .explanations-container__detail {
   width: 82.3636%;
   margin: 30px auto 0;
@@ -1064,6 +1376,26 @@ header nav .contact-info .contact-button img {
     font-size: 15px;
   }
 }
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  #explanations .explanations-container .explanations-container__detail {
+    width: 95%;
+    padding: 0 5px;
+    font-size: 19px;
+  }
+}
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
+  #explanations .explanations-container .explanations-container__detail {
+    width: 95%;
+    padding: 0 5px;
+    font-size: 22px;
+  }
+}
+@media screen and (min-width: 1920px) {
+  #explanations .explanations-container .explanations-container__detail {
+    margin-top: 60px;
+    font-size: 27px;
+  }
+}
 
 #step {
   background: url("https://welltech-km.github.io/seigan/img/4step-bg.webp");
@@ -1072,8 +1404,34 @@ header nav .contact-info .contact-button img {
 }
 @media screen and (max-width: 767px) {
   #step {
-    margin-top: 0;
+    margin-top: -60px;
+    padding-top: 60px;
     padding-bottom: 90px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  #step {
+    margin-top: -60px;
+    padding-top: 60px;
+    padding-bottom: 90px;
+  }
+}
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
+  #step {
+    margin-top: -60px;
+    padding-top: 60px;
+    padding-bottom: 90px;
+  }
+}
+@media screen and (min-width: 1920px) {
+  #step {
+    aspect-ratio: unset;
+    padding-bottom: 150px;
+  }
+}
+@media screen and (min-width: 2150px) {
+  #step {
+    margin-top: -260px;
   }
 }
 #step .step-ttl {
@@ -1094,6 +1452,27 @@ header nav .contact-info .contact-button img {
     padding-top: 90px;
   }
 }
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  #step .step-ttl {
+    font-size: 35px;
+    width: 72%;
+    line-height: 1.5;
+    padding-top: 90px;
+  }
+}
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
+  #step .step-ttl {
+    font-size: 44px;
+    width: 80%;
+    line-height: 1.5;
+    padding-top: 90px;
+  }
+}
+@media screen and (min-width: 1920px) {
+  #step .step-ttl {
+    width: 40%;
+  }
+}
 #step .step-ttl::after {
   position: absolute;
   background: url("https://welltech-km.github.io/seigan/img/4step-ttl.png");
@@ -1112,6 +1491,21 @@ header nav .contact-info .contact-button img {
     top: 95%;
   }
 }
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  #step .step-ttl::after {
+    top: 88%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
+  #step .step-ttl::after {
+    width: 80%;
+    top: 88%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
 #step .step-container {
   margin: 120px auto 0;
   width: 49%;
@@ -1127,6 +1521,23 @@ header nav .contact-info .contact-button img {
     flex-wrap: nowrap;
     flex-direction: column;
     margin-top: 75px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  #step .step-container {
+    width: 90%;
+    margin-top: 105px;
+  }
+}
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
+  #step .step-container {
+    width: 60%;
+    margin-top: 105px;
+  }
+}
+@media screen and (min-width: 1920px) {
+  #step .step-container {
+    width: 40%;
   }
 }
 #step .step-container__el {
@@ -1162,11 +1573,26 @@ header nav .contact-info .contact-button img {
   height: 3px;
   background-color: #B53938;
 }
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
+  #step .step-container__el .el-step::before, #step .step-container__el .el-step::after {
+    width: 60px;
+  }
+}
 #step .step-container__el .el-step::before {
   left: -75px;
 }
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
+  #step .step-container__el .el-step::before {
+    left: -60px;
+  }
+}
 #step .step-container__el .el-step::after {
   right: -75px;
+}
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
+  #step .step-container__el .el-step::after {
+    right: -60px;
+  }
 }
 #step .step-container__el img {
   width: 88.34%;
@@ -1176,6 +1602,11 @@ header nav .contact-info .contact-button img {
   margin-top: 15px;
   font-size: 26px;
   color: #b53938;
+}
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
+  #step .step-container__el .el-ttl {
+    font-size: 22px;
+  }
 }
 #step .step-container__el .el-ttl span {
   font-size: 0.8em;
@@ -1187,12 +1618,22 @@ header nav .contact-info .contact-button img {
   font-weight: bold;
   color: #5a3736;
 }
+@media screen and (min-width: 1920px) {
+  #step .step-container__el p {
+    font-size: 20px;
+  }
+}
 
 #careful {
   background: #FFF7F2;
   padding-bottom: 120px;
 }
 @media screen and (max-width: 767px) {
+  #careful {
+    padding-bottom: 90px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
   #careful {
     padding-bottom: 90px;
   }
@@ -1215,6 +1656,27 @@ header nav .contact-info .contact-button img {
     padding-top: 90px;
   }
 }
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  #careful .careful-ttl {
+    font-size: 35px;
+    width: 72%;
+    line-height: 1.5;
+    padding-top: 90px;
+  }
+}
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
+  #careful .careful-ttl {
+    font-size: 44px;
+    width: 80%;
+    line-height: 1.5;
+    padding-top: 90px;
+  }
+}
+@media screen and (min-width: 1920px) {
+  #careful .careful-ttl {
+    width: 40%;
+  }
+}
 #careful .careful-ttl::after {
   position: absolute;
   background: url("https://welltech-km.github.io/seigan/img/4step-ttl.png");
@@ -1234,6 +1696,21 @@ header nav .contact-info .contact-button img {
     bottom: unset;
   }
 }
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  #careful .careful-ttl::after {
+    top: 88%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
+  #careful .careful-ttl::after {
+    width: 80%;
+    top: 88%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
 #careful .careful-container {
   display: flex;
   flex-direction: column;
@@ -1243,6 +1720,21 @@ header nav .contact-info .contact-button img {
 @media screen and (max-width: 767px) {
   #careful .careful-container {
     width: 90%;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  #careful .careful-container {
+    width: 90%;
+  }
+}
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
+  #careful .careful-container {
+    width: 70%;
+  }
+}
+@media screen and (min-width: 1920px) {
+  #careful .careful-container {
+    width: 40%;
   }
 }
 @media screen and (max-width: 767px) {
@@ -1267,6 +1759,11 @@ header nav .contact-info .contact-button img {
     margin-top: 75px;
   }
 }
+@media screen and (min-width: 1920px) {
+  #careful .container__ttl {
+    width: 40%;
+  }
+}
 #careful .container__ttl::before, #careful .container__ttl::after {
   position: absolute;
   content: "";
@@ -1283,6 +1780,21 @@ header nav .contact-info .contact-button img {
     height: 1px;
   }
 }
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  #careful .container__ttl::before, #careful .container__ttl::after {
+    width: 40%;
+  }
+}
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
+  #careful .container__ttl::before, #careful .container__ttl::after {
+    width: 40%;
+  }
+}
+@media screen and (min-width: 1920px) {
+  #careful .container__ttl::before, #careful .container__ttl::after {
+    width: 55%;
+  }
+}
 #careful .container__ttl::before {
   left: -20%;
 }
@@ -1291,12 +1803,42 @@ header nav .contact-info .contact-button img {
     left: -35%;
   }
 }
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  #careful .container__ttl::before {
+    left: -37%;
+  }
+}
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
+  #careful .container__ttl::before {
+    left: -37%;
+  }
+}
+@media screen and (min-width: 1920px) {
+  #careful .container__ttl::before {
+    left: -37%;
+  }
+}
 #careful .container__ttl::after {
   right: -20%;
 }
 @media screen and (max-width: 767px) {
   #careful .container__ttl::after {
     right: -35%;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  #careful .container__ttl::after {
+    right: -37%;
+  }
+}
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
+  #careful .container__ttl::after {
+    right: -37%;
+  }
+}
+@media screen and (min-width: 1920px) {
+  #careful .container__ttl::after {
+    right: -37%;
   }
 }
 #careful .container__sub {
@@ -1343,6 +1885,11 @@ header nav .contact-info .contact-button img {
     width: 100%;
   }
 }
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  #careful .container__detail {
+    font-size: 20px;
+  }
+}
 #careful .container__detail p {
   margin-bottom: 30px;
 }
@@ -1376,11 +1923,21 @@ header nav .contact-info .contact-button img {
   padding-top: 75px;
   padding-bottom: 150px;
 }
+@media screen and (min-width: 1920px) {
+  #example {
+    aspect-ratio: unset;
+  }
+}
 #example .example-ttl {
   padding: 45px 0;
   background: rgba(255, 255, 255, 0.7);
 }
 @media screen and (max-width: 767px) {
+  #example .example-ttl {
+    padding: 30px 0;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
   #example .example-ttl {
     padding: 30px 0;
   }
@@ -1408,6 +1965,11 @@ header nav .contact-info .contact-button img {
     font-size: 35px;
   }
 }
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  #example .example-ttl .example-ttl__content {
+    font-size: 40px;
+  }
+}
 #example .example-container {
   width: 57.29%;
   margin: 60px auto 0;
@@ -1418,6 +1980,21 @@ header nav .contact-info .contact-button img {
 @media screen and (max-width: 767px) {
   #example .example-container {
     width: 90%;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  #example .example-container {
+    width: 80%;
+  }
+}
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
+  #example .example-container {
+    width: 70%;
+  }
+}
+@media screen and (min-width: 1920px) {
+  #example .example-container {
+    width: 40%;
   }
 }
 #example .example-container .example-container__case {
@@ -1437,6 +2014,12 @@ header nav .contact-info .contact-button img {
     font-size: 25px;
   }
 }
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  #example .example-container .example-container__case {
+    background: #B53938;
+    font-size: 30px;
+  }
+}
 #example .example-container .example-container__personal {
   font-family: "Yu Gothic";
   font-weight: bold;
@@ -1450,6 +2033,12 @@ header nav .contact-info .contact-button img {
   #example .example-container .example-container__personal {
     margin-top: 45px;
     font-size: 22px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  #example .example-container .example-container__personal {
+    margin-top: 30px;
+    font-size: 24px;
   }
 }
 #example .example-container .example-container__personal::after {
@@ -1471,6 +2060,11 @@ header nav .contact-info .contact-button img {
     width: 60%;
   }
 }
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  #example .example-container .example-container__personal::after {
+    width: 50%;
+  }
+}
 #example .example-container .example-container__times {
   font-family: "Yu Gothic";
   font-weight: bold;
@@ -1480,6 +2074,11 @@ header nav .contact-info .contact-button img {
   padding-top: 30px;
 }
 @media screen and (max-width: 767px) {
+  #example .example-container .example-container__times {
+    padding-top: 15px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
   #example .example-container .example-container__times {
     padding-top: 15px;
   }
@@ -1514,6 +2113,12 @@ header nav .contact-info .contact-button img {
     justify-content: center;
   }
 }
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  #example .example-container .example-container__detail {
+    width: 90%;
+    justify-content: center;
+  }
+}
 #example .example-container .example-container__detail dt {
   width: 35%;
   background: #B53938;
@@ -1533,6 +2138,13 @@ header nav .contact-info .contact-button img {
     width: 30%;
   }
 }
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  #example .example-container .example-container__detail dt {
+    font-size: 20px;
+    text-align: center;
+    width: 35%;
+  }
+}
 #example .example-container .example-container__detail dd {
   display: flex;
   background: #FFF2F1;
@@ -1549,6 +2161,11 @@ header nav .contact-info .contact-button img {
 @media screen and (max-width: 767px) {
   #example .example-container .example-container__detail dd {
     font-size: 18px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  #example .example-container .example-container__detail dd {
+    font-size: 20px;
   }
 }
 #example .example-container .example-container__detail dd span {
@@ -1578,6 +2195,12 @@ header nav .contact-info .contact-button img {
     top: -35%;
   }
 }
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  #example .example-container .example-container__detail::after {
+    width: 18%;
+    top: -70%;
+  }
+}
 #example .example-container .example-container__detail:nth-of-type(1)::after {
   background: url("https://welltech-km.github.io/seigan/img/container-detail-img01.png");
   background-size: contain;
@@ -1598,6 +2221,13 @@ header nav .contact-info .contact-button img {
   color: #45160c;
 }
 @media screen and (max-width: 767px) {
+  #example .example-container p {
+    width: 90%;
+    font-size: 16px;
+    margin: 25px auto 0;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
   #example .example-container p {
     width: 90%;
     font-size: 16px;
@@ -1627,6 +2257,16 @@ header nav .contact-info .contact-button img {
     padding: 45px 0 75px;
   }
 }
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  #qna .qna-ttl {
+    padding: 45px 0 75px;
+  }
+}
+@media screen and (min-width: 1920px) {
+  #qna .qna-ttl {
+    padding-bottom: 105px;
+  }
+}
 #qna .qna-ttl .qna-ttl__sub {
   font-family: しっぽり明朝;
   font-weight: bold;
@@ -1651,6 +2291,17 @@ header nav .contact-info .contact-button img {
   #qna .qna-ttl h2 {
     width: 90%;
     font-size: 30px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  #qna .qna-ttl h2 {
+    width: 90%;
+    font-size: 35px;
+  }
+}
+@media screen and (min-width: 1920px) {
+  #qna .qna-ttl h2 {
+    width: 40%;
   }
 }
 #qna .qna-ttl h2::after {
@@ -1687,6 +2338,24 @@ header nav .contact-info .contact-button img {
     width: 90%;
     font-size: 16px;
     padding: 15px 45px 15px 60px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  #qna .accordion {
+    width: 80%;
+    font-size: 18px;
+  }
+}
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
+  #qna .accordion {
+    width: 70%;
+    font-size: 20px;
+  }
+}
+@media screen and (min-width: 1920px) {
+  #qna .accordion {
+    margin-bottom: 75px;
+    width: 40%;
   }
 }
 #qna .accordion::before {
@@ -1748,6 +2417,23 @@ header nav .contact-info .contact-button img {
     padding: 15px 45px 15px 60px;
   }
 }
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  #qna .accordion__panel {
+    width: 80%;
+    font-size: 18px;
+  }
+}
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
+  #qna .accordion__panel {
+    width: 70%;
+    font-size: 20px;
+  }
+}
+@media screen and (min-width: 1920px) {
+  #qna .accordion__panel {
+    width: 40%;
+  }
+}
 #qna .accordion__panel::before {
   content: "A.";
   position: absolute;
@@ -1787,6 +2473,19 @@ header nav .contact-info .contact-button img {
     padding-top: 40px;
   }
 }
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  #believe .believe-ttl {
+    font-size: 35px;
+    width: 72%;
+    line-height: 1.5;
+    padding-top: 90px;
+  }
+}
+@media screen and (min-width: 1920px) {
+  #believe .believe-ttl {
+    width: 40%;
+  }
+}
 #believe .believe-ttl::after {
   position: absolute;
   background: url("https://welltech-km.github.io/seigan/img/4step-ttl.png");
@@ -1806,6 +2505,13 @@ header nav .contact-info .contact-button img {
     bottom: unset;
   }
 }
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  #believe .believe-ttl::after {
+    top: 88%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
 #believe .believe-content {
   margin: 120px auto 0;
   padding: 20px;
@@ -1822,6 +2528,25 @@ header nav .contact-info .contact-button img {
     padding-top: 60px;
   }
 }
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  #believe .believe-content {
+    width: 80%;
+    margin-top: 90px;
+    padding-top: 60px;
+  }
+}
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
+  #believe .believe-content {
+    width: 70%;
+    margin-top: 90px;
+    padding-top: 60px;
+  }
+}
+@media screen and (min-width: 1920px) {
+  #believe .believe-content {
+    width: 40%;
+  }
+}
 #believe .believe-content .believe-content__el {
   display: flex;
   flex-direction: column;
@@ -1831,6 +2556,12 @@ header nav .contact-info .contact-button img {
   padding-bottom: 90px;
 }
 @media screen and (max-width: 767px) {
+  #believe .believe-content .believe-content__el {
+    width: 95%;
+    padding-bottom: 60px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
   #believe .believe-content .believe-content__el {
     width: 95%;
     padding-bottom: 60px;
@@ -1846,6 +2577,11 @@ header nav .contact-info .contact-button img {
     gap: 15px;
   }
 }
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  #believe .believe-content .believe-content__el .el-upper {
+    gap: 15px;
+  }
+}
 #believe .believe-content .believe-content__el .el-upper img {
   max-width: 182px;
   aspect-ratio: 1/1;
@@ -1853,6 +2589,11 @@ header nav .contact-info .contact-button img {
 @media screen and (max-width: 767px) {
   #believe .believe-content .believe-content__el .el-upper img {
     max-width: 100px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  #believe .believe-content .believe-content__el .el-upper img {
+    max-width: 150px;
   }
 }
 #believe .believe-content .believe-content__el .el-upper dl {
@@ -1902,6 +2643,11 @@ header nav .contact-info .contact-button img {
     font-size: 16px;
   }
 }
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  #believe .believe-content .believe-content__el .el-lower {
+    font-size: 17px;
+  }
+}
 #believe .believe-content .believe-content__el:nth-of-type(1)::after {
   position: absolute;
   content: "";
@@ -1920,6 +2666,11 @@ header nav .contact-info .contact-button img {
 @media screen and (max-width: 767px) {
   #believe .believe-content .believe-content__el:nth-of-type(2) {
     padding-top: 60px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  #believe .believe-content .believe-content__el:nth-of-type(2) {
+    padding-top: 75px;
   }
 }
 #believe .believe-content::after {
@@ -1971,6 +2722,17 @@ header nav .contact-info .contact-button img {
     width: 90%;
   }
 }
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  #reservation .reservation-ttl h2 {
+    font-size: 35px;
+    width: 90%;
+  }
+}
+@media screen and (min-width: 1920px) {
+  #reservation .reservation-ttl h2 {
+    width: 40%;
+  }
+}
 #reservation .reservation-ttl h2::after {
   position: absolute;
   width: 50%;
@@ -1999,6 +2761,11 @@ header nav .contact-info .contact-button img {
     line-height: 1.8;
   }
 }
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  #reservation .reservation-message {
+    line-height: 1.8;
+  }
+}
 #reservation .reservation-message span {
   background: #b53938;
   color: #fff;
@@ -2020,6 +2787,22 @@ header nav .contact-info .contact-button img {
     margin-top: 75px;
   }
 }
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  #reservation .reservation-content {
+    width: 90%;
+    margin-top: 75px;
+  }
+}
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
+  #reservation .reservation-content {
+    width: 70%;
+  }
+}
+@media screen and (min-width: 1920px) {
+  #reservation .reservation-content {
+    width: 40%;
+  }
+}
 #reservation .reservation-content .reservation-content__ttl {
   position: absolute;
   aspect-ratio: 637/85;
@@ -2035,6 +2818,11 @@ header nav .contact-info .contact-button img {
     width: 90%;
   }
 }
+@media screen and (min-width: 1920px) {
+  #reservation .reservation-content .reservation-content__ttl {
+    width: 40%;
+  }
+}
 #reservation .reservation-content .reservation-content__ttl img {
   width: 100%;
 }
@@ -2048,6 +2836,16 @@ header nav .contact-info .contact-button img {
   #reservation .reservation-content .reservation-content__upper {
     width: 75%;
     padding-top: 45px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  #reservation .reservation-content .reservation-content__upper {
+    padding-top: 60px;
+  }
+}
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
+  #reservation .reservation-content .reservation-content__upper {
+    padding-top: 60px;
   }
 }
 #reservation .reservation-content .reservation-content__upper img {
@@ -2067,6 +2865,16 @@ header nav .contact-info .contact-button img {
   #reservation .reservation-content .reservation-content__upper a {
     font-size: 16px;
     padding-right: 15px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  #reservation .reservation-content .reservation-content__upper a {
+    font-size: 22px;
+  }
+}
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
+  #reservation .reservation-content .reservation-content__upper a {
+    font-size: 22px;
   }
 }
 #reservation .reservation-content .reservation-content__upper::after {
@@ -2097,6 +2905,16 @@ header nav .contact-info .contact-button img {
     gap: 75px;
   }
 }
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  #reservation .reservation-content .reservation-content__step {
+    width: 90%;
+  }
+}
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
+  #reservation .reservation-content .reservation-content__step {
+    width: 95%;
+  }
+}
 #reservation .reservation-content .reservation-content__step .step-el {
   border-radius: 30px;
   background: #b53938;
@@ -2117,6 +2935,12 @@ header nav .contact-info .contact-button img {
   #reservation .reservation-content .reservation-content__step .step-el .step-el__ttl {
     width: 100%;
     top: -44px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  #reservation .reservation-content .reservation-content__step .step-el .step-el__ttl {
+    top: -20%;
+    width: 95px;
   }
 }
 #reservation .reservation-content .reservation-content__step .step-el .step-el__ttl img {
@@ -2168,6 +2992,16 @@ header nav .contact-info .contact-button img {
     line-height: 1.7;
   }
 }
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  #reservation .reservation-content .reservation-content__step .step-el .step-el__txt {
+    font-size: 14px;
+  }
+}
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
+  #reservation .reservation-content .reservation-content__step .step-el .step-el__txt {
+    font-size: 16px;
+  }
+}
 #reservation .reservation-content .reservation-content__step .step-el .step-el__txt span {
   color: #000;
   background: #fff;
@@ -2214,6 +3048,11 @@ header nav .contact-info .contact-button img {
     transform: translateX(-41%) rotate(180deg);
   }
 }
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  #reservation .reservation-content .reservation-content__step .step-el:not(:last-child)::after {
+    top: 35%;
+  }
+}
 #reservation .reservation-content .reservation-content__step .step-el:nth-child(2)::after {
   top: 40%;
   right: -27%;
@@ -2225,6 +3064,11 @@ header nav .contact-info .contact-button img {
     top: 104%;
     right: 41%;
     transform: translateX(-41%) rotate(180deg);
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  #reservation .reservation-content .reservation-content__step .step-el:nth-child(2)::after {
+    top: 35%;
   }
 }
 #reservation .reservation-content .reservation-content__step .step-el:nth-child(2) {
@@ -2270,6 +3114,11 @@ header nav .contact-info .contact-button img {
     padding: 45px 0 75px;
   }
 }
+@media screen and (min-width: 1920px) {
+  #tenpo .tenpo-ttl {
+    padding-bottom: 105px;
+  }
+}
 #tenpo .tenpo-ttl .tenpo-ttl__sub {
   font-family: しっぽり明朝;
   font-weight: bold;
@@ -2295,6 +3144,11 @@ header nav .contact-info .contact-button img {
   #tenpo .tenpo-ttl h2 {
     width: 90%;
     font-size: 30px;
+  }
+}
+@media screen and (min-width: 1920px) {
+  #tenpo .tenpo-ttl h2 {
+    width: 40%;
   }
 }
 #tenpo .tenpo-ttl h2::after {
@@ -2336,6 +3190,25 @@ header nav .contact-info .contact-button img {
     justify-content: center;
   }
 }
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  #tenpo .accordion {
+    padding: 15px 90px 15px 45px;
+    width: 80%;
+    font-size: 20px;
+  }
+}
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
+  #tenpo .accordion {
+    padding: 15px 90px 15px 45px;
+    width: 70%;
+  }
+}
+@media screen and (min-width: 1920px) {
+  #tenpo .accordion {
+    width: 40%;
+    margin-bottom: 75px;
+  }
+}
 #tenpo .accordion h3 {
   font-family: "Yu Gothic";
 }
@@ -2359,6 +3232,18 @@ header nav .contact-info .contact-button img {
   #tenpo .accordion::after {
     width: 40px;
     font-size: 25px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  #tenpo .accordion::after {
+    font-size: 30px;
+    width: 45px;
+  }
+}
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
+  #tenpo .accordion::after {
+    font-size: 32px;
+    width: 50px;
   }
 }
 #tenpo .accordion__active::after {
@@ -2389,6 +3274,21 @@ header nav .contact-info .contact-button img {
     margin-bottom: 0;
   }
 }
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  #tenpo .accordion__panel {
+    width: 80%;
+  }
+}
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
+  #tenpo .accordion__panel {
+    width: 70%;
+  }
+}
+@media screen and (min-width: 1920px) {
+  #tenpo .accordion__panel {
+    width: 40%;
+  }
+}
 #tenpo .accordion__panel .accordion__panel-el {
   background-color: #FFF5F5;
   font-family: "Yu Gothic";
@@ -2401,6 +3301,11 @@ header nav .contact-info .contact-button img {
 @media screen and (max-width: 767px) {
   #tenpo .accordion__panel .accordion__panel-el {
     width: 100%;
+    padding: 20px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  #tenpo .accordion__panel .accordion__panel-el {
     padding: 20px;
   }
 }
@@ -2420,6 +3325,12 @@ header nav .contact-info .contact-button img {
     margin-bottom: 5px;
   }
 }
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  #tenpo .accordion__panel .accordion__panel-el h4 {
+    font-size: 20px;
+    margin-bottom: 5px;
+  }
+}
 #tenpo .accordion__panel .accordion__panel-el p {
   font-size: 16px;
   width: 100%;
@@ -2427,7 +3338,16 @@ header nav .contact-info .contact-button img {
 @media screen and (max-width: 767px) {
   #tenpo .accordion__panel .accordion__panel-el p {
     font-size: 14px;
-    width: 100%;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  #tenpo .accordion__panel .accordion__panel-el p {
+    font-size: 13px;
+  }
+}
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
+  #tenpo .accordion__panel .accordion__panel-el p {
+    font-size: 14px;
   }
 }
 #tenpo .accordion__panel .accordion__panel-el .line-button {
@@ -2442,6 +3362,11 @@ header nav .contact-info .contact-button img {
   text-decoration: none;
   font-weight: bold;
 }
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  #tenpo .accordion__panel .accordion__panel-el .line-button {
+    width: 100%;
+  }
+}
 #tenpo .accordion__panel.open {
   display: flex;
   max-height: 1000px; /* sufficiently large max-height to allow smooth transition */
@@ -2454,6 +3379,11 @@ header nav .contact-info .contact-button img {
 @media screen and (max-width: 767px) {
   #company {
     padding-top: 40px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  #company {
+    padding-top: 120px;
   }
 }
 #company .company-ttl {
@@ -2478,6 +3408,26 @@ header nav .contact-info .contact-button img {
   #company .company-content {
     width: 90%;
     padding-bottom: 120px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  #company .company-content {
+    width: 80%;
+  }
+}
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
+  #company .company-content {
+    width: 70%;
+  }
+}
+@media screen and (min-width: 1920px) {
+  #company .company-content {
+    padding-bottom: 150px;
+  }
+}
+@media screen and (min-width: 1920px) {
+  #company .company-content {
+    width: 40%;
   }
 }
 #company .company-content .company-content__detail {
