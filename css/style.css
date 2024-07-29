@@ -1787,7 +1787,7 @@ header nav .contact-info .contact-button img {
   height: 2px;
   flex-grow: 1;
   top: 55%;
-  width: 32%;
+  width: 45%;
   background-color: #b53938;
 }
 @media screen and (max-width: 767px) {
@@ -1813,7 +1813,7 @@ header nav .contact-info .contact-button img {
   }
 }
 #careful .container__ttl::before {
-  left: -20%;
+  left: -37%;
 }
 @media screen and (max-width: 767px) {
   #careful .container__ttl::before {
@@ -1836,7 +1836,7 @@ header nav .contact-info .contact-button img {
   }
 }
 #careful .container__ttl::after {
-  right: -20%;
+  right: -37%;
 }
 @media screen and (max-width: 767px) {
   #careful .container__ttl::after {
