@@ -2437,6 +2437,7 @@ header nav .contact-info .contact-button img {
 @media screen and (min-width: 1920px) {
   #qna .accordion__panel {
     width: 40%;
+    margin-top: -75px;
   }
 }
 #qna .accordion__panel::before {
