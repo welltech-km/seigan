@@ -2269,7 +2269,7 @@ header nav .contact-info .contact-button img {
 }
 @media screen and (min-width: 1920px) {
   #qna .qna-ttl {
-    padding-bottom: 105px;
+    padding: 105px 0;
   }
 }
 #qna .qna-ttl .qna-ttl__sub {
@@ -2701,6 +2701,11 @@ header nav .contact-info .contact-button img {
 #reservation .reservation-ttl {
   padding: 45px 0;
 }
+@media screen and (min-width: 1920px) {
+  #reservation .reservation-ttl {
+    padding: 105px 0;
+  }
+}
 #reservation .reservation-ttl .reservation-ttl__sub {
   font-family: しっぽり明朝;
   font-weight: bold;
@@ -3121,7 +3126,7 @@ header nav .contact-info .contact-button img {
 }
 @media screen and (min-width: 1920px) {
   #tenpo .tenpo-ttl {
-    padding-bottom: 105px;
+    padding: 105px 0;
   }
 }
 #tenpo .tenpo-ttl .tenpo-ttl__sub {
