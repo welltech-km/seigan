@@ -1,2908 +1,3504 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap');
-@import 'variables';
-@import 'mixins';
-@import 'reset';
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a:visited {
+  text-decoration: none;
+}
 
 body {
-    font-family: $body-font;
-    color: $text-color;
-    line-height: 1.6;
-    background-color: $background-color;
-    font-weight: 500;
+  font-family: "DNPShueiMinPr6";
+  color: #282828;
+  line-height: 1.6;
+  background-color: #fcfafa;
+  font-weight: 500;
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: $heading-font;
-    font-weight: 700;
+  font-family: "DNPShueiMinPr6";
+  font-weight: 700;
 }
 
-.br-sp{
-    display: none;
-@include sp{
+.br-sp {
+  display: none;
+}
+@media screen and (max-width: 767px) {
+  .br-sp {
     display: block;
+  }
 }
+
+.br-spntab {
+  display: none;
 }
-.br-spntab{
-    display: none;
-    @include spntab{
-        display: block;
-    }
+@media screen and (max-width: 1023px) {
+  .br-spntab {
+    display: block;
+  }
 }
 
 .section-title {
-    font-size: 2.5rem;
-    text-align: center;
-    margin-bottom: 50px;
-    color: $main-color;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    position: relative;
-    
-    &::after {
-        content: '';
-        display: block;
-        width: 50px;
-        height: 3px;
-        background-color: $main-color;
-        margin: 20px auto 0;
-    }
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 50px;
+  color: #b1382b;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  position: relative;
+}
+.section-title::after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 3px;
+  background-color: #b1382b;
+  margin: 20px auto 0;
 }
 
 header {
-    background-color: $accent-color;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    padding: $header-padding;
-    @include text-center;
-    position: -webkit-sticky;
-    position: sticky;
-    top: 0;
-    width: 100%; 
-    z-index: 1000; 
-
-    .logo {
-        font-size: 2rem;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        @include sp{
-            justify-content: space-between;
-        }
-        img {
-            margin-right: 10px;
-            width: 90%;
-            max-width: 250px;
-            @include sp{
-                width: 70%;
-            }
-        }
-    }
-
-    nav {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        max-width: 80%;
-        margin: 0 auto;
-        padding: 0 20px;
-        @include sp{
-            max-width: 100%;
-            padding: 0 10px;
-        }
-
-        .nav-links {
-            display: none;
-
-            li {
-                display: inline-block;
-                margin: 0 10px;
-
-                a {
-                    color: $text-color;
-                    text-decoration: none;
-                    &:hover {
-                        color: $main-color;
-                    }
-                }
-            }
-        }
-
-        .contact-info {
-            display: flex;
-            align-items: center;
-
-            .phone {
-                margin-right: 20px;
-            }
-
-            .contact-button {
-                @include button-style;
-                img{
-                    width: 200px;
-                    @include sp{
-                        width: 150px;
-                    }
-                }
-            }
-        }
-    }
+  background-color: #fff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 10px 0;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+header .logo {
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media screen and (max-width: 767px) {
+  header .logo {
+    justify-content: space-between;
+  }
+}
+header .logo img {
+  margin-right: 10px;
+  width: 90%;
+  max-width: 250px;
+}
+@media screen and (max-width: 767px) {
+  header .logo img {
+    width: 70%;
+  }
+}
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 80%;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+@media screen and (max-width: 767px) {
+  header nav {
+    max-width: 100%;
+    padding: 0 10px;
+  }
+}
+header nav .nav-links {
+  display: none;
+}
+header nav .nav-links li {
+  display: inline-block;
+  margin: 0 10px;
+}
+header nav .nav-links li a {
+  color: #282828;
+  text-decoration: none;
+}
+header nav .nav-links li a:hover {
+  color: #b1382b;
+}
+header nav .contact-info {
+  display: flex;
+  align-items: center;
+}
+header nav .contact-info .phone {
+  margin-right: 20px;
+}
+header nav .contact-info .contact-button {
+  text-decoration: none;
+}
+header nav .contact-info .contact-button img {
+  width: 200px;
+}
+@media screen and (max-width: 767px) {
+  header nav .contact-info .contact-button img {
+    width: 150px;
+  }
 }
 
 .fv {
+  width: 100%;
+  background: url("https://welltech-km.github.io/seigan/img/bg_pc.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+  user-select: none; /* CSS3 */
+  -webkit-user-select: none; /* Safari、Chromeなど */
+  -webkit-user-drag: none;
+  -moz-user-select: none;
+}
+@media screen and (max-width: 767px) {
+  .fv {
+    margin-top: 0;
+    background: unset;
+  }
+}
+.fv .fv-container {
+  max-width: 1920px;
+  aspect-ratio: 160/77;
+  text-align: center;
+  margin: 0 auto -12px;
+}
+@media screen and (max-width: 767px) {
+  .fv .fv-container {
     width: 100%;
-    background: url("https://welltech-km.github.io/seigan/img/bg_pc.webp");
-    background-size: cover;
-    background-repeat: no-repeat;
-    user-select: none; /* CSS3 */
-    -webkit-user-select: none; /* Safari、Chromeなど */
-    -webkit-user-drag: none;
-    -moz-user-select: none;
-    @include sp {
-        margin-top: 0;
-        background: unset;
-    }
-    .fv-container{
-        max-width: 1920px;
-        aspect-ratio: 160/77;
-        text-align: center;
-        margin: 0 auto -12px;
-        @include sp{
-            width: 100%;
-        }
-    }
-    img {
-        width: 100%;
-    }
+  }
+}
+.fv img {
+  width: 100%;
 }
 
-
-
 #cta {
-    background-size: cover;
-    padding-top: 1em;
+  background-size: cover;
+  padding-top: 1em;
+  width: 100%;
+  background-image: url("https://welltech-km.github.io/seigan/img/bg-cta.webp");
+  background-repeat: no-repeat;
+  max-height: 452px;
+  position: relative;
+  z-index: 1;
+}
+@media screen and (max-width: 767px) {
+  #cta {
+    padding-top: 0.5em;
+  }
+}
+#cta .cta-price {
+  background-size: cover;
+  width: 100%;
+  background-image: url("https://welltech-km.github.io/seigan/img/cta-price-bg.webp");
+  background-repeat: no-repeat;
+}
+#cta .cta-price img {
+  display: block;
+  width: min(50%, 1066px);
+  margin: 0 auto;
+  padding: 1.5em 0;
+}
+@media screen and (max-width: 767px) {
+  #cta .cta-price img {
     width: 100%;
-    background-image: url("https://welltech-km.github.io/seigan/img/bg-cta.webp");
-    background-repeat: no-repeat;
-    max-height: 452px;
-    position: relative;
-    z-index: 1;
-    @include sp{
-        padding-top: 0.5em;
-    }
-    .cta-price{
-        background-size: cover;
-        width: 100%;
-        background-image: url("https://welltech-km.github.io/seigan/img/cta-price-bg.webp");
-        background-repeat: no-repeat;
-        img{
-        display: block;
-        width: min(50%, 1066px);
-        margin: 0 auto;
-        padding: 1.5em 0;
-        @include sp {
-            width: 100%;
-            background-image: none;
-            padding: 0;
-        }
-        }
-    }
-    .cta-btn {
-        .cta-btn__txt{
-            width: min(35%,738px);
-            margin: 1em auto 0;
-            color: #fff;
-            font-size: min(1.5vw,2em);
-            font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
-            font-weight: bold;
-            text-align: center;
-            @include sp{
-                width: 100%;
-                font-size: 1.15em;
-            }
-            @include tab{
-                width: 100%;
-                font-size: 1.35em;
-            }
-        }
-        .cta-btn__el{
-            display: block;
-            width: min(35%,738px);
-            margin: 0.75em auto 0;
-        @include button-style;
-        @include sp{
-            width: 90%;
-        }
-        @include tab{
-            width: 50%;
-        }
-        img{
-            width: 100%;
-        }
-        }
-    }
-    .cta-footer{
-        background: url('https://welltech-km.github.io/seigan/img/bg-cta-footer.webp');
-    }
+    background-image: none;
+    padding: 0;
+  }
+}
+#cta .cta-btn .cta-btn__txt {
+  width: min(35%, 738px);
+  margin: 1em auto 0;
+  color: #fff;
+  font-size: min(1.5vw, 2em);
+  font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
+  font-weight: bold;
+  text-align: center;
+}
+@media screen and (max-width: 767px) {
+  #cta .cta-btn .cta-btn__txt {
+    width: 100%;
+    font-size: 1.15em;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  #cta .cta-btn .cta-btn__txt {
+    width: 100%;
+    font-size: 1.35em;
+  }
+}
+#cta .cta-btn .cta-btn__el {
+  display: block;
+  width: min(35%, 738px);
+  margin: 0.75em auto 0;
+  text-decoration: none;
+}
+@media screen and (max-width: 767px) {
+  #cta .cta-btn .cta-btn__el {
+    width: 90%;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  #cta .cta-btn .cta-btn__el {
+    width: 50%;
+  }
+}
+#cta .cta-btn .cta-btn__el img {
+  width: 100%;
+}
+#cta .cta-footer {
+  background: url("https://welltech-km.github.io/seigan/img/bg-cta-footer.webp");
 }
 
 #issues {
-    background: url('https://welltech-km.github.io/seigan/img/bg-issues.webp');
-    aspect-ratio: 480/343;
-    text-align: center;
-    background-repeat: no-repeat;
-    background-size: contain;
-    padding-top: min(3vw,5em);
-    @include sp {
-        aspect-ratio: unset!important;
-        background-repeat: repeat;
-        background-size: cover;
-        padding-top: 105px;
-        padding-bottom: 75px;
-        position: relative;
-        overflow: hidden;
-    }
-    @include monitor{
+  background: url("https://welltech-km.github.io/seigan/img/bg-issues.webp");
+  aspect-ratio: 480/343;
+  text-align: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  padding-top: min(3vw, 5em);
+}
+@media screen and (max-width: 767px) {
+  #issues {
+    aspect-ratio: unset !important;
+    background-repeat: repeat;
+    background-size: cover;
+    padding-top: 105px;
+    padding-bottom: 75px;
+    position: relative;
+    overflow: hidden;
+  }
+}
+@media screen and (min-width: 1920px) {
+  #issues {
     padding-top: min(5vw, 11em);
     height: min(70vw, 89em);
     background-repeat: repeat-x;
     width: 100%;
-    }
-    .issues-frame{
-        aspect-ratio: 263/155;
-        position: relative;
-        max-width: 1920px;
-        margin: 0 auto;
-        background: url("https://welltech-km.github.io/seigan/img/issues-frame.webp");
-        background-size: contain;
-        background-repeat: no-repeat;
-        @include sp{
-            display: block;
-            background: unset;
-            width: 85%;
-            background: #fff;
-            filter: drop-shadow(8px 8px 10px rgba(216, 207, 223, 0.16));
-            border-radius: 16px;
-            background-size: cover;
-            aspect-ratio: unset;
-        }
-    img{
-        width: min(100%, 1920px);
-    }
-    .sp-circle{
-        @include sp{
-            width: 87%;
-            height: 60%;
-            border-radius: 170px/70px;
-            position: absolute;
-            top: -55px;
-            background: #fff;
-            z-index: -1;
-            left: 50%;
-            transform: translateX(-50%);
-            -webkit-transform: translateX(-50%);
-            -ms-transform: translateX(-50%);
-        }
-    }
-    h2{
-        font-family: DNPShueiMinPr6;
-        font-weight: 500;
-        font-size: min(3vw, 3.6em);
-        letter-spacing: 0.04em;
-        line-height: min(4.2vw, 76px);
-        text-align: center;
-        color: #5f5fa3;
-        position: absolute;
-        top: 14%;
-        left: 37.8%;
-        aspect-ratio: 445/182;
-        @include sp{
-            font-size: 27px;
-            text-align: center;
-            line-height: 1.6;
-            width: 90%;
-            margin: 0 auto;
-            display: block;
-            left: 50%;
-            transform: translateX(-50%);
-            -webkit-transform: translateX(-50%);
-            -ms-transform: translateX(-50%);
-            top: -45px;
-        }
-    span {
-        font-size: 1.35em;
-        position: relative;
-        z-index: 1;
-    }
-    span::before{
-        position: absolute;
-        content: "";
-        background-color: #F0F1FF;
-        width: 100%;
-        height: 24px;
-        display: inline-block;
-        bottom: 0;
-        left: 0;
-        z-index: -1;
-    }
-    }
-    .issue_box-container{
-        max-width: 927px;
-        aspect-ratio: 927/559;
-        position: absolute;
-        top: 31%;
-        left: 27.6%;
-        @include sp{
-            max-width: 95%;
-            width: 95%;
-            position: initial;
-            margin: 0 auto;
-            padding: 75px 10px 30px;
-            aspect-ratio: unset;
-        }
-        @include tab{
-            left: 26.4%;
-        }
-        @include pc{
-            left: 26.8%;
-        }
-        @include pc-large{
-            left: 27.3%;
-        }
-        @include monitor{
-            left: 27.4%;
-        }
-    }
-    .issue_box{
-        aspect-ratio: 927/69;
-        background: #fff;
-        border: 3px solid #edf0ff;
-        max-width: 927px;
-        font-size: min(1.3vw,31px);
-        line-height: min(2vw,49px);
-        text-align: left;
-        color: #5a3736;
-        @include sp{
-            font-size: 15px;
-            line-height: 1.4;
-            aspect-ratio: unset!important;
-            max-width: 100%;
-        }
-        @include tab{
-            font-size: min(1.35vw,13.5px);
-            line-height: 1.4;
-        }
-        @include tab{
-            font-size: min(1.32vw, 20px);
-            line-height: 1.4;
-        }
-        @include pc{
-            font-size: min(1.34vw, 21px);
-        }
-        @include pc-large{
-            font-size: min(1.4vw, 27px);
-        }
-        @include monitor{
-            font-size: min(1.44vw,28px);
-        }
-    }
-    .issue_box:not(:last-child){
-        margin-bottom: 1em;
-    }
-    .check-box{
-        box-sizing: border-box;
-        cursor: pointer;
-        display: inline-block;
-        padding: 5px 30px;
-        position: relative;
-        width: auto;
-        @include sp{
-            padding-left: 40px;
-            display: flex;
-            justify-content: flex-start;
-        }
-        input{
-            appearance: none;
-        }
-        .check-box__text{
-            padding-left: 35px;
-            @include sp{
-                padding-left: 0;
-            }
-            @include tab{
-                padding-left: 15px;
-            }
-            @include monitor{
-                padding-left: 25px;
-            }
-        }
-    }
-    .check-box::before{
-        background: #fff;
-        border: 2px solid #DDCCCC;
-        border-radius: 3px;
-        content: '';
-        display: block;
-        height: 18px;
-        left: 5px;
-        margin-top: -8px;
-        position: absolute;
-        top: 46%;
-        width: 18px;
-        @include sp{
-            top: 40%;
-        }
-        @include tab{
-            width: min(1.8vw, 17px);
-            height: min(1.8vw, 17px);
-        }
-        @include pc-large{
-            width: min(2vw, 20px);
-            height: min(2vw, 20px);
-            left: 8px;
-        }
-        @include monitor{
-            width: min(2.2vw, 22px);
-            height: min(2.2vw, 22px);
-            left: 10px;
-        }
-    }
-    }
-    .check-box__checked{
-        position: relative;
-    }
-    .check-box__checked::after{
-        border-right: 5px solid #B53938;
-        border-bottom: 5px solid #B53938;
-        content: '';
-        display: block;
-        height: 20px;
-        left: 18px;
-        margin-top: -16px;
-        opacity: 1;
-        position: absolute;
-        top: 50%;
-        transform: rotate(45deg);
-        width: 9px;
-        @include sp{
-            height: 15px;
-            left: 12px;
-            width: 8px;
-        }
-    }
-    .issues-frame::before{
-        @include sp{
-            position: absolute;
-            content: '';
-            display: inline-block;
-            width: 68%;
-            height: auto;
-            background-image: url("https://welltech-km.github.io/seigan/img/issues-bgleft_sp.webp");
-            background-size: contain;
-            vertical-align: middle;
-            aspect-ratio: 1189/2055;
-            bottom: -50px;
-            left: -165px;
-            background-repeat: no-repeat;
-        }
-    }
-    .issues-frame::after{
-        @include sp{
-            position: absolute;
-            content: '';
-            display: inline-block;
-            width: 68%;
-            height: auto;
-            background-image: url("https://welltech-km.github.io/seigan/img/issues-bgright_sp.webp");
-            background-size: contain;
-            vertical-align: middle;
-            aspect-ratio: 1189/2055;
-            top: -65px;
-            right: -175px;
-        }
-    }
-
-    ul {
-        list-style-type: none;
-        padding: 0;
-        display: inline-block;
-        text-align: left;
-
-        li {
-            background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgdmlld0JveD0iMCAwIDE2IDE2Ij48cGF0aCBkPSJNMTIuMzU2IDMuMzU2bC0yLjc3NyAyLjc3NyA0LjA2NCA0LjA2NEw4IDEyTDEuOTIzIDYuNTI0bDIuNzctMi43NzdMOS42IDEwLjQzMnoiIGZpbGw9IiMwMDAiLz48L3N2Zz4=') no-repeat left center;
-            padding-left: 30px;
-            margin: 10px 0;
-        }
-    }
-
-    .issue-images {
-        display: flex;
-        justify-content: center;
-        margin-top: 30px;
-
-        img {
-            width: 150px;
-            height: auto;
-            margin: 0 20px;
-            border-radius: 50%;
-        }
-    }
+  }
 }
-#issues::before{
-    @include sp{
+#issues .issues-frame {
+  aspect-ratio: 263/155;
+  position: relative;
+  max-width: 1920px;
+  margin: 0 auto;
+  background: url("https://welltech-km.github.io/seigan/img/issues-frame.webp");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+@media screen and (max-width: 767px) {
+  #issues .issues-frame {
+    display: block;
+    background: unset;
+    width: 85%;
+    background: #fff;
+    filter: drop-shadow(8px 8px 10px rgba(216, 207, 223, 0.16));
+    border-radius: 16px;
+    background-size: cover;
+    aspect-ratio: unset;
+  }
+}
+#issues .issues-frame img {
+  width: min(100%, 1920px);
+}
+@media screen and (max-width: 767px) {
+  #issues .issues-frame .sp-circle {
+    width: 87%;
+    height: 60%;
+    border-radius: 170px/70px;
+    position: absolute;
+    top: -55px;
+    background: #fff;
+    z-index: -1;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+  }
+}
+#issues .issues-frame h2 {
+  font-family: DNPShueiMinPr6;
+  font-weight: 500;
+  font-size: min(3vw, 3.6em);
+  letter-spacing: 0.04em;
+  line-height: min(4.2vw, 76px);
+  text-align: center;
+  color: #5f5fa3;
+  position: absolute;
+  top: 14%;
+  left: 37.8%;
+  aspect-ratio: 445/182;
+}
+@media screen and (max-width: 767px) {
+  #issues .issues-frame h2 {
+    font-size: 27px;
+    text-align: center;
+    line-height: 1.6;
+    width: 90%;
+    margin: 0 auto;
+    display: block;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    top: -45px;
+  }
+}
+#issues .issues-frame h2 span {
+  font-size: 1.35em;
+  position: relative;
+  z-index: 1;
+}
+#issues .issues-frame h2 span::before {
+  position: absolute;
+  content: "";
+  background-color: #F0F1FF;
+  width: 100%;
+  height: 24px;
+  display: inline-block;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+}
+#issues .issues-frame .issue_box-container {
+  max-width: 927px;
+  aspect-ratio: 927/559;
+  position: absolute;
+  top: 31%;
+  left: 27.6%;
+}
+@media screen and (max-width: 767px) {
+  #issues .issues-frame .issue_box-container {
+    max-width: 95%;
+    width: 95%;
+    position: initial;
+    margin: 0 auto;
+    padding: 75px 10px 30px;
+    aspect-ratio: unset;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  #issues .issues-frame .issue_box-container {
+    left: 26.4%;
+  }
+}
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
+  #issues .issues-frame .issue_box-container {
+    left: 26.8%;
+  }
+}
+@media screen and (min-width: 1440px) {
+  #issues .issues-frame .issue_box-container {
+    left: 27.3%;
+  }
+}
+@media screen and (min-width: 1920px) {
+  #issues .issues-frame .issue_box-container {
+    left: 27.4%;
+  }
+}
+#issues .issues-frame .issue_box {
+  aspect-ratio: 927/69;
+  background: #fff;
+  border: 3px solid #edf0ff;
+  max-width: 927px;
+  font-size: min(1.3vw, 31px);
+  line-height: min(2vw, 49px);
+  text-align: left;
+  color: #5a3736;
+}
+@media screen and (max-width: 767px) {
+  #issues .issues-frame .issue_box {
+    font-size: 15px;
+    line-height: 1.4;
+    aspect-ratio: unset !important;
+    max-width: 100%;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  #issues .issues-frame .issue_box {
+    font-size: min(1.35vw, 13.5px);
+    line-height: 1.4;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  #issues .issues-frame .issue_box {
+    font-size: min(1.32vw, 20px);
+    line-height: 1.4;
+  }
+}
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
+  #issues .issues-frame .issue_box {
+    font-size: min(1.34vw, 21px);
+  }
+}
+@media screen and (min-width: 1440px) {
+  #issues .issues-frame .issue_box {
+    font-size: min(1.4vw, 27px);
+  }
+}
+@media screen and (min-width: 1920px) {
+  #issues .issues-frame .issue_box {
+    font-size: min(1.44vw, 28px);
+  }
+}
+#issues .issues-frame .issue_box:not(:last-child) {
+  margin-bottom: 1em;
+}
+#issues .issues-frame .check-box {
+  box-sizing: border-box;
+  cursor: pointer;
+  display: inline-block;
+  padding: 5px 30px;
+  position: relative;
+  width: auto;
+}
+@media screen and (max-width: 767px) {
+  #issues .issues-frame .check-box {
+    padding-left: 40px;
+    display: flex;
+    justify-content: flex-start;
+  }
+}
+#issues .issues-frame .check-box input {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+#issues .issues-frame .check-box .check-box__text {
+  padding-left: 35px;
+}
+@media screen and (max-width: 767px) {
+  #issues .issues-frame .check-box .check-box__text {
+    padding-left: 0;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  #issues .issues-frame .check-box .check-box__text {
+    padding-left: 15px;
+  }
+}
+@media screen and (min-width: 1920px) {
+  #issues .issues-frame .check-box .check-box__text {
+    padding-left: 25px;
+  }
+}
+#issues .issues-frame .check-box::before {
+  background: #fff;
+  border: 2px solid #DDCCCC;
+  border-radius: 3px;
+  content: "";
+  display: block;
+  height: 18px;
+  left: 5px;
+  margin-top: -8px;
+  position: absolute;
+  top: 46%;
+  width: 18px;
+}
+@media screen and (max-width: 767px) {
+  #issues .issues-frame .check-box::before {
+    top: 40%;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  #issues .issues-frame .check-box::before {
+    width: min(1.8vw, 17px);
+    height: min(1.8vw, 17px);
+  }
+}
+@media screen and (min-width: 1440px) {
+  #issues .issues-frame .check-box::before {
+    width: min(2vw, 20px);
+    height: min(2vw, 20px);
+    left: 8px;
+  }
+}
+@media screen and (min-width: 1920px) {
+  #issues .issues-frame .check-box::before {
+    width: min(2.2vw, 22px);
+    height: min(2.2vw, 22px);
+    left: 10px;
+  }
+}
+#issues .check-box__checked {
+  position: relative;
+}
+#issues .check-box__checked::after {
+  border-right: 5px solid #B53938;
+  border-bottom: 5px solid #B53938;
+  content: "";
+  display: block;
+  height: 20px;
+  left: 18px;
+  margin-top: -16px;
+  opacity: 1;
+  position: absolute;
+  top: 50%;
+  transform: rotate(45deg);
+  width: 9px;
+}
+@media screen and (max-width: 767px) {
+  #issues .check-box__checked::after {
+    height: 15px;
+    left: 12px;
+    width: 8px;
+  }
+}
+@media screen and (max-width: 767px) {
+  #issues .issues-frame::before {
+    position: absolute;
+    content: "";
+    display: inline-block;
+    width: 68%;
+    height: auto;
+    background-image: url("https://welltech-km.github.io/seigan/img/issues-bgleft_sp.webp");
+    background-size: contain;
+    vertical-align: middle;
+    aspect-ratio: 1189/2055;
+    bottom: -50px;
+    left: -165px;
+    background-repeat: no-repeat;
+  }
+}
+@media screen and (max-width: 767px) {
+  #issues .issues-frame::after {
+    position: absolute;
+    content: "";
+    display: inline-block;
+    width: 68%;
+    height: auto;
+    background-image: url("https://welltech-km.github.io/seigan/img/issues-bgright_sp.webp");
+    background-size: contain;
+    vertical-align: middle;
+    aspect-ratio: 1189/2055;
+    top: -65px;
+    right: -175px;
+  }
+}
+#issues ul {
+  list-style-type: none;
+  padding: 0;
+  display: inline-block;
+  text-align: left;
+}
+#issues ul li {
+  background: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgdmlld0JveD0iMCAwIDE2IDE2Ij48cGF0aCBkPSJNMTIuMzU2IDMuMzU2bC0yLjc3NyAyLjc3NyA0LjA2NCA0LjA2NEw4IDEyTDEuOTIzIDYuNTI0bDIuNzctMi43NzdMOS42IDEwLjQzMnoiIGZpbGw9IiMwMDAiLz48L3N2Zz4=") no-repeat left center;
+  padding-left: 30px;
+  margin: 10px 0;
+}
+#issues .issue-images {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+#issues .issue-images img {
+  width: 150px;
+  height: auto;
+  margin: 0 20px;
+  border-radius: 50%;
+}
+
+@media screen and (max-width: 767px) {
+  #issues::before {
     position: absolute;
     width: 200px;
     height: 100px;
-    -moz-border-radius: 100px / 50px;
-    -webkit-border-radius: 100px / 50px;
-    border-radius: 100px / 50px;
-    }
+    border-radius: 100px/50px;
+  }
 }
 
 #features {
-    margin-top: min(-2vw,-4em);
-    background: #fff;
-    @include sp{
-        margin-top: 0;
-    }
-    h2{
-        img{
-            width: 100%;
-            vertical-align: top;
-        }
-    }
-    .features-recommend{
-        width: 100%;
-        aspect-ratio:1920/419;
-        display: block;
-        border: 0;
-        padding: 0;
-        margin: 0;
-    }
-    .features-woman {
-        max-width: 1920px;
-        margin: 0 auto;
-    }
-    .features-woman img{
-        aspect-ratio: 640/301;
-        width: 75%;
-        display: block;
-        border: 0;
-        padding: 0;
-        margin: 0 auto;
-        @include sp{
-            width: 100%;
-        }
-    }
-    .features-effect{
-        aspect-ratio: 960/192;
-        img{
-            width: 100%;
-        }
-    }
+  margin-top: min(-2vw, -4em);
+  background: #fff;
+}
+@media screen and (max-width: 767px) {
+  #features {
+    margin-top: 0;
+  }
+}
+#features h2 img {
+  width: 100%;
+  vertical-align: top;
+}
+#features .features-recommend {
+  width: 100%;
+  aspect-ratio: 1920/419;
+  display: block;
+  border: 0;
+  padding: 0;
+  margin: 0;
+}
+#features .features-woman {
+  max-width: 1920px;
+  margin: 0 auto;
+}
+#features .features-woman img {
+  aspect-ratio: 640/301;
+  width: 75%;
+  display: block;
+  border: 0;
+  padding: 0;
+  margin: 0 auto;
+}
+@media screen and (max-width: 767px) {
+  #features .features-woman img {
+    width: 100%;
+  }
+}
+#features .features-effect {
+  aspect-ratio: 960/192;
+}
+#features .features-effect img {
+  width: 100%;
 }
 
-#effects{
-    background: url('https://welltech-km.github.io/seigan/img/bg-effect.webp');
-    aspect-ratio: 1920/4330;
+#effects {
+  background: url("https://welltech-km.github.io/seigan/img/bg-effect.webp");
+  aspect-ratio: 1920/4330;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-top: max(-3vw, -5em);
+}
+@media screen and (max-width: 767px) {
+  #effects {
+    margin-top: 0;
+    aspect-ratio: 2217/5000;
+  }
+}
+@media screen and (min-width: 1920px) {
+  #effects {
+    aspect-ratio: unset;
+  }
+}
+#effects .effects-container {
+  padding-top: min(8vw, 135px);
+}
+@media screen and (max-width: 767px) {
+  #effects .effects-container {
+    padding-top: 45px;
+  }
+}
+#effects .effects-container .effects-ttl {
+  width: 71.45833%;
+  background: #f4fcff;
+  box-shadow: 8px 8px 10px rgba(104, 161, 178, 0.16);
+  font-size: min(3.1vw, 60px);
+  line-height: min(4.8vw, 98px);
+  text-align: center;
+  color: #45160c;
+  display: flex;
+  vertical-align: middle;
+  justify-content: flex-end;
+  padding-bottom: 0.3em;
+  padding-right: 2em;
+}
+@media screen and (max-width: 767px) {
+  #effects .effects-container .effects-ttl {
+    width: 85%;
+    font-size: 19px;
+    padding: 15px 10px 15px 0;
+  }
+}
+@media screen and (min-width: 1920px) {
+  #effects .effects-container .effects-ttl {
+    font-size: 57px;
+  }
+}
+#effects .effects-container .effects-ttl span {
+  position: relative;
+}
+#effects .effects-container .effects-ttl span::before {
+  position: absolute;
+  content: "";
+  width: 35px;
+  height: 35px;
+  background: #5ebde0;
+  border-radius: 50px;
+  top: min(1.9vw, 1.7em);
+  left: -1.25em;
+}
+@media screen and (max-width: 767px) {
+  #effects .effects-container .effects-ttl span::before {
+    width: 20px;
+    height: 20px;
+    top: 2px;
+    left: -25px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  #effects .effects-container .effects-ttl span::before {
+    width: 22px;
+    height: 22px;
+    top: 65%;
+    transform: translateY(-65%);
+  }
+}
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
+  #effects .effects-container .effects-ttl span::before {
+    width: 25px;
+    height: 25px;
+    top: 70%;
+    transform: translateY(-70%);
+  }
+}
+#effects .effects-container .effects-lower {
+  display: flex;
+  max-width: 1100px;
+  margin: 0 auto;
+  gap: 15px;
+}
+@media screen and (max-width: 767px) {
+  #effects .effects-container .effects-lower {
+    max-width: 95%;
+  }
+}
+#effects .effects-container .effects-txt {
+  width: 44%;
+  font-weight: 500;
+  font-size: min(4vw, 24px);
+  line-height: 50px;
+  text-align: left;
+  color: #45160c;
+  margin-top: min(7vw, 90px);
+}
+@media screen and (max-width: 767px) {
+  #effects .effects-container .effects-txt {
+    margin-top: 30px;
+    font-size: 15px;
+    width: 60%;
+    line-height: 2.2;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  #effects .effects-container .effects-txt {
+    font-size: 22px;
+  }
+}
+@media screen and (min-width: 1920px) {
+  #effects .effects-container .effects-txt {
+    font-size: 24px;
+  }
+}
+#effects .effects-container .effects-img {
+  aspect-ratio: 488/410;
+  max-width: 488px;
+  margin-top: min(5vw, 45px);
+}
+@media screen and (max-width: 767px) {
+  #effects .effects-container .effects-img {
+    margin-top: 30px;
+    max-width: 35%;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  #effects .effects-container .effects-img {
+    max-width: 380px;
+  }
+}
+#effects .effects-container .effects-img img {
+  width: 75%;
+  display: block;
+  margin: 0 auto;
+}
+@media screen and (max-width: 767px) {
+  #effects .effects-container .effects-img img {
+    width: 100%;
+  }
+}
+#effects .effects-container:not(:first-child) {
+  padding-top: min(7.4vw, 180px);
+}
+@media screen and (max-width: 767px) {
+  #effects .effects-container:not(:first-child) {
+    padding-top: 45px;
+  }
+}
+#effects .effects-container:nth-child(2n) .effects-ttl {
+  justify-content: flex-start;
+  margin: 0 0 0 auto;
+  padding-left: 2em;
+}
+#effects .effects-container:nth-child(2) .effects-ttl {
+  background-color: #EFF3FF;
+}
+#effects .effects-container:nth-child(2) .effects-img {
+  aspect-ratio: 512/378;
+  max-width: 512px;
+}
+@media screen and (max-width: 767px) {
+  #effects .effects-container:nth-child(2) .effects-img {
+    margin-top: 30px;
+    max-width: 35%;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  #effects .effects-container:nth-child(2) .effects-img {
+    max-width: 380px;
+  }
+}
+#effects .effects-container:nth-child(2) .effects-ttl span::before {
+  background: #AFA1E5;
+}
+#effects .effects-container:nth-child(3) .effects-ttl {
+  background-color: #FFEEF4;
+}
+#effects .effects-container:nth-child(3) .effects-img {
+  aspect-ratio: 525/410;
+  max-width: 525px;
+}
+@media screen and (max-width: 767px) {
+  #effects .effects-container:nth-child(3) .effects-img {
+    margin-top: 30px;
+    max-width: 35%;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  #effects .effects-container:nth-child(3) .effects-img {
+    max-width: 380px;
+  }
+}
+#effects .effects-container:nth-child(3) .effects-ttl span::before {
+  background: #F492A0;
+}
+#effects .effects-container:nth-child(4) .effects-ttl {
+  background-color: #FFFDEB;
+}
+#effects .effects-container:nth-child(4) .effects-img {
+  aspect-ratio: 567/495;
+  max-width: 567px;
+}
+@media screen and (max-width: 767px) {
+  #effects .effects-container:nth-child(4) .effects-img {
+    margin-top: 30px;
+    max-width: 35%;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  #effects .effects-container:nth-child(4) .effects-img {
+    max-width: 380px;
+  }
+}
+#effects .effects-container:nth-child(4) .effects-ttl span::before {
+  background: #DBD06C;
+}
+#effects .effects-beauty {
+  max-width: 1400px;
+  aspect-ratio: 1400/1325;
+  background: url("https://welltech-km.github.io/seigan/img/beauty-bg.webp");
+  background-size: contain;
+  margin: 0 auto;
+}
+@media screen and (max-width: 767px) {
+  #effects .effects-beauty {
+    background: unset;
+    padding-bottom: 240px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  #effects .effects-beauty {
+    background: unset;
+    padding-bottom: 240px;
+  }
+}
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
+  #effects .effects-beauty {
+    background: unset;
+    margin-top: -60px;
+  }
+}
+#effects .effects-beauty .effects-beauty__ttl {
+  font-size: 60px;
+  letter-spacing: 0.03em;
+  line-height: 55px;
+  text-align: left;
+  color: #b53938;
+  max-width: 958px;
+  position: relative;
+  text-align: center;
+  margin: 0 auto;
+}
+@media screen and (max-width: 767px) {
+  #effects .effects-beauty .effects-beauty__ttl {
+    margin-top: 0;
+    font-size: 21px;
+    padding-top: 240px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  #effects .effects-beauty .effects-beauty__ttl {
+    padding-top: 0;
+    font-size: 35px;
+  }
+}
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
+  #effects .effects-beauty .effects-beauty__ttl {
+    font-size: 45px;
+    padding-top: 0;
+  }
+}
+#effects .effects-beauty .effects-beauty__ttl::after {
+  position: absolute;
+  content: url("https://welltech-km.github.io/seigan/img/beauty-title.png");
+  width: 958px;
+  aspect-ratio: 958/57;
+  top: 30px;
+  right: 0;
+}
+@media screen and (max-width: 767px) {
+  #effects .effects-beauty .effects-beauty__ttl::after {
+    content: "";
+    background: url("https://welltech-km.github.io/seigan/img/beauty-title.png");
     background-repeat: no-repeat;
-    background-size: cover;
-    margin-top: max(-3vw, -5em);
-    @include sp{
-        margin-top: 0;
-        aspect-ratio: 2217/5000;
-    }
-    @include monitor{
-            aspect-ratio: unset;
-    }
-    .effects-container{
-        padding-top: min(8vw,135px);
-        @include sp{
-            padding-top: 45px;
-        }
-        .effects-ttl{
-            width: 71.45833%;
-            background: #f4fcff;
-            box-shadow: 8px 8px 10px rgba(104, 161, 178, 0.16);
-            font-size: min(3.1vw,60px);
-            line-height: min(4.8vw, 98px);
-            text-align: center;
-            color: #45160c;
-            display: flex;
-            vertical-align: middle;
-            justify-content: flex-end;
-            padding-bottom: .3em;
-            padding-right: 2em;
-            @include sp{
-                width: 85%;
-                font-size: 19px;
-                padding: 15px 10px 15px 0;
-            }
-            @include monitor{
-                font-size: 57px;
-            }
-        }
-        .effects-ttl span{
-            position: relative;
-        }
-        .effects-ttl span::before{
-            position: absolute;
-            content: "";
-            width: 35px;
-            height: 35px;
-            background: #5ebde0;
-            border-radius: 50px;
-            top: min(1.9vw,1.7em);
-            left: -1.25em;
-            @include sp{
-                width: 20px;
-                height: 20px;
-                top: 2px;
-                left: -25px;
-            }
-            @include tab{
-                width: 22px;
-                height: 22px;
-                top: 65%;
-                transform: translateY(-65%);
-            }
-            @include pc{
-                width: 25px;
-                height: 25px;
-                top: 70%;
-                transform: translateY(-70%);
-            }
-        }
-        .effects-lower{
-            display: flex;
-            max-width: 1100px;
-            margin: 0 auto;
-            gap: 15px;
-            @include sp {
-                max-width: 95%;
-            }
-        }
-        .effects-txt{
-            width: 44%;
-            font-weight: 500;
-            font-size: min(4vw,24px);
-            line-height: 50px;
-            text-align: left;
-            color: #45160c;
-            margin-top: min(7vw,90px);
-            @include sp{
-                margin-top: 30px;
-                font-size: 15px;
-                width: 60%;
-                line-height: 2.2;
-            }
-            @include tab{
-                font-size: 22px;
-            }
-            @include monitor{
-                font-size: 24px;
-            }
-        }
-        .effects-img{
-            aspect-ratio: 488/410;
-            max-width: 488px;
-            margin-top: min(5vw,45px);
-            @include sp{
-                margin-top: 30px;
-                max-width: 35%;
-            }
-            @include tab{
-                max-width: 380px;
-            }
-            & img{
-                width: 75%;
-                display: block;
-                margin: 0 auto;
-                @include sp{
-                    width: 100%;
-                }
-            }
-        }
-    }
-    .effects-container:not(:first-child){
-        padding-top: min(7.4vw,180px);
-        @include sp{
-            padding-top: 45px;
-        }
-    }
-    .effects-container:nth-child(2n){
-        .effects-ttl{
-            justify-content: flex-start;
-            margin: 0 0 0 auto;
-            padding-left: 2em;
-        }
-    }
-    .effects-container:nth-child(2){
-        .effects-ttl{
-            background-color: #EFF3FF;
-        }
-        .effects-img{
-            aspect-ratio: 512/378;
-            max-width: 512px;
-                @include sp{
-                    margin-top: 30px;
-                    max-width: 35%;
-                }
-                @include tab{
-                    max-width: 380px;
-                }
-        }
-        .effects-ttl span::before{
-            background: #AFA1E5;
-        }
-    }
-    .effects-container:nth-child(3){
-        .effects-ttl{
-            background-color: #FFEEF4;
-        }
-        .effects-img{
-            aspect-ratio: 525/410;
-            max-width: 525px;
-            @include sp{
-                margin-top: 30px;
-                max-width: 35%;
-            }
-            @include tab{
-                max-width: 380px;
-            }
-        }
-        .effects-ttl span::before{
-            background: #F492A0;
-        }
-    }
-    .effects-container:nth-child(4){
-        .effects-ttl{
-            background-color: #FFFDEB;
-        }
-        .effects-img{
-            aspect-ratio: 567/495;
-            max-width: 567px;
-            @include sp{
-                margin-top: 30px;
-                max-width: 35%;
-            }
-            @include tab{
-                max-width: 380px;
-            }
-        }
-        .effects-ttl span::before{
-            background: #DBD06C;
-        }
-    }
-    .effects-beauty{
-        max-width: 1400px;
-        aspect-ratio: 1400/1325;
-        background: url('https://welltech-km.github.io/seigan/img/beauty-bg.webp');
-        background-size: contain;
-        margin: 0 auto;
-        @include sp{
-            background: unset;
-            padding-bottom: 240px;
-        }
-        @include tab{
-            background: unset;
-            padding-bottom: 240px;
-        }
-        @include pc{
-            background: unset;
-            margin-top: -60px;
-        }
-        .effects-beauty__ttl{
-            font-size: 60px;
-            letter-spacing: 0.03em;
-            line-height: 55px;
-            text-align: left;
-            color: #b53938;
-            max-width: 958px;
-            position: relative;
-            text-align: center;
-            margin: 0 auto;
-            @include sp{
-                margin-top: 0;
-                font-size: 21px;
-                padding-top: 240px;
-            }
-            @include tab{
-                padding-top: 0;
-                font-size: 35px;
-            }
-            @include pc{
-                font-size: 45px;
-                padding-top: 0;
-            }
-        }
-        .effects-beauty__ttl::after{
-            position: absolute;
-            content: url('https://welltech-km.github.io/seigan/img/beauty-title.png');
-            width: 958px;
-            aspect-ratio: 958/57;
-            top: 30px;
-            right: 0;
-            @include sp{
-                content: "";
-                background: url('https://welltech-km.github.io/seigan/img/beauty-title.png');
-                background-repeat: no-repeat;
-                background-size: contain;
-                width: 90%;
-                margin:0 auto;
-                left: 50%;
-                transform: translateX(-50%);
-                padding-top: 45px;
-                top: 95%;
-            }
-            @include tab{
-                content: "";
-                background: url('https://welltech-km.github.io/seigan/img/beauty-title.png');
-                background-repeat: no-repeat;
-                background-size: contain;
-                padding-top: 2em;
-                width: 80%;
-                margin: 0 auto;
-                left: 50%;
-                transform: translateX(-50%);
-                top: 90%;
-            }
-            @include pc{
-                content: "";
-                background: url('https://welltech-km.github.io/seigan/img/beauty-title.png');
-                background-repeat: no-repeat;
-                background-size: contain;
-                padding-top: 2em;
-                width: 80%;
-                margin: 0 auto;
-                left: 50%;
-                transform: translateX(-50%);
-                top: 90%;
-            }
-        }
-        .effects-beauty__fv{
-            max-width: 476px;
-            aspect-ratio: 476/262;
-            margin: 4em auto 0;
-            @include sp{
-                margin-top: 15px;
-                aspect-ratio: unset;
-            }
-            @include tab{
-                max-width: 350px;
-                margin: 3em auto 0;
-            }
-            @include pc{
-                max-width: 380px;
-                margin: 3em auto 0;
-            }
-            img {
-                width: 100%;
-                @include sp{
-                    width: 60%;
-                    display: block;
-                    margin: 0 auto;
-                }
-            }
-        }
-        .effects-beauty__txt{
-            line-height: 55px;
-            color: #b53938;
-            font-size: 35px;
-            text-align: center;
-            margin-top: 1em;
-            @include sp{
-                font-size: 18px;
-                line-height: 2;
-            }
-            @include tab{
-                font-size: 25px;
-                line-height: 1.8;
-                width: 80%;
-                margin: 15px auto 0;
-            }
-            @include pc{
-                font-size: 29px;
-                line-height: 1.8;
-                width: 80%;
-                margin: 15px auto 0;
-            }
-            span {
-                font-size: 1.25em;
-            }
-        }
-        .effects-beauty__detail{
-            display: flex;
-            max-width: 1000px;
-            margin: 3em auto 0;
-            gap: 15px;
-            @include sp{
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-            }
-            @include tab{
-                width: 80%;
-                max-width: unset;
-            }
-            @include pc{
-                width: 75%;
-                max-width: 830px;
-            }
-            p {
-                font-size: 28px;
-                color: #5a3736;
-                @include sp{
-                    font-size: 15px;
-                    width: 95%;
-                }
-                @include tab{
-                    font-size: 20px;
-                }
-                @include pc{
-                    font-size: 20px;
-                }
-            }
-            img{
-                max-width: 379px;
-                aspect-ratio: 379/233;
-                @include sp{
-                    width: 80%;
-                }
-                @include tab{
-                    width: 300px;
-                }
-                @include pc{
-                    width: 300px;
-                }
-            }
-        }
-    }
-}
-
-#explanations{
-    background: url('https://welltech-km.github.io/seigan/img/explanations-bg.webp') no-repeat;
     background-size: contain;
-    aspect-ratio: 1920/1813;
-    margin-top: -30em;
-    position: relative;
-    @include sp{
-        background-size: auto;
-        aspect-ratio: unset;
-        padding-top: 210px;
-        padding-bottom: 90px;
-        margin-top: -10em;
-    }
-    @include tab{
-        background-size: auto;
-        aspect-ratio: unset;
-        padding-top: 290px;
-        padding-bottom: 90px;
-        margin-top: -15em;
-    }
-    @include pc{
-        background-size: auto;
-        aspect-ratio: unset;
-        padding-top: 350px;
-        padding-bottom: 90px;
-        margin-top: -20em;
-    }
-    @include monitor{
-        margin-top: -35em;
-    }
-
-.explanations-container{
-    width: 57.2916%;
-    max-width: 1130px;
-    aspect-ratio: 1130 / 1310;
+    width: 90%;
     margin: 0 auto;
-    position: absolute;
-    background: url('https://welltech-km.github.io/seigan/img/explanations-container.webp') no-repeat center center;
-    background-size: contain;
-    top: 15em;
     left: 50%;
     transform: translateX(-50%);
-    @include sp{
-        width: 90%;
-        background-size: auto;
-        position: unset;
-        aspect-ratio: unset;
-        transform: unset;
-        position: relative;
-        top: 0;
-        left: 0;
-        padding-bottom: 60px;
-    }
-    @include tab{
-        width: 75%;
-        background-size: auto;
-        position: unset;
-        aspect-ratio: unset;
-        transform: unset;
-        position: relative;
-        top: 0;
-        left: 0;
-        padding-bottom: 60px;
-    }
-    @include pc{
-        width: 66%;
-        background-size: auto;
-        position: unset;
-        aspect-ratio: unset;
-        transform: unset;
-        position: relative;
-        top: 0;
-        left: 0;
-        padding-bottom: 60px;
-    }
-    @include monitor{
-        top: 20em;
-        width: 55%;
-    }
-    @include monitor-big{
-        top: 25em;
-    }
-    .explanations-container__ttl{
-        width: 87.545%;
-        border-radius: 58px;
-        background: #fff;
-        box-shadow: 5px 5px 8px rgba(175, 100, 100, 0.16);
-        font-size: 47px;
-        letter-spacing: 0.03em;
-        line-height: 80px;
-        color: #b53938;
-        text-align: center;
-        padding-bottom: 0.2em;
-        margin: -45px auto 0;
-        @include sp{
-            font-size: 25px;
-            line-height: 1.6;
-            position: absolute;
-            top: 0%;
-            left: 50%;
-            transform: translateX(-50%);
-        }
-        @include tab{
-            font-size: 35px;
-            line-height: 1.6;
-            position: absolute;
-            top: 0%;
-            left: 50%;
-            transform: translateX(-50%);
-        }
-        @include pc{
-            font-size: 36px;
-            line-height: 1.6;
-            position: absolute;
-            top: 0%;
-            left: 50%;
-            transform: translateX(-50%);
-        }
-    }
-    .explanations-container__img{
-        width: 48.636%;
-        margin: 1em auto 0;
-        @include sp{
-            width: 70%;
-            padding-top: 50px;
-        }
-        @include tab{
-            width: 70%;
-            padding-top: 50px;
-        }
-        @include pc{
-            width: 60%;
-            padding-top: 40px;
-        }
-        img{
-            width: 100%;
-        }
-    }
-    .explanations-container__txt{
-        width: 82.3636%;
-        margin: 0 auto;
-        font-size: 32px;
-        letter-spacing: 0.03em;
-        line-height: 1.6;
-        text-align: center;
-        color: #b53938;
-        @include sp{
-            font-size: 21px;
-            width: 90%;
-            margin-top: 15px;
-        }
-        @include tab{
-            font-size: 25px;
-            width: 90%;
-            margin-top: 15px;
-        }
-        @include pc{
-            font-size: 27px;
-            width: 90%;
-            margin-top: 15px;
-        }
-        @include monitor{
-            margin-top: 60px;
-        }
-        span {
-            font-size: 1.37em;
-            @include sp{
-                font-size: 1.25em;
-            }
-            @include tab{
-                font-size: 1.25em;
-            }
-            @include pc{
-                font-size: 1.25em;
-            }
-        }
-        .marker{
-            position: relative;
-            z-index: 1;
-        }
-        .marker::before{
-            background: #FFDCDC;
-            position: absolute;
-            content: "";
-            width: 100%;
-            height: 24px;
-            display: inline-block;
-            bottom: 0;
-            left: 0;
-            z-index: -1;
-            @include sp{
-                height: 15px;
-            }
-            @include tab{
-                height: 15px;
-            }
-            @include pc{
-                height: 15px;
-            }
-        }
-    }
-    .explanations-container__detail{
-        width: 82.3636%;
-        margin: 30px auto 0;
-        font-size: 23px;
-        line-height: 2;
-        text-align: center;
-        color: #45160c;
-        border-left: 2px solid #C07D6F;
-        border-right: 2px solid #C07D6F;
-        @include sp{
-            width: 95%;
-            padding: 0 5px;
-            font-size: 15px;
-        }
-        @include tab{
-            width: 95%;
-            padding: 0 5px;
-            font-size: 19px;
-        }
-        @include pc{
-            width: 95%;
-            padding: 0 5px;
-            font-size: 22px;
-        }
-        @include monitor{
-            margin-top: 60px;
-            font-size: 27px;
-        }
-    }
+    padding-top: 45px;
+    top: 95%;
+  }
 }
-}
-
-#step{
-    background: url('https://welltech-km.github.io/seigan/img/4step-bg.webp');
-    aspect-ratio: 1920/2016;
-    margin-top: -210px;
-    padding-bottom: 150px;
-    @include sp{
-        margin-top: -60px;
-        padding-top: 60px;
-        padding-bottom: 90px;
-    }
-    @include tab{
-        margin-top: -60px;
-        padding-top: 60px;
-        padding-bottom: 90px;
-    }
-    @include pc{
-        margin-top: -60px;
-        padding-top: 60px;
-        padding-bottom: 90px;
-    }
-    @include monitor{
-        aspect-ratio: unset;
-    }
-    @include monitor-big{
-        margin-top: -260px;
-    }
-    .step-ttl{
-        padding-top: 240px;
-        font-size: 50px;
-        line-height: 75px;
-        text-align: center;
-        color: #b53938;
-        position: relative;
-        width: 57.2916%;
-        margin: 0 auto;
-        @include sp{
-            font-size: 26px;
-            width: 95%;
-            line-height: 1.5;
-            padding-top: 90px;
-        }
-        @include tab{
-            font-size: 35px;
-            width: 72%;
-            line-height: 1.5;
-            padding-top: 90px;
-        }
-        @include pc{
-            font-size: 44px;
-            width: 80%;
-            line-height: 1.5;
-            padding-top: 90px;
-        }
-        @include monitor{
-            width: 40%;
-        }
-    }
-    .step-ttl::after{
-        position: absolute;
-        background: url('https://welltech-km.github.io/seigan/img/4step-ttl.png');
-        background-size: contain;
-        content: '';
-        display: inline-block;
-        width: 100%;
-        height: auto;
-        aspect-ratio: 1100/113;
-        background-repeat: no-repeat;
-        bottom: -45px;
-        left: 0;
-        @include sp{
-            top: 95%;
-        }
-        @include tab{
-            top: 88%;
-            left: 50%;
-            transform: translateX(-50%);
-        }
-        @include pc{
-            width: 80%;
-            top: 88%;
-            left: 50%;
-            transform: translateX(-50%);
-        }
-    }
-    .step-container{
-        margin: 120px auto 0;
-        width: 49%;
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        justify-content: space-between;
-        gap: 45px;
-        @include sp{
-            width: 90%;
-            flex-wrap: nowrap;
-            flex-direction: column;
-            margin-top: 75px;
-        }
-        @include tab{
-            width: 90%;
-            margin-top: 105px;
-        }
-        @include pc{
-            width: 60%;
-            margin-top: 105px;
-        }
-        @include monitor{
-            width: 40%;
-        }
-    }
-    .step-container__el{
-        width: 44%;
-        aspect-ratio: 446/662;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        background: #fff;
-        filter: drop-shadow(8px 8px 10px rgba(114, 85, 78, 0.16));
-        border-top: 10px solid #B53938;
-        border-bottom: 10px solid #B53938;
-        @include sp{
-            width: 100%;
-        }
-
-        .el-step{
-            position: relative;
-            width: 50%;
-            margin: 15px auto 0;
-            text-align: center;
-            font-family: DNPShueiMinPr6;
-            font-size: 33px;
-            color: #b53938;
-        }
-        .el-step::before,.el-step::after{
-            position: absolute;
-            content: "";
-            top: 56%;
-            width: 100px;
-            height: 3px;
-            background-color: #B53938;
-            @include pc{
-                width: 60px;
-            }
-        }
-        .el-step::before{
-            left: -75px;
-            @include pc{
-                left: -60px;
-            }
-        }
-        .el-step::after{
-            right: -75px;
-            @include pc{
-                right: -60px;
-            }
-        }
-        img{
-            width: 88.34%;
-            margin: 30px auto 0;
-        }
-        .el-ttl{
-            margin-top: 15px;
-            font-size: 26px;
-            color: #b53938;
-            @include pc{
-                font-size: 22px;
-            }
-            span{
-                font-size: 0.8em;
-            }
-        }
-        p{
-            width: 88.34%;
-            margin: 15px auto 60px;
-            font-family: "Yu Gothic";
-            font-weight: bold;
-            color: #5a3736;
-            @include pc-large{
-                height: 140px;
-            }
-            @include monitor{
-                font-size: 20px;
-            }
-            span{
-                font-size: 0.85em;
-                color: #706a6a;
-                display: block;
-                margin-top: 15px;
-            }
-        }
-    }
-}
-
-#careful{
-    background: #FFF7F2;
-    padding-bottom: 120px;
-    @include sp{
-        padding-bottom: 90px;
-    }
-    @include tab{
-        padding-bottom: 90px;
-    }
-    .careful-ttl{
-        padding-top: 120px;
-        font-size: 50px;
-        line-height: 75px;
-        text-align: center;
-        color: #b53938;
-        position: relative;
-        width: 57.2916%;
-        margin: 0 auto;
-        @include sp{
-            font-size: 26px;
-            width: 95%;
-            line-height: 1.5;
-            padding-top: 90px;
-        }
-        @include tab{
-            font-size: 35px;
-            width: 72%;
-            line-height: 1.5;
-            padding-top: 90px;
-        }
-        @include pc{
-            font-size: 44px;
-            width: 80%;
-            line-height: 1.5;
-            padding-top: 90px;
-        }
-        @include monitor{
-            width: 40%;
-        }
-    }
-    .careful-ttl::after{
-        position: absolute;
-        background: url('https://welltech-km.github.io/seigan/img/4step-ttl.png');
-        background-size: contain;
-        content: '';
-        display: inline-block;
-        width: 100%;
-        height: auto;
-        aspect-ratio: 1100/113;
-        background-repeat: no-repeat;
-        bottom: -45px;
-        left: 0;
-        @include sp{
-            top: 95%;
-            bottom: unset;
-        }
-        @include tab{
-            top: 88%;
-            left: 50%;
-            transform: translateX(-50%);
-        }
-        @include pc{
-            width: 80%;
-            top: 88%;
-            left: 50%;
-            transform: translateX(-50%);
-        }
-    }
-    .careful-container{
-        display: flex;
-        flex-direction: column;
-        width: 57.29%;
-        margin: 0 auto;
-        @include sp{
-            width: 90%;
-        }
-        @include tab{
-            width: 90%;
-        }
-        @include pc{
-            width: 70%;
-        }
-        @include monitor{
-            width: 40%;
-        }
-    }
-    .careful-container:nth-of-type(2){
-        @include sp{
-        .container__lower{
-            flex-direction: column;
-        }
-    }
-    }
-    .container__ttl{
-        font-size: 40px;
-        color: #b53938;
-        text-align: center;
-        width: 57.29%;
-        margin: 120px auto 0;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        position: relative;
-        @include sp{
-            font-size: 25px;
-            margin-top: 75px;
-        }
-        @include monitor{
-            width: 40%;
-        }
-    }
-    .container__ttl::before,.container__ttl::after{
-        position: absolute;
-        content: "";
-        height: 2px;
-        flex-grow: 1;
-        top: 55%;
-        width: 32%;
-        background-color: #b53938;
-        @include sp{
-            width: 25%;
-            top: 57%;
-            height: 1px;
-        }
-        @include tab{
-            width: 40%;
-        }
-        @include pc{
-            width: 40%;
-        }
-        @include monitor{
-            width: 65%;
-        }
-    }
-    .container__ttl::before{
-        left: -20%;
-        @include sp{
-            left: -35%;
-        }
-        @include tab{
-            left: -37%;
-        }
-        @include pc{
-            left: -37%;
-        }
-        @include monitor{
-            left: -75%;
-        }
-    }
-    .container__ttl::after{
-        right: -20%;
-        @include sp{
-            right: -35%;
-        }
-        @include tab{
-            right: -37%;
-        }
-        @include pc{
-            right: -37%;
-        }
-        @include monitor{
-            right: -75%;
-        }
-    }
-    .container__sub{
-        font-size: 18px;
-        text-align: center;
-        position: relative;
-        color: #b53938;
-        padding: 5px 0 20px;
-    }
-    .container__sub::after{
-        position: absolute;
-        background: url('https://welltech-km.github.io/seigan/img/careful-sub.png');
-        content: "";
-        background-size: contain;
-        display: inline-block;
-        width: 100%;
-        height: auto;
-        aspect-ratio: 1100/113;
-        background-repeat: no-repeat;
-        top: 100%;
-        left: 0;
-    }
-    .container__lower{
-        display: flex;
-        margin-top: 60px;
-        justify-content: space-between;
-        @include sp{
-            flex-direction: column-reverse;
-            gap: 30px;
-        }
-    }
-    .container__detail{
-        width: 59%;
-        font-size: 22px;
-        text-align: left;
-        color: #45160c;
-        line-height: 2;
-        @include sp{
-            font-size: 18px;
-            width: 100%;
-        }
-        @include tab{
-            font-size: 20px;
-        }
-        p{
-            margin-bottom: 30px;
-            @include sp{
-                margin-bottom: 15px;
-            }
-        }
-    }
-    .container__img{
-        width: 37.545%;
-        max-width: 413px;
-        display: flex;
-        flex-direction: column;
-        gap: 15px;
-        @include sp{
-            width: 100%;
-        }
-        img{
-            width: 100%;
-        }
-    }
-}
-
-#example{
-    background: url('https://welltech-km.github.io/seigan/img/example-bg.webp');
-    aspect-ratio: 2965/4999;
-    background-size: cover;
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  #effects .effects-beauty .effects-beauty__ttl::after {
+    content: "";
+    background: url("https://welltech-km.github.io/seigan/img/beauty-title.png");
     background-repeat: no-repeat;
-    margin-top: -15px;
-    padding-top: 75px;
-    padding-bottom: 150px;
-    @include monitor{
-        aspect-ratio: unset;
-    }
-    .example-ttl{
-        padding: 45px 0;
-        background: rgba(255, 255, 255, 0.7);
-        @include sp{
-            padding: 30px 0;
-        }
-        @include tab{
-            padding: 30px 0;
-        }
-        .example-ttl__sub{
-            font-family: しっぽり明朝;
-            font-weight: bold;
-            font-size: 15px;
-            letter-spacing: 0.25em;
-            text-align: center;
-            color: #b53938;
-            opacity: 1;
-        }
-        .example-ttl__content{
-            font-family: DNPShueiMinPr6;
-            font-weight: 500;
-            font-size: 48px;
-            letter-spacing: 0.03em;
-            text-align: center;
-            color: #b53938;
-            opacity: 1;
-            @include sp{
-                font-size: 35px;
-            }
-            @include tab{
-                font-size: 40px;
-            }
-        }
-    }
-    .example-container{
-        width: 57.29%;
-        margin: 60px auto 0;
-        background: #fff;
-        padding-bottom: 60px;
-        border-bottom: 20px solid #B53938;
-        @include sp{
-            width: 90%;
-        }
-        @include tab{
-            width: 80%;
-        }
-        @include pc{
-            width: 70%;
-        }
-        @include monitor{
-            width: 40%;
-        }
-        .example-container__case{
-            background: url('https://welltech-km.github.io/seigan/img/example-container-case.png');
-            aspect-ratio: 110/7;
-            background-size: contain;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-family: DNPShueiMinPr6;
-            font-size: 35px;
-            color: #fff;
-            @include sp{
-                background:#B53938;
-                font-size: 25px;
-            }
-            @include tab{
-                background:#B53938;
-                font-size: 30px;
-            }
-        }
-        .example-container__personal{
-            font-family: "Yu Gothic";
-            font-weight: bold;
-            font-size: 28px;
-            text-align: center;
-            color: #b53938;
-            position: relative;
-            margin-top: 60px;
-            @include sp{
-                margin-top: 45px;
-                font-size: 22px;
-            }
-            @include tab{
-                margin-top: 30px;
-                font-size: 24px;
-            }
-        }
-        .example-container__personal::after{
-            position: absolute;
-            content: "";
-            background: url('https://welltech-km.github.io/seigan/img/example-container-personal.png');
-            background-size: contain;
-            aspect-ratio: 143/4;
-            display: inline-block;
-            width: 40%;
-            height: auto;        
-            background-repeat: no-repeat;
-            left: 50%; 
-            transform: translateX(-50%); 
-            top: 100%;
-            @include sp{
-                width: 60%;
-            }
-            @include tab{
-                width: 50%;
-            }
-        }
-        .example-container__times{
-            font-family: "Yu Gothic";
-            font-weight: bold;
-            font-size: 28px;
-            text-align: center;
-            color: #b53938;
-            padding-top: 30px;
-            @include sp{
-                padding-top: 15px;
-            }
-            @include tab{
-                padding-top: 15px;
-            }
-            span{
-                font-size: 1.5em;
-                padding-left: 15px;
-                padding-right: 5px;
-            }
-        }
-        .example-container__img{
-            width: 76.6363%;
-            aspect-ratio:843/345;
-            margin: 30px auto 0;
-            @include sp{
-                width: 90%;
-            }
-            img{
-                width: 100%;
-            }
-        }
-        .example-container__detail{
-            display: flex;
-            width: 76.6363%;
-            margin: 30px auto 0;
-            position: relative;
-            @include sp{
-                width: 100%;
-                justify-content: center;
-            }
-            @include tab{
-                width: 90%;
-                justify-content: center;
-            }
-            dt{
-                width: 35%;
-                background: #B53938;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                color: #fff;
-                font-family: "Yu Gothic";
-                font-weight: bold;
-                font-size: 24px;
-                padding: 15px 0;
-                @include sp{
-                    font-size: 18px;
-                    text-align: center;
-                    width: 30%;
-                }
-                @include tab{
-                    font-size: 20px;
-                    text-align: center;
-                    width: 35%;
-                }
-            }
-            dd{
-                display: flex;
-                background: #FFF2F1;
-                align-items: center;
-                justify-content: center;
-                font-family: "Yu Gothic";
-                font-weight: bold;
-                font-size: 24px;
-                line-height: 66px;
-                text-align: center;
-                color: #b53938;
-                width: 65%;
-                @include sp{
-                    font-size: 18px;
-                }
-                @include tab{
-                    font-size: 20px;
-                }
-            }
-            dd span{
-                display: block;
-                font-size: 1.25em;
-                padding-left: 60px;
-                position: relative;
-            }
-            dd span::before{
-                position: absolute;
-                content: "▲";
-                transform: rotate(90deg);
-                left: 15px;
-                font-size: 1.5rem;
-            }
-        }
-        .example-container__detail::after{
-            position: absolute;
-            content: "";
-            aspect-ratio: 141/97;
-            width: 12%;
-            top: -15px;
-            right: -15px;
-            @include sp{
-                width: 24%;
-                top: -35%;
-            }
-            @include tab{
-                width: 18%;
-                top: -70%;
-            }
-        }
-        .example-container__detail:nth-of-type(1)::after{
-            background: url('https://welltech-km.github.io/seigan/img/container-detail-img01.png');
-            background-size: contain;
-            background-repeat: no-repeat;
-        }
-        .example-container__detail:nth-of-type(2)::after{
-            background: url('https://welltech-km.github.io/seigan/img/container-detail-img02.png');
-            background-size: contain;
-            background-repeat: no-repeat;
-        }
-        p{
-            margin: 45px auto 0;
-            width: 76.6363%;
-            font-family: "Yu Gothic";
-            font-weight: bold;
-            font-size: 22px;
-            line-height: 2;
-            color: #45160c;
-            @include sp{
-                width: 90%;
-                font-size: 16px;
-                margin: 25px auto 0;
-            }
-            @include tab{
-                width: 90%;
-                font-size: 16px;
-                margin: 25px auto 0;
-            }
-            span{
-                color: #B53938;
-            }
-        }
-    }
+    background-size: contain;
+    padding-top: 2em;
+    width: 80%;
+    margin: 0 auto;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 90%;
+  }
 }
-
-#qna{
-    background: #B53939;
-    display: flex;
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
+  #effects .effects-beauty .effects-beauty__ttl::after {
+    content: "";
+    background: url("https://welltech-km.github.io/seigan/img/beauty-title.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding-top: 2em;
+    width: 80%;
+    margin: 0 auto;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 90%;
+  }
+}
+#effects .effects-beauty .effects-beauty__fv {
+  max-width: 476px;
+  aspect-ratio: 476/262;
+  margin: 4em auto 0;
+}
+@media screen and (max-width: 767px) {
+  #effects .effects-beauty .effects-beauty__fv {
+    margin-top: 15px;
+    aspect-ratio: unset;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  #effects .effects-beauty .effects-beauty__fv {
+    max-width: 350px;
+    margin: 3em auto 0;
+  }
+}
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
+  #effects .effects-beauty .effects-beauty__fv {
+    max-width: 380px;
+    margin: 3em auto 0;
+  }
+}
+#effects .effects-beauty .effects-beauty__fv img {
+  width: 100%;
+}
+@media screen and (max-width: 767px) {
+  #effects .effects-beauty .effects-beauty__fv img {
+    width: 60%;
+    display: block;
+    margin: 0 auto;
+  }
+}
+#effects .effects-beauty .effects-beauty__txt {
+  line-height: 55px;
+  color: #b53938;
+  font-size: 35px;
+  text-align: center;
+  margin-top: 1em;
+}
+@media screen and (max-width: 767px) {
+  #effects .effects-beauty .effects-beauty__txt {
+    font-size: 18px;
+    line-height: 2;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  #effects .effects-beauty .effects-beauty__txt {
+    font-size: 25px;
+    line-height: 1.8;
+    width: 80%;
+    margin: 15px auto 0;
+  }
+}
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
+  #effects .effects-beauty .effects-beauty__txt {
+    font-size: 29px;
+    line-height: 1.8;
+    width: 80%;
+    margin: 15px auto 0;
+  }
+}
+#effects .effects-beauty .effects-beauty__txt span {
+  font-size: 1.25em;
+}
+#effects .effects-beauty .effects-beauty__detail {
+  display: flex;
+  max-width: 1000px;
+  margin: 3em auto 0;
+  gap: 15px;
+}
+@media screen and (max-width: 767px) {
+  #effects .effects-beauty .effects-beauty__detail {
     flex-direction: column;
-    padding-bottom: 120px;
-    @include sp{
-        padding-bottom: 20px;
-    }
-    .qna-ttl{
-        padding: 45px 0;
-        @include sp{
-            padding: 45px 0 75px
-            }
-        @include tab{
-            padding: 45px 0 75px
-            }
-        @include monitor{
-            padding: 105px 0;
-        }
-        .qna-ttl__sub{
-            font-family: しっぽり明朝;
-            font-weight: bold;
-            font-size: 15px;
-            letter-spacing: 0.25em;
-            text-align: center;
-            color: #fff;
-            opacity: 1;
-        }
-        h2{
-            width: 57.29%;
-            margin: 0 auto;
-            font-family: "Yu Gothic";
-            font-weight: bold;
-            font-size: 48px;
-            letter-spacing: 0.03em;
-            text-align: center;
-            color: #fff;
-            position: relative;
-            @include sp{
-                width: 90%;
-                font-size: 30px;
-            }
-            @include tab{
-                width: 90%;
-                font-size: 35px;
-            }
-            @include monitor{
-                width: 40%;
-            }
-        }
-        h2::after{
-            position: absolute;
-            width: 50%;
-            height: 5px;
-            background: #fff;
-            content: "";
-            top: 100%;
-            left: 50%;
-            transform: translateX(-50%);
-            -webkit-transform: translateX(-50%);
-            -ms-transform: translateX(-50%);
-        }
-    }
-    .accordion {
-        background-color: #fff;
-        color: #B53938;
-        cursor: pointer;
-        padding: 15px 90px;
-        width: 57.29%;
-        margin: 0 auto;
-        border: none;
-        text-align: left;
-        outline: none;
-        transition: background-color 0.4s;
-        position: relative;
-        font-family: "Yu Gothic";
-        font-weight: bold;
-        font-size: 22px;
-        margin-bottom: 45px;
-        @include sp{
-            width: 90%;
-            font-size: 16px;
-            padding: 15px 45px 15px 60px;
-            
-        }
-        @include tab{
-            width: 80%;
-            font-size: 18px;
-        }
-        @include pc{
-            width: 70%;
-            font-size: 20px;
-        }
-        @include monitor{
-            margin-bottom: 75px;
-            width: 40%;
-        }
-    }
-
-    .accordion::before {
-        content: "Q.";
-        position: absolute;
-        left: 30px;
-        font-weight: bold;
-        @include sp{
-            left: 5%;
-        }
-    }
-
-    .accordion::after {
-        content: "▲";
-        position: absolute;
-        right: 30px;
-        transition: transform 0.3s;
-        @include sp{
-            top: 50%;
-            transform: translateY(-50%);
-            right: 5%;
-        }
-    }
-
-    .accordion__active::after {
-        transform: rotate(180deg);
-        @include sp{
-            top: 35%;
-        }
-    }
-
-    .accordion__active,.accordion:hover {
-        background-color: #8B2F2B;
-        color: #fff;
-    }
-
-    .accordion__panel {
-        padding: 15px 90px;
-        display: none;
-        background-color: white;
-        overflow: hidden;
-        transition: max-height 0.3s ease-out;
-        max-height: 0;
-        width: 57.29%;
-        margin: -45px auto 45px;
-        font-family: "Yu Gothic";
-        font-weight: bold;
-        font-size: 22px;
-        line-height: 2;
-        color: #5a3736;
-        position: relative;
-        @include sp{
-            width: 90%;
-            font-size: 16px;
-            padding: 15px 45px 15px 60px;
-        }
-        @include tab{
-            width: 80%;
-            font-size: 18px;
-        }
-        @include pc{
-            width: 70%;
-            font-size: 20px;
-        }
-        @include monitor{
-            width: 40%;
-            margin-top: -75px;
-        }
-    }
-
-    .accordion__panel::before {
-        content: "A.";
-        position: absolute;
-        left: 30px;
-        font-weight: bold;
-        @include sp{
-            left: 5%;
-        }
-    }
-
-    .accordion__panel.open {
-        display: block;
-        max-height: 1000px; /* sufficiently large max-height to allow smooth transition */
-    }
+    justify-content: center;
+    align-items: center;
+  }
 }
-
-#believe{
-    background: #fff;
-    padding-bottom: 120px;
-    .believe-ttl{
-        padding-top: 120px;
-        font-size: 50px;
-        line-height: 75px;
-        text-align: center;
-        color: #b53938;
-        position: relative;
-        width: 57.2916%;
-        margin: 0 auto;
-        @include sp{
-            width: 90%;
-            font-size: 26px;
-            width: 95%;
-            line-height: 1.5;
-            padding-top: 40px;
-        }
-        @include tab{
-            font-size: 35px;
-            width: 72%;
-            line-height: 1.5;
-            padding-top: 90px;
-        }
-        @include monitor{
-            width: 40%;
-        }
-    }
-    .believe-ttl::after{
-        position: absolute;
-        background: url('https://welltech-km.github.io/seigan/img/4step-ttl.png');
-        background-size: contain;
-        content: '';
-        display: inline-block;
-        width: 100%;
-        height: auto;
-        aspect-ratio: 1100/113;
-        background-repeat: no-repeat;
-        bottom: -45px;
-        left: 0;
-        @include sp{
-            top: 95%;
-            bottom: unset;
-        }
-        @include tab{
-            top: 88%;
-            left: 50%;
-            transform: translateX(-50%);
-        }
-    }
-    .believe-content{
-        margin: 120px auto 0;
-        padding: 20px;
-        padding-top: 90px;
-        width: 57.29%;
-        background: #fff7f2;
-        box-shadow: 8px 8px 10px rgba(141, 96, 96, 0.16);
-        position: relative;
-        @include sp{
-            width: 90%;
-            margin-top: 90px;
-            padding-top: 60px;
-        }
-        @include tab{
-            width: 80%;
-            margin-top: 90px;
-            padding-top: 60px;
-        }
-        @include pc{
-            width: 70%;
-            margin-top: 90px;
-            padding-top: 60px;
-        }
-        @include monitor{
-            width: 40%;
-        }
-        .believe-content__el{
-            display: flex;
-            flex-direction: column;
-            width: 84.5454%;
-            margin: 0 auto;
-            position: relative;
-            padding-bottom: 90px;
-            @include sp{
-                width: 95%;
-                padding-bottom: 60px;
-            }
-            @include tab{
-                width: 95%;
-                padding-bottom: 60px;
-            }
-            .el-upper{
-                display: flex;
-                justify-content: space-around;
-                align-items: center;
-                @include sp{
-                    gap: 15px;
-                }
-                @include tab{
-                    gap: 15px;
-                }
-                img{
-                    max-width: 182px;
-                    aspect-ratio: 1/1;
-                    @include sp{
-                        max-width: 100px;
-                    }
-                    @include tab{
-                        max-width: 150px;
-                    }
-                }
-                dl{
-                    width: 66.8117%;
-                    height: 124px;
-                    border-radius: 62px;
-                    background: #fff;
-                    padding-left: 45px;
-                    font-family: "Yu Gothic";
-                    font-weight: bold;
-                    font-size: 19px;
-                    color: #5a3736;
-                    display: flex;
-                    justify-content: flex-start;
-                    align-items: center;
-                    @include sp{
-                        flex-direction: column;
-                        height: unset;
-                        padding: 15px 0 15px 30px;
-                        font-size: 16px;
-                        justify-content: center;
-                        align-items: baseline;
-                    }
-                }
-                dd{
-                    padding-left: 30px;
-                    @include sp{
-                        padding-left: 0;
-                    }
-                }
-            }
-            .el-lower{
-                font-family: "Yu Gothic";
-                font-weight: bold;
-                font-size: 19px;
-                line-height: 2;
-                color: #5a3736;
-                padding-top: 45px;
-                @include sp{
-                    padding-top:30px;
-                    width: 100%;
-                    font-size: 16px;
-                }
-                @include tab{
-                    font-size: 17px;
-                }
-            }
-        }
-        .believe-content__el:nth-of-type(1)::after{
-            position: absolute;
-            content: "";
-            background: url('https://welltech-km.github.io/seigan/img/believe-content-bg.png');
-            background-size: contain;
-            display: inline-block;
-            width: 100%;
-            height: auto;
-            aspect-ratio: 1100/113;
-            background-repeat: no-repeat;
-            top: 100%;
-        }
-        .believe-content__el:nth-of-type(2){
-            padding-top: 90px;
-            @include sp{
-                padding-top: 60px;
-            }
-            @include tab{
-                padding-top: 75px;
-            }
-        }
-    }
-    .believe-content::after{
-        position: absolute;
-        border: 1px solid #B53938;
-        content: "";
-        top: 12px;
-        bottom: 12px;
-        left: 12px;
-        right: 12px;
-    }
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  #effects .effects-beauty .effects-beauty__detail {
+    width: 80%;
+    max-width: unset;
+  }
 }
-
-#reservation{
-    background: #FFF7F2;
-    padding-bottom: 120px;
-    scroll-margin-top: 60px;
-    @include sp{
-        scroll-margin-top: 100px;
-    }
-    .reservation-ttl{
-        padding: 45px 0;
-        @include monitor{
-            padding: 105px 0;
-        }
-        .reservation-ttl__sub{
-            font-family: しっぽり明朝;
-            font-weight: bold;
-            font-size: 15px;
-            letter-spacing: 0.25em;
-            text-align: center;
-            color: #B53938;
-            opacity: 1;
-        }
-        h2{
-            width: 57.29%;
-            margin: 0 auto;
-            font-family: "Yu Gothic";
-            font-weight: bold;
-            font-size: 48px;
-            letter-spacing: 0.03em;
-            text-align: center;
-            color: #B53938;
-            position: relative;
-            @include sp{
-                font-size: 30px;
-                width: 90%;
-            }
-            @include tab{
-                font-size: 35px;
-                width: 90%;
-            }
-            @include monitor{
-                width: 40%;
-            }
-        }
-        h2::after{
-            position: absolute;
-            width: 50%;
-            height: 5px;
-            background: #B53938;
-            content: "";
-            top: 100%;
-            left: 50%;
-            transform: translateX(-50%);
-            -webkit-transform: translateX(-50%);
-            -ms-transform: translateX(-50%);
-        }
-    }
-    .reservation-message{
-        background-color: #fff;
-        font-family: "Yu Gothic";
-        font-weight: bold;
-        font-size: 22px;
-        text-align: left;
-        color: #b53938;
-        padding: 10px 0;
-        text-align: center;
-        margin-top: 30px;
-        @include sp{
-            line-height: 1.8;
-        }
-        @include tab{
-            line-height: 1.8;
-        }
-        span{
-            background: #b53938;
-            color: #fff;  
-            font-size: 1.4em;
-            margin: 0 5px;
-            padding: 5px;          
-        }
-    }
-    .reservation-content{
-        width: 57.2916%;
-        margin: 105px auto 0;
-        padding-bottom: 90px;
-        border-radius: 36px;
-        background: #fff;
-        position: relative;
-        @include sp{
-            width: 90%;
-            margin-top: 75px;
-        }
-        @include tab{
-            width: 90%;
-            margin-top: 75px;
-        }
-        @include pc{
-            width: 70%;
-        }
-        @include monitor{
-            width: 40%;
-        }
-        .reservation-content__ttl{
-            position: absolute;
-            aspect-ratio: 637/85;
-            width: 57%;
-            left: 50%;
-            top: -3%;
-            transform: translateX(-50%);
-            -webkit-transform: translateX(-50%);
-            -ms-transform: translateX(-50%);
-            @include sp{
-                width: 90%;
-            }
-            @include monitor{
-                width: 40%;
-            }
-            img{
-                width: 100%;
-            }
-        }
-        .reservation-content__upper{
-            width: 41.2727%;
-            margin: 0 auto;
-            padding-top: 90px;
-            position: relative;
-            @include sp{
-                width: 75%;
-                padding-top: 45px;
-            }
-            @include tab{
-                padding-top: 60px;
-            }
-            @include pc{
-                padding-top: 60px;
-            }
-            img{
-                width: 100%;
-            }
-            a{
-                display: block;
-                padding-top: 30px;
-                font-family: "Yu Gothic";
-                font-weight: bold;
-                font-size: 25px;
-                color: #000;
-                text-decoration: underline;
-                text-align: center;
-                @include sp{
-                    font-size: 16px;
-                    padding-right: 15px;
-                }
-                @include tab{
-                    font-size: 22px;
-                }
-                @include pc{
-                    font-size: 22px;
-                }
-            }
-        }
-        .reservation-content__upper::after{
-            position: absolute;
-            background: url('https://welltech-km.github.io/seigan/img/reservation-content-icon.png');
-            background-size: contain;
-            background-repeat: no-repeat;
-            content: "";
-            aspect-ratio: 395/354;
-            width: 40%;
-            top: 55%;
-            right: -50%;
-            @include sp{
-                right: -20%;
-                top: 71%;
-            }
-        }
-        .reservation-content__step{
-            width: 85.3636%;
-            margin: 60px auto 0;
-            display: flex;
-            justify-content: space-between;
-            @include sp{
-                gap: 75px;
-            }
-            @include tab{
-                width: 90%;
-            }
-            @include pc{
-                width: 95%;
-            }
-            .step-el{
-                border-radius: 30px;
-                background: #b53938;
-                padding: 0 15px;
-                @include sp{
-                    padding-bottom: 10px;
-                }
-                .step-el__ttl{
-                    position: relative;
-                    top: -15%;
-                    margin: 0 auto;
-                    width: 110px;
-                    @include sp{
-                        width: 100%;
-                        top: -44px;
-                    }
-                    @include tab{
-                        top: -20%;
-                        width: 95px;
-                    }
-                    img{
-                        width: 100%;
-                        display: block;
-                        margin: 0 auto;
-                        @include sp{
-                            width: 50%;
-                        }
-                    }
-                }
-                .step-el__ttl::after{
-                    position: absolute;
-                    background: url('https://welltech-km.github.io/seigan/img/reservation-step-dot.png');
-                    content: "";
-                    aspect-ratio: 617/8;
-                    background-size: contain;
-                    background-repeat: no-repeat;
-                    display: inline-block;
-                    width: 90%;
-                    height: auto;
-                    aspect-ratio: 1100 / 113;
-                    background-repeat: no-repeat;
-                    bottom: 0;
-                    left: 50%;
-                    transform: translateX(-50%);
-                    @include sp{
-                        bottom: -15%;
-                    }
-                }
-                .step-el__txt{
-                    font-family: "Yu Gothic";
-                    font-weight: bold;
-                    font-size: 17px;
-                    line-height: 2;
-                    text-align: center;
-                    color: #fff;
-                    width: 100%;
-                    margin-top: -30px;
-                    @include sp{
-                        margin-top: -35px;
-                        width: 100%;
-                        font-size: 19px;
-                        line-height: 1.7;
-                    }
-                    @include tab{
-                        font-size: 14px;
-                    }
-                    @include pc{
-                        font-size: 16px;
-                    }
-                    span{
-                        color: #000;
-                        background: #fff;
-                        padding: 5px 0;
-                    }
-                }
-                .step-el__icon{
-                    max-width: 115px;
-                    margin: 0 auto;
-                    @include sp{
-                        width: 100%;
-                        margin: 0 auto;
-                    }
-                    img{
-                        width: 75%;
-                        display: block;
-                        margin: 0 auto;
-                    }
-                }
-            }
-            .step-el:nth-child(1){
-                width: 22%;
-                position: relative;
-                @include sp{
-                    width: 100%;
-                }
-            }
-            .step-el:not(:last-child)::after{
-                position: absolute;
-                content: "▲";
-                font-size: 30px;
-                color: #B53938;
-                top: 40%;
-                right: -34%;
-                transform: translateY(-40%);
-                transform: rotate(90deg);
-                @include sp{
-                    top: 104%;
-                    right: 41%;
-                    transform: translateX(-41%) rotate(180deg);
-                }
-                @include tab{
-                    top:35%;
-                }
-            }
-            .step-el:nth-child(2)::after{
-                top: 40%;
-                right: -27%;
-                transform: translateY(-40%);
-                transform: rotate(90deg);
-                @include sp{
-                    top: 104%;
-                    right: 41%;
-                    transform: translateX(-41%) rotate(180deg);
-                }
-                @include tab{
-                    top:35%;
-                }
-            }
-            .step-el:nth-child(2){
-                width: 31%;
-                position: relative;
-                @include sp{
-                    width: 100%;
-                }
-            }
-            .step-el:nth-child(3){
-                width: 26%;
-                @include sp{
-                    width: 100%;
-                }
-            }
-            @include sp{
-                flex-direction: column;
-            }
-            img{
-                width: 100%;
-            }
-        }
-    }
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
+  #effects .effects-beauty .effects-beauty__detail {
+    width: 75%;
+    max-width: 830px;
+  }
 }
-
-#tenpo{
-    background: #B53938;
-    padding-bottom: 150px;
-    @include sp{
-        padding-bottom: 20px;
-    }
-    .tenpo-ttl{
-        padding: 45px 0;
-        @include sp{
-            padding: 45px 0 75px;
-        }
-        @include monitor{
-            padding: 105px 0;
-        }
-        .tenpo-ttl__sub{
-            font-family: しっぽり明朝;
-            font-weight: bold;
-            font-size: 15px;
-            letter-spacing: 0.25em;
-            text-align: center;
-            color: #fff;
-            opacity: 1;
-        }
-        h2{
-            width: 57.29%;
-            margin: 30px auto 0;
-            margin: 0 auto;
-            font-family: "Yu Gothic";
-            font-weight: bold;
-            font-size: 32px;
-            letter-spacing: 0.03em;
-            text-align: center;
-            color: #fff;
-            position: relative;
-            @include sp{
-                width: 90%;
-                font-size: 30px;
-            }
-            @include monitor{
-                width: 40%;
-            }
-        }
-        h2::after{
-            position: absolute;
-            width: 50%;
-            height: 5px;
-            background: #fff;
-            content: "";
-            top: 100%;
-            left: 50%;
-            transform: translateX(-50%);
-            -webkit-transform: translateX(-50%);
-            -ms-transform: translateX(-50%);
-        }
-    }
-    .accordion {
-        font-family: "Yu Gothic";
-        background-color: #fff;
-        color: #B53938;
-        cursor: pointer;
-        padding: 15px 90px;
-        width: 57.29%;
-        margin: 30px auto 0;
-        margin: 0 auto;
-        border: none;
-        text-align: left;
-        outline: none;
-        transition: background-color 0.4s;
-        position: relative;
-        font-weight: bold;
-        font-size: 22px;
-        margin-bottom: 45px;
-        display: flex;
-        @include sp{
-            width: 90%;
-            font-size: 16px;
-            padding-right: 105px;
-            justify-content: center;
-        }
-        @include tab{
-            padding: 15px 90px 15px 45px;
-            width: 80%;
-            font-size: 20px;
-        }
-        @include pc{
-            padding: 15px 90px 15px 45px;
-            width: 70%;
-        }
-        @include monitor{
-            width: 40%;
-            margin-bottom: 75px;
-        }
-        h3{
-            font-family: "Yu Gothic";
-        }
-    }
-    .accordion::after {
-        content: "+";
-        position: absolute;
-        right: 30px;
-        transition: transform 0.3s;
-        color: #fff;
-        transform: translateY(-50%);
-        top: 50%;
-        font-weight: bold;
-        background: #B53938;
-        font-size: 35px;
-        width: 60px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        @include sp{
-            width: 40px;
-            font-size: 25px;
-        }
-        @include tab{
-            font-size: 30px;
-            width: 45px;
-        }
-        @include pc{
-            font-size: 32px;
-            width: 50px;
-        }
-    }
-    .accordion__active::after {
-        content: "－";
-        transition: transform 0.3s;
-    }
-    .accordion__panel {
-        padding: 30px 0;
-        display: none;
-        flex-wrap: wrap;
-        gap: 30px;
-        justify-content: space-between;
-        overflow: hidden;
-        transition: max-height 0.3s ease-out;
-        max-height: 0;
-        width: 57.29%;
-        margin: 30px auto 0;
-        margin: -45px auto 45px;
-        position: relative;
-        @include sp{
-            width: 90%;
-            padding: 30px 0;
-            flex-wrap: nowrap;
-            flex-direction: column;
-            align-items: center;
-            margin-bottom: 0;
-        }
-        @include tab{
-            width: 80%;
-        }
-        @include pc{
-            width: 70%;
-        }
-        @include monitor{
-            width: 40%;
-        }
-        .accordion__panel-el{
-            background-color: #FFF5F5;
-            font-family: "Yu Gothic";
-            font-size: 17px;
-            line-height: 2;    
-            width: 45.18%;
-            color: #696969;
-            padding: 30px;
-            @include sp{
-                width: 100%;
-                padding: 20px;
-            }
-            @include tab{
-                padding: 20px;
-            }
-            a{
-                color: #696969;
-            }
-            h4{
-                font-family: "Yu Gothic";
-                font-weight: bold;
-                font-size: 23px;
-                color: #9b1a19;
-                line-height: 1.5;
-                @include sp{
-                    font-size: 20px;
-                    margin-bottom: 5px;
-                }
-                @include tab{
-                    font-size: 20px;
-                    margin-bottom: 5px;
-                }
-            }
-            p{
-                font-size: 16px;
-                width: 100%;
-                @include sp{
-                    font-size: 14px;
-                }
-                @include tab{
-                    font-size: 13px;
-                }
-                @include pc{
-                    font-size: 14px;
-                }
-            }
-            .line-button{
-            background: linear-gradient(#71ff75 0%, #1cf21c 40.22%, #11dd0a 100%);
-            box-shadow: 0px 3px 10px rgba(122, 122, 122, 0.4);
-            width: 70%;
-            margin: 20px auto 0;
-            display: block;
-            color: #fff;
-            text-align: center;
-            line-height: 50px;
-            text-decoration: none;
-            font-weight: bold;
-            @include tab{
-                width: 100%;
-            }
-            }
-        }
-    }
-    .accordion__panel.open {
-        display: flex;
-        max-height: 1000px; /* sufficiently large max-height to allow smooth transition */
-    }
-    
+#effects .effects-beauty .effects-beauty__detail p {
+  font-size: 28px;
+  color: #5a3736;
 }
-
-#company{
-    background: #fff;
-    padding-top: 150px;
-    @include sp{
-        padding-top: 40px;
-    }
-    @include tab{
-        padding-top: 120px;
-    }
-    .company-ttl{
-        font-family: "Yu Gothic";
-        font-weight: bold;
-        font-size: 35px;
-        letter-spacing: 0.1em;
-        text-align: center;
-        color: #9b1a19;
-        @include sp{
-            font-size: 30px;
-        }
-    }
-    .company-content{
-        width: 57.29%;
-        margin: 30px auto 0;
-        padding-bottom:90px;
-        @include sp{
-            width: 90%;
-            padding-bottom: 120px;
-        }        
-        @include tab{
-            width: 80%;
-        }        
-        @include pc{
-            width: 70%;
-        }        
-        @include monitor{
-            padding-bottom: 150px;
-        }
-        @include monitor{
-            width: 40%;
-        }
-        .company-content__detail{
-            border-bottom: 1px solid #707070;
-            display: flex;
-            font-family: "Yu Gothic";
-            font-weight: 500;
-            font-size: 16px;
-            line-height: 70px;
-            text-align: center;
-            color: #707070;
-            justify-content: space-between;
-            @include sp{
-                font-size: 16px;
-                line-height: 2;
-                padding: 30px 0;
-            }
-            dt{
-                width: 35%;
-                text-align: left;
-                padding-left: 30px;
-                @include sp{
-                    width: 40%;
-                    padding-left: 10px;
-                }
-            }
-            dd{
-                width: 70%;
-                text-align: left;
-            }
-        }
-    }
-}
-
-footer{
-    color: #fff;
-    text-align: center;
+@media screen and (max-width: 767px) {
+  #effects .effects-beauty .effects-beauty__detail p {
     font-size: 15px;
-    font-family: "Yu Gothic";
-    font-weight: 500;
-    text-align: center;
-    color: #fff;
+    width: 95%;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  #effects .effects-beauty .effects-beauty__detail p {
+    font-size: 20px;
+  }
+}
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
+  #effects .effects-beauty .effects-beauty__detail p {
+    font-size: 20px;
+  }
+}
+#effects .effects-beauty .effects-beauty__detail img {
+  max-width: 379px;
+  aspect-ratio: 379/233;
+}
+@media screen and (max-width: 767px) {
+  #effects .effects-beauty .effects-beauty__detail img {
+    width: 80%;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  #effects .effects-beauty .effects-beauty__detail img {
+    width: 300px;
+  }
+}
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
+  #effects .effects-beauty .effects-beauty__detail img {
+    width: 300px;
+  }
+}
+
+#explanations {
+  background: url("https://welltech-km.github.io/seigan/img/explanations-bg.webp") no-repeat;
+  background-size: contain;
+  aspect-ratio: 1920/1813;
+  margin-top: -30em;
+  position: relative;
+}
+@media screen and (max-width: 767px) {
+  #explanations {
+    background-size: auto;
+    aspect-ratio: unset;
+    padding-top: 210px;
+    padding-bottom: 90px;
+    margin-top: -10em;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  #explanations {
+    background-size: auto;
+    aspect-ratio: unset;
+    padding-top: 290px;
+    padding-bottom: 90px;
+    margin-top: -15em;
+  }
+}
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
+  #explanations {
+    background-size: auto;
+    aspect-ratio: unset;
+    padding-top: 350px;
+    padding-bottom: 90px;
+    margin-top: -20em;
+  }
+}
+@media screen and (min-width: 1920px) {
+  #explanations {
+    margin-top: -35em;
+  }
+}
+#explanations .explanations-container {
+  width: 57.2916%;
+  max-width: 1130px;
+  aspect-ratio: 1130/1310;
+  margin: 0 auto;
+  position: absolute;
+  background: url("https://welltech-km.github.io/seigan/img/explanations-container.webp") no-repeat center center;
+  background-size: contain;
+  top: 15em;
+  left: 50%;
+  transform: translateX(-50%);
+}
+@media screen and (max-width: 767px) {
+  #explanations .explanations-container {
+    width: 90%;
+    background-size: auto;
+    position: unset;
+    aspect-ratio: unset;
+    transform: unset;
+    position: relative;
+    top: 0;
+    left: 0;
+    padding-bottom: 60px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  #explanations .explanations-container {
+    width: 75%;
+    background-size: auto;
+    position: unset;
+    aspect-ratio: unset;
+    transform: unset;
+    position: relative;
+    top: 0;
+    left: 0;
+    padding-bottom: 60px;
+  }
+}
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
+  #explanations .explanations-container {
+    width: 66%;
+    background-size: auto;
+    position: unset;
+    aspect-ratio: unset;
+    transform: unset;
+    position: relative;
+    top: 0;
+    left: 0;
+    padding-bottom: 60px;
+  }
+}
+@media screen and (min-width: 1920px) {
+  #explanations .explanations-container {
+    top: 20em;
+    width: 55%;
+  }
+}
+@media screen and (min-width: 2150px) {
+  #explanations .explanations-container {
+    top: 25em;
+  }
+}
+#explanations .explanations-container .explanations-container__ttl {
+  width: 87.545%;
+  border-radius: 58px;
+  background: #fff;
+  box-shadow: 5px 5px 8px rgba(175, 100, 100, 0.16);
+  font-size: 47px;
+  letter-spacing: 0.03em;
+  line-height: 80px;
+  color: #b53938;
+  text-align: center;
+  padding-bottom: 0.2em;
+  margin: -45px auto 0;
+}
+@media screen and (max-width: 767px) {
+  #explanations .explanations-container .explanations-container__ttl {
+    font-size: 25px;
+    line-height: 1.6;
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  #explanations .explanations-container .explanations-container__ttl {
+    font-size: 35px;
+    line-height: 1.6;
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
+  #explanations .explanations-container .explanations-container__ttl {
+    font-size: 36px;
+    line-height: 1.6;
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+#explanations .explanations-container .explanations-container__img {
+  width: 48.636%;
+  margin: 1em auto 0;
+}
+@media screen and (max-width: 767px) {
+  #explanations .explanations-container .explanations-container__img {
+    width: 70%;
+    padding-top: 50px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  #explanations .explanations-container .explanations-container__img {
+    width: 70%;
+    padding-top: 50px;
+  }
+}
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
+  #explanations .explanations-container .explanations-container__img {
+    width: 60%;
+    padding-top: 40px;
+  }
+}
+#explanations .explanations-container .explanations-container__img img {
+  width: 100%;
+}
+#explanations .explanations-container .explanations-container__txt {
+  width: 82.3636%;
+  margin: 0 auto;
+  font-size: 32px;
+  letter-spacing: 0.03em;
+  line-height: 1.6;
+  text-align: center;
+  color: #b53938;
+}
+@media screen and (max-width: 767px) {
+  #explanations .explanations-container .explanations-container__txt {
+    font-size: 21px;
+    width: 90%;
+    margin-top: 15px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  #explanations .explanations-container .explanations-container__txt {
+    font-size: 25px;
+    width: 90%;
+    margin-top: 15px;
+  }
+}
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
+  #explanations .explanations-container .explanations-container__txt {
+    font-size: 27px;
+    width: 90%;
+    margin-top: 15px;
+  }
+}
+@media screen and (min-width: 1920px) {
+  #explanations .explanations-container .explanations-container__txt {
+    margin-top: 60px;
+  }
+}
+#explanations .explanations-container .explanations-container__txt span {
+  font-size: 1.37em;
+}
+@media screen and (max-width: 767px) {
+  #explanations .explanations-container .explanations-container__txt span {
+    font-size: 1.25em;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  #explanations .explanations-container .explanations-container__txt span {
+    font-size: 1.25em;
+  }
+}
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
+  #explanations .explanations-container .explanations-container__txt span {
+    font-size: 1.25em;
+  }
+}
+#explanations .explanations-container .explanations-container__txt .marker {
+  position: relative;
+  z-index: 1;
+}
+#explanations .explanations-container .explanations-container__txt .marker::before {
+  background: #FFDCDC;
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 24px;
+  display: inline-block;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+}
+@media screen and (max-width: 767px) {
+  #explanations .explanations-container .explanations-container__txt .marker::before {
+    height: 15px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  #explanations .explanations-container .explanations-container__txt .marker::before {
+    height: 15px;
+  }
+}
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
+  #explanations .explanations-container .explanations-container__txt .marker::before {
+    height: 15px;
+  }
+}
+#explanations .explanations-container .explanations-container__detail {
+  width: 82.3636%;
+  margin: 30px auto 0;
+  font-size: 23px;
+  line-height: 2;
+  text-align: center;
+  color: #45160c;
+  border-left: 2px solid #C07D6F;
+  border-right: 2px solid #C07D6F;
+}
+@media screen and (max-width: 767px) {
+  #explanations .explanations-container .explanations-container__detail {
+    width: 95%;
+    padding: 0 5px;
+    font-size: 15px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  #explanations .explanations-container .explanations-container__detail {
+    width: 95%;
+    padding: 0 5px;
+    font-size: 19px;
+  }
+}
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
+  #explanations .explanations-container .explanations-container__detail {
+    width: 95%;
+    padding: 0 5px;
+    font-size: 22px;
+  }
+}
+@media screen and (min-width: 1920px) {
+  #explanations .explanations-container .explanations-container__detail {
+    margin-top: 60px;
+    font-size: 27px;
+  }
+}
+
+#step {
+  background: url("https://welltech-km.github.io/seigan/img/4step-bg.webp");
+  aspect-ratio: 1920/2016;
+  margin-top: -210px;
+  padding-bottom: 150px;
+}
+@media screen and (max-width: 767px) {
+  #step {
+    margin-top: -60px;
+    padding-top: 60px;
+    padding-bottom: 90px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  #step {
+    margin-top: -60px;
+    padding-top: 60px;
+    padding-bottom: 90px;
+  }
+}
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
+  #step {
+    margin-top: -60px;
+    padding-top: 60px;
+    padding-bottom: 90px;
+  }
+}
+@media screen and (min-width: 1920px) {
+  #step {
+    aspect-ratio: unset;
+  }
+}
+@media screen and (min-width: 2150px) {
+  #step {
+    margin-top: -260px;
+  }
+}
+#step .step-ttl {
+  padding-top: 240px;
+  font-size: 50px;
+  line-height: 75px;
+  text-align: center;
+  color: #b53938;
+  position: relative;
+  width: 57.2916%;
+  margin: 0 auto;
+}
+@media screen and (max-width: 767px) {
+  #step .step-ttl {
+    font-size: 26px;
+    width: 95%;
+    line-height: 1.5;
+    padding-top: 90px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  #step .step-ttl {
+    font-size: 35px;
+    width: 72%;
+    line-height: 1.5;
+    padding-top: 90px;
+  }
+}
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
+  #step .step-ttl {
+    font-size: 44px;
+    width: 80%;
+    line-height: 1.5;
+    padding-top: 90px;
+  }
+}
+@media screen and (min-width: 1920px) {
+  #step .step-ttl {
+    width: 40%;
+  }
+}
+#step .step-ttl::after {
+  position: absolute;
+  background: url("https://welltech-km.github.io/seigan/img/4step-ttl.png");
+  background-size: contain;
+  content: "";
+  display: inline-block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1100/113;
+  background-repeat: no-repeat;
+  bottom: -45px;
+  left: 0;
+}
+@media screen and (max-width: 767px) {
+  #step .step-ttl::after {
+    top: 95%;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  #step .step-ttl::after {
+    top: 88%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
+  #step .step-ttl::after {
+    width: 80%;
+    top: 88%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+#step .step-container {
+  margin: 120px auto 0;
+  width: 49%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 45px;
+}
+@media screen and (max-width: 767px) {
+  #step .step-container {
+    width: 90%;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    margin-top: 75px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  #step .step-container {
+    width: 90%;
+    margin-top: 105px;
+  }
+}
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
+  #step .step-container {
+    width: 60%;
+    margin-top: 105px;
+  }
+}
+@media screen and (min-width: 1920px) {
+  #step .step-container {
+    width: 40%;
+  }
+}
+#step .step-container__el {
+  width: 44%;
+  aspect-ratio: 446/662;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #fff;
+  filter: drop-shadow(8px 8px 10px rgba(114, 85, 78, 0.16));
+  border-top: 10px solid #B53938;
+  border-bottom: 10px solid #B53938;
+}
+@media screen and (max-width: 767px) {
+  #step .step-container__el {
+    width: 100%;
+  }
+}
+#step .step-container__el .el-step {
+  position: relative;
+  width: 50%;
+  margin: 15px auto 0;
+  text-align: center;
+  font-family: DNPShueiMinPr6;
+  font-size: 33px;
+  color: #b53938;
+}
+#step .step-container__el .el-step::before, #step .step-container__el .el-step::after {
+  position: absolute;
+  content: "";
+  top: 56%;
+  width: 100px;
+  height: 3px;
+  background-color: #B53938;
+}
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
+  #step .step-container__el .el-step::before, #step .step-container__el .el-step::after {
+    width: 60px;
+  }
+}
+#step .step-container__el .el-step::before {
+  left: -75px;
+}
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
+  #step .step-container__el .el-step::before {
+    left: -60px;
+  }
+}
+#step .step-container__el .el-step::after {
+  right: -75px;
+}
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
+  #step .step-container__el .el-step::after {
+    right: -60px;
+  }
+}
+#step .step-container__el img {
+  width: 88.34%;
+  margin: 30px auto 0;
+}
+#step .step-container__el .el-ttl {
+  margin-top: 15px;
+  font-size: 26px;
+  color: #b53938;
+}
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
+  #step .step-container__el .el-ttl {
+    font-size: 22px;
+  }
+}
+#step .step-container__el .el-ttl span {
+  font-size: 0.8em;
+}
+#step .step-container__el p {
+  width: 88.34%;
+  margin: 15px auto 60px;
+  font-family: "Yu Gothic";
+  font-weight: bold;
+  color: #5a3736;
+}
+@media screen and (min-width: 1440px) {
+  #step .step-container__el p {
+    height: 140px;
+  }
+}
+@media screen and (min-width: 1920px) {
+  #step .step-container__el p {
+    font-size: 20px;
+  }
+}
+#step .step-container__el p span {
+  font-size: 0.85em;
+  color: #706a6a;
+  display: block;
+  margin-top: 15px;
+}
+
+#careful {
+  background: #FFF7F2;
+  padding-bottom: 120px;
+}
+@media screen and (max-width: 767px) {
+  #careful {
+    padding-bottom: 90px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  #careful {
+    padding-bottom: 90px;
+  }
+}
+#careful .careful-ttl {
+  padding-top: 120px;
+  font-size: 50px;
+  line-height: 75px;
+  text-align: center;
+  color: #b53938;
+  position: relative;
+  width: 57.2916%;
+  margin: 0 auto;
+}
+@media screen and (max-width: 767px) {
+  #careful .careful-ttl {
+    font-size: 26px;
+    width: 95%;
+    line-height: 1.5;
+    padding-top: 90px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  #careful .careful-ttl {
+    font-size: 35px;
+    width: 72%;
+    line-height: 1.5;
+    padding-top: 90px;
+  }
+}
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
+  #careful .careful-ttl {
+    font-size: 44px;
+    width: 80%;
+    line-height: 1.5;
+    padding-top: 90px;
+  }
+}
+@media screen and (min-width: 1920px) {
+  #careful .careful-ttl {
+    width: 40%;
+  }
+}
+#careful .careful-ttl::after {
+  position: absolute;
+  background: url("https://welltech-km.github.io/seigan/img/4step-ttl.png");
+  background-size: contain;
+  content: "";
+  display: inline-block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1100/113;
+  background-repeat: no-repeat;
+  bottom: -45px;
+  left: 0;
+}
+@media screen and (max-width: 767px) {
+  #careful .careful-ttl::after {
+    top: 95%;
+    bottom: unset;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  #careful .careful-ttl::after {
+    top: 88%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
+  #careful .careful-ttl::after {
+    width: 80%;
+    top: 88%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+#careful .careful-container {
+  display: flex;
+  flex-direction: column;
+  width: 57.29%;
+  margin: 0 auto;
+}
+@media screen and (max-width: 767px) {
+  #careful .careful-container {
+    width: 90%;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  #careful .careful-container {
+    width: 90%;
+  }
+}
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
+  #careful .careful-container {
+    width: 70%;
+  }
+}
+@media screen and (min-width: 1920px) {
+  #careful .careful-container {
+    width: 40%;
+  }
+}
+@media screen and (max-width: 767px) {
+  #careful .careful-container:nth-of-type(2) .container__lower {
+    flex-direction: column;
+  }
+}
+#careful .container__ttl {
+  font-size: 40px;
+  color: #b53938;
+  text-align: center;
+  width: 57.29%;
+  margin: 120px auto 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+@media screen and (max-width: 767px) {
+  #careful .container__ttl {
+    font-size: 25px;
+    margin-top: 75px;
+  }
+}
+@media screen and (min-width: 1920px) {
+  #careful .container__ttl {
+    width: 40%;
+  }
+}
+#careful .container__ttl::before, #careful .container__ttl::after {
+  position: absolute;
+  content: "";
+  height: 2px;
+  flex-grow: 1;
+  top: 55%;
+  width: 32%;
+  background-color: #b53938;
+}
+@media screen and (max-width: 767px) {
+  #careful .container__ttl::before, #careful .container__ttl::after {
+    width: 25%;
+    top: 57%;
+    height: 1px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  #careful .container__ttl::before, #careful .container__ttl::after {
+    width: 40%;
+  }
+}
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
+  #careful .container__ttl::before, #careful .container__ttl::after {
+    width: 40%;
+  }
+}
+@media screen and (min-width: 1920px) {
+  #careful .container__ttl::before, #careful .container__ttl::after {
+    width: 65%;
+  }
+}
+#careful .container__ttl::before {
+  left: -20%;
+}
+@media screen and (max-width: 767px) {
+  #careful .container__ttl::before {
+    left: -35%;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  #careful .container__ttl::before {
+    left: -37%;
+  }
+}
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
+  #careful .container__ttl::before {
+    left: -37%;
+  }
+}
+@media screen and (min-width: 1920px) {
+  #careful .container__ttl::before {
+    left: -75%;
+  }
+}
+#careful .container__ttl::after {
+  right: -20%;
+}
+@media screen and (max-width: 767px) {
+  #careful .container__ttl::after {
+    right: -35%;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  #careful .container__ttl::after {
+    right: -37%;
+  }
+}
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
+  #careful .container__ttl::after {
+    right: -37%;
+  }
+}
+@media screen and (min-width: 1920px) {
+  #careful .container__ttl::after {
+    right: -75%;
+  }
+}
+#careful .container__sub {
+  font-size: 18px;
+  text-align: center;
+  position: relative;
+  color: #b53938;
+  padding: 5px 0 20px;
+}
+#careful .container__sub::after {
+  position: absolute;
+  background: url("https://welltech-km.github.io/seigan/img/careful-sub.png");
+  content: "";
+  background-size: contain;
+  display: inline-block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1100/113;
+  background-repeat: no-repeat;
+  top: 100%;
+  left: 0;
+}
+#careful .container__lower {
+  display: flex;
+  margin-top: 60px;
+  justify-content: space-between;
+}
+@media screen and (max-width: 767px) {
+  #careful .container__lower {
+    flex-direction: column-reverse;
+    gap: 30px;
+  }
+}
+#careful .container__detail {
+  width: 59%;
+  font-size: 22px;
+  text-align: left;
+  color: #45160c;
+  line-height: 2;
+}
+@media screen and (max-width: 767px) {
+  #careful .container__detail {
+    font-size: 18px;
+    width: 100%;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  #careful .container__detail {
+    font-size: 20px;
+  }
+}
+#careful .container__detail p {
+  margin-bottom: 30px;
+}
+@media screen and (max-width: 767px) {
+  #careful .container__detail p {
+    margin-bottom: 15px;
+  }
+}
+#careful .container__img {
+  width: 37.545%;
+  max-width: 413px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+@media screen and (max-width: 767px) {
+  #careful .container__img {
+    width: 100%;
+  }
+}
+#careful .container__img img {
+  width: 100%;
+}
+
+#example {
+  background: url("https://welltech-km.github.io/seigan/img/example-bg.webp");
+  aspect-ratio: 2965/4999;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-top: -15px;
+  padding-top: 75px;
+  padding-bottom: 150px;
+}
+@media screen and (min-width: 1920px) {
+  #example {
+    aspect-ratio: unset;
+  }
+}
+#example .example-ttl {
+  padding: 45px 0;
+  background: rgba(255, 255, 255, 0.7);
+}
+@media screen and (max-width: 767px) {
+  #example .example-ttl {
+    padding: 30px 0;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  #example .example-ttl {
+    padding: 30px 0;
+  }
+}
+#example .example-ttl .example-ttl__sub {
+  font-family: しっぽり明朝;
+  font-weight: bold;
+  font-size: 15px;
+  letter-spacing: 0.25em;
+  text-align: center;
+  color: #b53938;
+  opacity: 1;
+}
+#example .example-ttl .example-ttl__content {
+  font-family: DNPShueiMinPr6;
+  font-weight: 500;
+  font-size: 48px;
+  letter-spacing: 0.03em;
+  text-align: center;
+  color: #b53938;
+  opacity: 1;
+}
+@media screen and (max-width: 767px) {
+  #example .example-ttl .example-ttl__content {
+    font-size: 35px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  #example .example-ttl .example-ttl__content {
+    font-size: 40px;
+  }
+}
+#example .example-container {
+  width: 57.29%;
+  margin: 60px auto 0;
+  background: #fff;
+  padding-bottom: 60px;
+  border-bottom: 20px solid #B53938;
+}
+@media screen and (max-width: 767px) {
+  #example .example-container {
+    width: 90%;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  #example .example-container {
+    width: 80%;
+  }
+}
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
+  #example .example-container {
+    width: 70%;
+  }
+}
+@media screen and (min-width: 1920px) {
+  #example .example-container {
+    width: 40%;
+  }
+}
+#example .example-container .example-container__case {
+  background: url("https://welltech-km.github.io/seigan/img/example-container-case.png");
+  aspect-ratio: 110/7;
+  background-size: contain;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: DNPShueiMinPr6;
+  font-size: 35px;
+  color: #fff;
+}
+@media screen and (max-width: 767px) {
+  #example .example-container .example-container__case {
+    background: #B53938;
+    font-size: 25px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  #example .example-container .example-container__case {
+    background: #B53938;
+    font-size: 30px;
+  }
+}
+#example .example-container .example-container__personal {
+  font-family: "Yu Gothic";
+  font-weight: bold;
+  font-size: 28px;
+  text-align: center;
+  color: #b53938;
+  position: relative;
+  margin-top: 60px;
+}
+@media screen and (max-width: 767px) {
+  #example .example-container .example-container__personal {
+    margin-top: 45px;
+    font-size: 22px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  #example .example-container .example-container__personal {
     margin-top: 30px;
-    @include sp{
-        font-size: 12px;
-    }
+    font-size: 24px;
+  }
+}
+#example .example-container .example-container__personal::after {
+  position: absolute;
+  content: "";
+  background: url("https://welltech-km.github.io/seigan/img/example-container-personal.png");
+  background-size: contain;
+  aspect-ratio: 143/4;
+  display: inline-block;
+  width: 40%;
+  height: auto;
+  background-repeat: no-repeat;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 100%;
+}
+@media screen and (max-width: 767px) {
+  #example .example-container .example-container__personal::after {
+    width: 60%;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  #example .example-container .example-container__personal::after {
+    width: 50%;
+  }
+}
+#example .example-container .example-container__times {
+  font-family: "Yu Gothic";
+  font-weight: bold;
+  font-size: 28px;
+  text-align: center;
+  color: #b53938;
+  padding-top: 30px;
+}
+@media screen and (max-width: 767px) {
+  #example .example-container .example-container__times {
+    padding-top: 15px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  #example .example-container .example-container__times {
+    padding-top: 15px;
+  }
+}
+#example .example-container .example-container__times span {
+  font-size: 1.5em;
+  padding-left: 15px;
+  padding-right: 5px;
+}
+#example .example-container .example-container__img {
+  width: 76.6363%;
+  aspect-ratio: 843/345;
+  margin: 30px auto 0;
+}
+@media screen and (max-width: 767px) {
+  #example .example-container .example-container__img {
+    width: 90%;
+  }
+}
+#example .example-container .example-container__img img {
+  width: 100%;
+}
+#example .example-container .example-container__detail {
+  display: flex;
+  width: 76.6363%;
+  margin: 30px auto 0;
+  position: relative;
+}
+@media screen and (max-width: 767px) {
+  #example .example-container .example-container__detail {
+    width: 100%;
+    justify-content: center;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  #example .example-container .example-container__detail {
+    width: 90%;
+    justify-content: center;
+  }
+}
+#example .example-container .example-container__detail dt {
+  width: 35%;
+  background: #B53938;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-family: "Yu Gothic";
+  font-weight: bold;
+  font-size: 24px;
+  padding: 15px 0;
+}
+@media screen and (max-width: 767px) {
+  #example .example-container .example-container__detail dt {
+    font-size: 18px;
+    text-align: center;
+    width: 30%;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  #example .example-container .example-container__detail dt {
+    font-size: 20px;
+    text-align: center;
+    width: 35%;
+  }
+}
+#example .example-container .example-container__detail dd {
+  display: flex;
+  background: #FFF2F1;
+  align-items: center;
+  justify-content: center;
+  font-family: "Yu Gothic";
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 66px;
+  text-align: center;
+  color: #b53938;
+  width: 65%;
+}
+@media screen and (max-width: 767px) {
+  #example .example-container .example-container__detail dd {
+    font-size: 18px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  #example .example-container .example-container__detail dd {
+    font-size: 20px;
+  }
+}
+#example .example-container .example-container__detail dd span {
+  display: block;
+  font-size: 1.25em;
+  padding-left: 60px;
+  position: relative;
+}
+#example .example-container .example-container__detail dd span::before {
+  position: absolute;
+  content: "▲";
+  transform: rotate(90deg);
+  left: 15px;
+  font-size: 1.5rem;
+}
+#example .example-container .example-container__detail::after {
+  position: absolute;
+  content: "";
+  aspect-ratio: 141/97;
+  width: 12%;
+  top: -15px;
+  right: -15px;
+}
+@media screen and (max-width: 767px) {
+  #example .example-container .example-container__detail::after {
+    width: 24%;
+    top: -35%;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  #example .example-container .example-container__detail::after {
+    width: 18%;
+    top: -70%;
+  }
+}
+#example .example-container .example-container__detail:nth-of-type(1)::after {
+  background: url("https://welltech-km.github.io/seigan/img/container-detail-img01.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+#example .example-container .example-container__detail:nth-of-type(2)::after {
+  background: url("https://welltech-km.github.io/seigan/img/container-detail-img02.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+#example .example-container p {
+  margin: 45px auto 0;
+  width: 76.6363%;
+  font-family: "Yu Gothic";
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 2;
+  color: #45160c;
+}
+@media screen and (max-width: 767px) {
+  #example .example-container p {
+    width: 90%;
+    font-size: 16px;
+    margin: 25px auto 0;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  #example .example-container p {
+    width: 90%;
+    font-size: 16px;
+    margin: 25px auto 0;
+  }
+}
+#example .example-container p span {
+  color: #B53938;
+}
+
+#qna {
+  background: #B53939;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 120px;
+}
+@media screen and (max-width: 767px) {
+  #qna {
+    padding-bottom: 20px;
+  }
+}
+#qna .qna-ttl {
+  padding: 45px 0;
+}
+@media screen and (max-width: 767px) {
+  #qna .qna-ttl {
+    padding: 45px 0 75px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  #qna .qna-ttl {
+    padding: 45px 0 75px;
+  }
+}
+@media screen and (min-width: 1920px) {
+  #qna .qna-ttl {
+    padding: 105px 0;
+  }
+}
+#qna .qna-ttl .qna-ttl__sub {
+  font-family: しっぽり明朝;
+  font-weight: bold;
+  font-size: 15px;
+  letter-spacing: 0.25em;
+  text-align: center;
+  color: #fff;
+  opacity: 1;
+}
+#qna .qna-ttl h2 {
+  width: 57.29%;
+  margin: 0 auto;
+  font-family: "Yu Gothic";
+  font-weight: bold;
+  font-size: 48px;
+  letter-spacing: 0.03em;
+  text-align: center;
+  color: #fff;
+  position: relative;
+}
+@media screen and (max-width: 767px) {
+  #qna .qna-ttl h2 {
+    width: 90%;
+    font-size: 30px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  #qna .qna-ttl h2 {
+    width: 90%;
+    font-size: 35px;
+  }
+}
+@media screen and (min-width: 1920px) {
+  #qna .qna-ttl h2 {
+    width: 40%;
+  }
+}
+#qna .qna-ttl h2::after {
+  position: absolute;
+  width: 50%;
+  height: 5px;
+  background: #fff;
+  content: "";
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+}
+#qna .accordion {
+  background-color: #fff;
+  color: #B53938;
+  cursor: pointer;
+  padding: 15px 90px;
+  width: 57.29%;
+  margin: 0 auto;
+  border: none;
+  text-align: left;
+  outline: none;
+  transition: background-color 0.4s;
+  position: relative;
+  font-family: "Yu Gothic";
+  font-weight: bold;
+  font-size: 22px;
+  margin-bottom: 45px;
+}
+@media screen and (max-width: 767px) {
+  #qna .accordion {
+    width: 90%;
+    font-size: 16px;
+    padding: 15px 45px 15px 60px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  #qna .accordion {
+    width: 80%;
+    font-size: 18px;
+  }
+}
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
+  #qna .accordion {
+    width: 70%;
+    font-size: 20px;
+  }
+}
+@media screen and (min-width: 1920px) {
+  #qna .accordion {
+    margin-bottom: 75px;
+    width: 40%;
+  }
+}
+#qna .accordion::before {
+  content: "Q.";
+  position: absolute;
+  left: 30px;
+  font-weight: bold;
+}
+@media screen and (max-width: 767px) {
+  #qna .accordion::before {
+    left: 5%;
+  }
+}
+#qna .accordion::after {
+  content: "▲";
+  position: absolute;
+  right: 30px;
+  transition: transform 0.3s;
+}
+@media screen and (max-width: 767px) {
+  #qna .accordion::after {
+    top: 50%;
+    transform: translateY(-50%);
+    right: 5%;
+  }
+}
+#qna .accordion__active::after {
+  transform: rotate(180deg);
+}
+@media screen and (max-width: 767px) {
+  #qna .accordion__active::after {
+    top: 35%;
+  }
+}
+#qna .accordion__active, #qna .accordion:hover {
+  background-color: #8B2F2B;
+  color: #fff;
+}
+#qna .accordion__panel {
+  padding: 15px 90px;
+  display: none;
+  background-color: white;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+  max-height: 0;
+  width: 57.29%;
+  margin: -45px auto 45px;
+  font-family: "Yu Gothic";
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 2;
+  color: #5a3736;
+  position: relative;
+}
+@media screen and (max-width: 767px) {
+  #qna .accordion__panel {
+    width: 90%;
+    font-size: 16px;
+    padding: 15px 45px 15px 60px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  #qna .accordion__panel {
+    width: 80%;
+    font-size: 18px;
+  }
+}
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
+  #qna .accordion__panel {
+    width: 70%;
+    font-size: 20px;
+  }
+}
+@media screen and (min-width: 1920px) {
+  #qna .accordion__panel {
+    width: 40%;
+    margin-top: -75px;
+  }
+}
+#qna .accordion__panel::before {
+  content: "A.";
+  position: absolute;
+  left: 30px;
+  font-weight: bold;
+}
+@media screen and (max-width: 767px) {
+  #qna .accordion__panel::before {
+    left: 5%;
+  }
+}
+#qna .accordion__panel.open {
+  display: block;
+  max-height: 1000px; /* sufficiently large max-height to allow smooth transition */
+}
+
+#believe {
+  background: #fff;
+  padding-bottom: 120px;
+}
+#believe .believe-ttl {
+  padding-top: 120px;
+  font-size: 50px;
+  line-height: 75px;
+  text-align: center;
+  color: #b53938;
+  position: relative;
+  width: 57.2916%;
+  margin: 0 auto;
+}
+@media screen and (max-width: 767px) {
+  #believe .believe-ttl {
+    width: 90%;
+    font-size: 26px;
+    width: 95%;
+    line-height: 1.5;
+    padding-top: 40px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  #believe .believe-ttl {
+    font-size: 35px;
+    width: 72%;
+    line-height: 1.5;
+    padding-top: 90px;
+  }
+}
+@media screen and (min-width: 1920px) {
+  #believe .believe-ttl {
+    width: 40%;
+  }
+}
+#believe .believe-ttl::after {
+  position: absolute;
+  background: url("https://welltech-km.github.io/seigan/img/4step-ttl.png");
+  background-size: contain;
+  content: "";
+  display: inline-block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1100/113;
+  background-repeat: no-repeat;
+  bottom: -45px;
+  left: 0;
+}
+@media screen and (max-width: 767px) {
+  #believe .believe-ttl::after {
+    top: 95%;
+    bottom: unset;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  #believe .believe-ttl::after {
+    top: 88%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+#believe .believe-content {
+  margin: 120px auto 0;
+  padding: 20px;
+  padding-top: 90px;
+  width: 57.29%;
+  background: #fff7f2;
+  box-shadow: 8px 8px 10px rgba(141, 96, 96, 0.16);
+  position: relative;
+}
+@media screen and (max-width: 767px) {
+  #believe .believe-content {
+    width: 90%;
+    margin-top: 90px;
+    padding-top: 60px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  #believe .believe-content {
+    width: 80%;
+    margin-top: 90px;
+    padding-top: 60px;
+  }
+}
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
+  #believe .believe-content {
+    width: 70%;
+    margin-top: 90px;
+    padding-top: 60px;
+  }
+}
+@media screen and (min-width: 1920px) {
+  #believe .believe-content {
+    width: 40%;
+  }
+}
+#believe .believe-content .believe-content__el {
+  display: flex;
+  flex-direction: column;
+  width: 84.5454%;
+  margin: 0 auto;
+  position: relative;
+  padding-bottom: 90px;
+}
+@media screen and (max-width: 767px) {
+  #believe .believe-content .believe-content__el {
+    width: 95%;
+    padding-bottom: 60px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  #believe .believe-content .believe-content__el {
+    width: 95%;
+    padding-bottom: 60px;
+  }
+}
+#believe .believe-content .believe-content__el .el-upper {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+@media screen and (max-width: 767px) {
+  #believe .believe-content .believe-content__el .el-upper {
+    gap: 15px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  #believe .believe-content .believe-content__el .el-upper {
+    gap: 15px;
+  }
+}
+#believe .believe-content .believe-content__el .el-upper img {
+  max-width: 182px;
+  aspect-ratio: 1/1;
+}
+@media screen and (max-width: 767px) {
+  #believe .believe-content .believe-content__el .el-upper img {
+    max-width: 100px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  #believe .believe-content .believe-content__el .el-upper img {
+    max-width: 150px;
+  }
+}
+#believe .believe-content .believe-content__el .el-upper dl {
+  width: 66.8117%;
+  height: 124px;
+  border-radius: 62px;
+  background: #fff;
+  padding-left: 45px;
+  font-family: "Yu Gothic";
+  font-weight: bold;
+  font-size: 19px;
+  color: #5a3736;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+@media screen and (max-width: 767px) {
+  #believe .believe-content .believe-content__el .el-upper dl {
+    flex-direction: column;
+    height: unset;
+    padding: 15px 0 15px 30px;
+    font-size: 16px;
+    justify-content: center;
+    align-items: baseline;
+  }
+}
+#believe .believe-content .believe-content__el .el-upper dd {
+  padding-left: 30px;
+}
+@media screen and (max-width: 767px) {
+  #believe .believe-content .believe-content__el .el-upper dd {
+    padding-left: 0;
+  }
+}
+#believe .believe-content .believe-content__el .el-lower {
+  font-family: "Yu Gothic";
+  font-weight: bold;
+  font-size: 19px;
+  line-height: 2;
+  color: #5a3736;
+  padding-top: 45px;
+}
+@media screen and (max-width: 767px) {
+  #believe .believe-content .believe-content__el .el-lower {
+    padding-top: 30px;
+    width: 100%;
+    font-size: 16px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  #believe .believe-content .believe-content__el .el-lower {
+    font-size: 17px;
+  }
+}
+#believe .believe-content .believe-content__el:nth-of-type(1)::after {
+  position: absolute;
+  content: "";
+  background: url("https://welltech-km.github.io/seigan/img/believe-content-bg.png");
+  background-size: contain;
+  display: inline-block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1100/113;
+  background-repeat: no-repeat;
+  top: 100%;
+}
+#believe .believe-content .believe-content__el:nth-of-type(2) {
+  padding-top: 90px;
+}
+@media screen and (max-width: 767px) {
+  #believe .believe-content .believe-content__el:nth-of-type(2) {
+    padding-top: 60px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  #believe .believe-content .believe-content__el:nth-of-type(2) {
+    padding-top: 75px;
+  }
+}
+#believe .believe-content::after {
+  position: absolute;
+  border: 1px solid #B53938;
+  content: "";
+  top: 12px;
+  bottom: 12px;
+  left: 12px;
+  right: 12px;
+}
+
+#reservation {
+  background: #FFF7F2;
+  padding-bottom: 120px;
+  scroll-margin-top: 60px;
+}
+@media screen and (max-width: 767px) {
+  #reservation {
+    scroll-margin-top: 100px;
+  }
+}
+#reservation .reservation-ttl {
+  padding: 45px 0;
+}
+@media screen and (min-width: 1920px) {
+  #reservation .reservation-ttl {
+    padding: 105px 0;
+  }
+}
+#reservation .reservation-ttl .reservation-ttl__sub {
+  font-family: しっぽり明朝;
+  font-weight: bold;
+  font-size: 15px;
+  letter-spacing: 0.25em;
+  text-align: center;
+  color: #B53938;
+  opacity: 1;
+}
+#reservation .reservation-ttl h2 {
+  width: 57.29%;
+  margin: 0 auto;
+  font-family: "Yu Gothic";
+  font-weight: bold;
+  font-size: 48px;
+  letter-spacing: 0.03em;
+  text-align: center;
+  color: #B53938;
+  position: relative;
+}
+@media screen and (max-width: 767px) {
+  #reservation .reservation-ttl h2 {
+    font-size: 30px;
+    width: 90%;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  #reservation .reservation-ttl h2 {
+    font-size: 35px;
+    width: 90%;
+  }
+}
+@media screen and (min-width: 1920px) {
+  #reservation .reservation-ttl h2 {
+    width: 40%;
+  }
+}
+#reservation .reservation-ttl h2::after {
+  position: absolute;
+  width: 50%;
+  height: 5px;
+  background: #B53938;
+  content: "";
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+}
+#reservation .reservation-message {
+  background-color: #fff;
+  font-family: "Yu Gothic";
+  font-weight: bold;
+  font-size: 22px;
+  text-align: left;
+  color: #b53938;
+  padding: 10px 0;
+  text-align: center;
+  margin-top: 30px;
+}
+@media screen and (max-width: 767px) {
+  #reservation .reservation-message {
+    line-height: 1.8;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  #reservation .reservation-message {
+    line-height: 1.8;
+  }
+}
+#reservation .reservation-message span {
+  background: #b53938;
+  color: #fff;
+  font-size: 1.4em;
+  margin: 0 5px;
+  padding: 5px;
+}
+#reservation .reservation-content {
+  width: 57.2916%;
+  margin: 105px auto 0;
+  padding-bottom: 90px;
+  border-radius: 36px;
+  background: #fff;
+  position: relative;
+}
+@media screen and (max-width: 767px) {
+  #reservation .reservation-content {
+    width: 90%;
+    margin-top: 75px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  #reservation .reservation-content {
+    width: 90%;
+    margin-top: 75px;
+  }
+}
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
+  #reservation .reservation-content {
+    width: 70%;
+  }
+}
+@media screen and (min-width: 1920px) {
+  #reservation .reservation-content {
+    width: 40%;
+  }
+}
+#reservation .reservation-content .reservation-content__ttl {
+  position: absolute;
+  aspect-ratio: 637/85;
+  width: 57%;
+  left: 50%;
+  top: -3%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+}
+@media screen and (max-width: 767px) {
+  #reservation .reservation-content .reservation-content__ttl {
+    width: 90%;
+  }
+}
+@media screen and (min-width: 1920px) {
+  #reservation .reservation-content .reservation-content__ttl {
+    width: 40%;
+  }
+}
+#reservation .reservation-content .reservation-content__ttl img {
+  width: 100%;
+}
+#reservation .reservation-content .reservation-content__upper {
+  width: 41.2727%;
+  margin: 0 auto;
+  padding-top: 90px;
+  position: relative;
+}
+@media screen and (max-width: 767px) {
+  #reservation .reservation-content .reservation-content__upper {
+    width: 75%;
+    padding-top: 45px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  #reservation .reservation-content .reservation-content__upper {
+    padding-top: 60px;
+  }
+}
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
+  #reservation .reservation-content .reservation-content__upper {
+    padding-top: 60px;
+  }
+}
+#reservation .reservation-content .reservation-content__upper img {
+  width: 100%;
+}
+#reservation .reservation-content .reservation-content__upper a {
+  display: block;
+  padding-top: 30px;
+  font-family: "Yu Gothic";
+  font-weight: bold;
+  font-size: 25px;
+  color: #000;
+  text-decoration: underline;
+  text-align: center;
+}
+@media screen and (max-width: 767px) {
+  #reservation .reservation-content .reservation-content__upper a {
+    font-size: 16px;
+    padding-right: 15px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  #reservation .reservation-content .reservation-content__upper a {
+    font-size: 22px;
+  }
+}
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
+  #reservation .reservation-content .reservation-content__upper a {
+    font-size: 22px;
+  }
+}
+#reservation .reservation-content .reservation-content__upper::after {
+  position: absolute;
+  background: url("https://welltech-km.github.io/seigan/img/reservation-content-icon.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  content: "";
+  aspect-ratio: 395/354;
+  width: 40%;
+  top: 55%;
+  right: -50%;
+}
+@media screen and (max-width: 767px) {
+  #reservation .reservation-content .reservation-content__upper::after {
+    right: -20%;
+    top: 71%;
+  }
+}
+#reservation .reservation-content .reservation-content__step {
+  width: 85.3636%;
+  margin: 60px auto 0;
+  display: flex;
+  justify-content: space-between;
+}
+@media screen and (max-width: 767px) {
+  #reservation .reservation-content .reservation-content__step {
+    gap: 75px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  #reservation .reservation-content .reservation-content__step {
+    width: 90%;
+  }
+}
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
+  #reservation .reservation-content .reservation-content__step {
+    width: 95%;
+  }
+}
+#reservation .reservation-content .reservation-content__step .step-el {
+  border-radius: 30px;
+  background: #b53938;
+  padding: 0 15px;
+}
+@media screen and (max-width: 767px) {
+  #reservation .reservation-content .reservation-content__step .step-el {
+    padding-bottom: 10px;
+  }
+}
+#reservation .reservation-content .reservation-content__step .step-el .step-el__ttl {
+  position: relative;
+  top: -15%;
+  margin: 0 auto;
+  width: 110px;
+}
+@media screen and (max-width: 767px) {
+  #reservation .reservation-content .reservation-content__step .step-el .step-el__ttl {
+    width: 100%;
+    top: -44px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  #reservation .reservation-content .reservation-content__step .step-el .step-el__ttl {
+    top: -20%;
+    width: 95px;
+  }
+}
+#reservation .reservation-content .reservation-content__step .step-el .step-el__ttl img {
+  width: 100%;
+  display: block;
+  margin: 0 auto;
+}
+@media screen and (max-width: 767px) {
+  #reservation .reservation-content .reservation-content__step .step-el .step-el__ttl img {
+    width: 50%;
+  }
+}
+#reservation .reservation-content .reservation-content__step .step-el .step-el__ttl::after {
+  position: absolute;
+  background: url("https://welltech-km.github.io/seigan/img/reservation-step-dot.png");
+  content: "";
+  aspect-ratio: 617/8;
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: inline-block;
+  width: 90%;
+  height: auto;
+  aspect-ratio: 1100/113;
+  background-repeat: no-repeat;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+@media screen and (max-width: 767px) {
+  #reservation .reservation-content .reservation-content__step .step-el .step-el__ttl::after {
+    bottom: -15%;
+  }
+}
+#reservation .reservation-content .reservation-content__step .step-el .step-el__txt {
+  font-family: "Yu Gothic";
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 2;
+  text-align: center;
+  color: #fff;
+  width: 100%;
+  margin-top: -30px;
+}
+@media screen and (max-width: 767px) {
+  #reservation .reservation-content .reservation-content__step .step-el .step-el__txt {
+    margin-top: -35px;
+    width: 100%;
+    font-size: 19px;
+    line-height: 1.7;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  #reservation .reservation-content .reservation-content__step .step-el .step-el__txt {
+    font-size: 14px;
+  }
+}
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
+  #reservation .reservation-content .reservation-content__step .step-el .step-el__txt {
+    font-size: 16px;
+  }
+}
+#reservation .reservation-content .reservation-content__step .step-el .step-el__txt span {
+  color: #000;
+  background: #fff;
+  padding: 5px 0;
+}
+#reservation .reservation-content .reservation-content__step .step-el .step-el__icon {
+  max-width: 115px;
+  margin: 0 auto;
+}
+@media screen and (max-width: 767px) {
+  #reservation .reservation-content .reservation-content__step .step-el .step-el__icon {
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+#reservation .reservation-content .reservation-content__step .step-el .step-el__icon img {
+  width: 75%;
+  display: block;
+  margin: 0 auto;
+}
+#reservation .reservation-content .reservation-content__step .step-el:nth-child(1) {
+  width: 22%;
+  position: relative;
+}
+@media screen and (max-width: 767px) {
+  #reservation .reservation-content .reservation-content__step .step-el:nth-child(1) {
+    width: 100%;
+  }
+}
+#reservation .reservation-content .reservation-content__step .step-el:not(:last-child)::after {
+  position: absolute;
+  content: "▲";
+  font-size: 30px;
+  color: #B53938;
+  top: 40%;
+  right: -34%;
+  transform: translateY(-40%);
+  transform: rotate(90deg);
+}
+@media screen and (max-width: 767px) {
+  #reservation .reservation-content .reservation-content__step .step-el:not(:last-child)::after {
+    top: 104%;
+    right: 41%;
+    transform: translateX(-41%) rotate(180deg);
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  #reservation .reservation-content .reservation-content__step .step-el:not(:last-child)::after {
+    top: 35%;
+  }
+}
+#reservation .reservation-content .reservation-content__step .step-el:nth-child(2)::after {
+  top: 40%;
+  right: -27%;
+  transform: translateY(-40%);
+  transform: rotate(90deg);
+}
+@media screen and (max-width: 767px) {
+  #reservation .reservation-content .reservation-content__step .step-el:nth-child(2)::after {
+    top: 104%;
+    right: 41%;
+    transform: translateX(-41%) rotate(180deg);
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  #reservation .reservation-content .reservation-content__step .step-el:nth-child(2)::after {
+    top: 35%;
+  }
+}
+#reservation .reservation-content .reservation-content__step .step-el:nth-child(2) {
+  width: 31%;
+  position: relative;
+}
+@media screen and (max-width: 767px) {
+  #reservation .reservation-content .reservation-content__step .step-el:nth-child(2) {
+    width: 100%;
+  }
+}
+#reservation .reservation-content .reservation-content__step .step-el:nth-child(3) {
+  width: 26%;
+}
+@media screen and (max-width: 767px) {
+  #reservation .reservation-content .reservation-content__step .step-el:nth-child(3) {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 767px) {
+  #reservation .reservation-content .reservation-content__step {
+    flex-direction: column;
+  }
+}
+#reservation .reservation-content .reservation-content__step img {
+  width: 100%;
+}
+
+#tenpo {
+  background: #B53938;
+  padding-bottom: 150px;
+}
+@media screen and (max-width: 767px) {
+  #tenpo {
+    padding-bottom: 20px;
+  }
+}
+#tenpo .tenpo-ttl {
+  padding: 45px 0;
+}
+@media screen and (max-width: 767px) {
+  #tenpo .tenpo-ttl {
+    padding: 45px 0 75px;
+  }
+}
+@media screen and (min-width: 1920px) {
+  #tenpo .tenpo-ttl {
+    padding: 105px 0;
+  }
+}
+#tenpo .tenpo-ttl .tenpo-ttl__sub {
+  font-family: しっぽり明朝;
+  font-weight: bold;
+  font-size: 15px;
+  letter-spacing: 0.25em;
+  text-align: center;
+  color: #fff;
+  opacity: 1;
+}
+#tenpo .tenpo-ttl h2 {
+  width: 57.29%;
+  margin: 30px auto 0;
+  margin: 0 auto;
+  font-family: "Yu Gothic";
+  font-weight: bold;
+  font-size: 32px;
+  letter-spacing: 0.03em;
+  text-align: center;
+  color: #fff;
+  position: relative;
+}
+@media screen and (max-width: 767px) {
+  #tenpo .tenpo-ttl h2 {
+    width: 90%;
+    font-size: 30px;
+  }
+}
+@media screen and (min-width: 1920px) {
+  #tenpo .tenpo-ttl h2 {
+    width: 40%;
+  }
+}
+#tenpo .tenpo-ttl h2::after {
+  position: absolute;
+  width: 50%;
+  height: 5px;
+  background: #fff;
+  content: "";
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+}
+#tenpo .accordion {
+  font-family: "Yu Gothic";
+  background-color: #fff;
+  color: #B53938;
+  cursor: pointer;
+  padding: 15px 90px;
+  width: 57.29%;
+  margin: 30px auto 0;
+  margin: 0 auto;
+  border: none;
+  text-align: left;
+  outline: none;
+  transition: background-color 0.4s;
+  position: relative;
+  font-weight: bold;
+  font-size: 22px;
+  margin-bottom: 45px;
+  display: flex;
+}
+@media screen and (max-width: 767px) {
+  #tenpo .accordion {
+    width: 90%;
+    font-size: 16px;
+    padding-right: 105px;
+    justify-content: center;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  #tenpo .accordion {
+    padding: 15px 90px 15px 45px;
+    width: 80%;
+    font-size: 20px;
+  }
+}
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
+  #tenpo .accordion {
+    padding: 15px 90px 15px 45px;
+    width: 70%;
+  }
+}
+@media screen and (min-width: 1920px) {
+  #tenpo .accordion {
+    width: 40%;
+    margin-bottom: 75px;
+  }
+}
+#tenpo .accordion h3 {
+  font-family: "Yu Gothic";
+}
+#tenpo .accordion::after {
+  content: "+";
+  position: absolute;
+  right: 30px;
+  transition: transform 0.3s;
+  color: #fff;
+  transform: translateY(-50%);
+  top: 50%;
+  font-weight: bold;
+  background: #B53938;
+  font-size: 35px;
+  width: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media screen and (max-width: 767px) {
+  #tenpo .accordion::after {
+    width: 40px;
+    font-size: 25px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  #tenpo .accordion::after {
+    font-size: 30px;
+    width: 45px;
+  }
+}
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
+  #tenpo .accordion::after {
+    font-size: 32px;
+    width: 50px;
+  }
+}
+#tenpo .accordion__active::after {
+  content: "－";
+  transition: transform 0.3s;
+}
+#tenpo .accordion__panel {
+  padding: 30px 0;
+  display: none;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: space-between;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+  max-height: 0;
+  width: 57.29%;
+  margin: 30px auto 0;
+  margin: -45px auto 45px;
+  position: relative;
+}
+@media screen and (max-width: 767px) {
+  #tenpo .accordion__panel {
+    width: 90%;
+    padding: 30px 0;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 0;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  #tenpo .accordion__panel {
+    width: 80%;
+  }
+}
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
+  #tenpo .accordion__panel {
+    width: 70%;
+  }
+}
+@media screen and (min-width: 1920px) {
+  #tenpo .accordion__panel {
+    width: 40%;
+  }
+}
+#tenpo .accordion__panel .accordion__panel-el {
+  background-color: #FFF5F5;
+  font-family: "Yu Gothic";
+  font-size: 17px;
+  line-height: 2;
+  width: 45.18%;
+  color: #696969;
+  padding: 30px;
+}
+@media screen and (max-width: 767px) {
+  #tenpo .accordion__panel .accordion__panel-el {
+    width: 100%;
+    padding: 20px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  #tenpo .accordion__panel .accordion__panel-el {
+    padding: 20px;
+  }
+}
+#tenpo .accordion__panel .accordion__panel-el a {
+  color: #696969;
+}
+#tenpo .accordion__panel .accordion__panel-el h4 {
+  font-family: "Yu Gothic";
+  font-weight: bold;
+  font-size: 23px;
+  color: #9b1a19;
+  line-height: 1.5;
+}
+@media screen and (max-width: 767px) {
+  #tenpo .accordion__panel .accordion__panel-el h4 {
+    font-size: 20px;
+    margin-bottom: 5px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  #tenpo .accordion__panel .accordion__panel-el h4 {
+    font-size: 20px;
+    margin-bottom: 5px;
+  }
+}
+#tenpo .accordion__panel .accordion__panel-el p {
+  font-size: 16px;
+  width: 100%;
+}
+@media screen and (max-width: 767px) {
+  #tenpo .accordion__panel .accordion__panel-el p {
+    font-size: 14px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  #tenpo .accordion__panel .accordion__panel-el p {
+    font-size: 13px;
+  }
+}
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
+  #tenpo .accordion__panel .accordion__panel-el p {
+    font-size: 14px;
+  }
+}
+#tenpo .accordion__panel .accordion__panel-el .line-button {
+  background: linear-gradient(#71ff75 0%, #1cf21c 40.22%, #11dd0a 100%);
+  box-shadow: 0px 3px 10px rgba(122, 122, 122, 0.4);
+  width: 70%;
+  margin: 20px auto 0;
+  display: block;
+  color: #fff;
+  text-align: center;
+  line-height: 50px;
+  text-decoration: none;
+  font-weight: bold;
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  #tenpo .accordion__panel .accordion__panel-el .line-button {
+    width: 100%;
+  }
+}
+#tenpo .accordion__panel.open {
+  display: flex;
+  max-height: 1000px; /* sufficiently large max-height to allow smooth transition */
+}
+
+#company {
+  background: #fff;
+  padding-top: 150px;
+}
+@media screen and (max-width: 767px) {
+  #company {
+    padding-top: 40px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  #company {
+    padding-top: 120px;
+  }
+}
+#company .company-ttl {
+  font-family: "Yu Gothic";
+  font-weight: bold;
+  font-size: 35px;
+  letter-spacing: 0.1em;
+  text-align: center;
+  color: #9b1a19;
+}
+@media screen and (max-width: 767px) {
+  #company .company-ttl {
+    font-size: 30px;
+  }
+}
+#company .company-content {
+  width: 57.29%;
+  margin: 30px auto 0;
+  padding-bottom: 90px;
+}
+@media screen and (max-width: 767px) {
+  #company .company-content {
+    width: 90%;
+    padding-bottom: 120px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  #company .company-content {
+    width: 80%;
+  }
+}
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
+  #company .company-content {
+    width: 70%;
+  }
+}
+@media screen and (min-width: 1920px) {
+  #company .company-content {
+    padding-bottom: 150px;
+  }
+}
+@media screen and (min-width: 1920px) {
+  #company .company-content {
+    width: 40%;
+  }
+}
+#company .company-content .company-content__detail {
+  border-bottom: 1px solid #707070;
+  display: flex;
+  font-family: "Yu Gothic";
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 70px;
+  text-align: center;
+  color: #707070;
+  justify-content: space-between;
+}
+@media screen and (max-width: 767px) {
+  #company .company-content .company-content__detail {
+    font-size: 16px;
+    line-height: 2;
+    padding: 30px 0;
+  }
+}
+#company .company-content .company-content__detail dt {
+  width: 35%;
+  text-align: left;
+  padding-left: 30px;
+}
+@media screen and (max-width: 767px) {
+  #company .company-content .company-content__detail dt {
+    width: 40%;
+    padding-left: 10px;
+  }
+}
+#company .company-content .company-content__detail dd {
+  width: 70%;
+  text-align: left;
+}
+
+footer {
+  color: #fff;
+  text-align: center;
+  font-size: 15px;
+  font-family: "Yu Gothic";
+  font-weight: 500;
+  text-align: center;
+  color: #fff;
+  margin-top: 30px;
+}
+@media screen and (max-width: 767px) {
+  footer {
+    font-size: 12px;
+  }
 }
