@@ -1401,6 +1401,7 @@ header nav .contact-info .contact-button img {
   background: url("https://welltech-km.github.io/seigan/img/4step-bg.webp");
   aspect-ratio: 1920/2016;
   margin-top: -210px;
+  padding-bottom: 150px;
 }
 @media screen and (max-width: 767px) {
   #step {
@@ -1426,7 +1427,6 @@ header nav .contact-info .contact-button img {
 @media screen and (min-width: 1920px) {
   #step {
     aspect-ratio: unset;
-    padding-bottom: 150px;
   }
 }
 @media screen and (min-width: 2150px) {
@@ -1617,6 +1617,11 @@ header nav .contact-info .contact-button img {
   font-family: "Yu Gothic";
   font-weight: bold;
   color: #5a3736;
+}
+@media screen and (min-width: 1440px) {
+  #step .step-container__el p {
+    height: 140px;
+  }
 }
 @media screen and (min-width: 1920px) {
   #step .step-container__el p {
