@@ -1792,7 +1792,7 @@ header nav .contact-info .contact-button img {
 }
 @media screen and (min-width: 1920px) {
   #careful .container__ttl::before, #careful .container__ttl::after {
-    width: 55%;
+    width: 65%;
   }
 }
 #careful .container__ttl::before {
@@ -1815,7 +1815,7 @@ header nav .contact-info .contact-button img {
 }
 @media screen and (min-width: 1920px) {
   #careful .container__ttl::before {
-    left: -37%;
+    left: -75%;
   }
 }
 #careful .container__ttl::after {
@@ -1838,7 +1838,7 @@ header nav .contact-info .contact-button img {
 }
 @media screen and (min-width: 1920px) {
   #careful .container__ttl::after {
-    right: -37%;
+    right: -75%;
   }
 }
 #careful .container__sub {
