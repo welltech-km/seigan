@@ -252,8 +252,10 @@ header nav .contact-info .contact-button img {
 #cta .cta-btn .cta-btn__el img {
   width: 100%;
 }
-#cta .cta-footer {
+
+.cta-footer {
   background: url("../img/bg-cta-footer.webp");
+  max-height: unset !important;
 }
 
 #issues {
