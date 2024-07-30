@@ -227,7 +227,12 @@ header nav .contact-info .contact-button img {
   display: block;
   width: min(35%, 738px);
   margin: 0.75em auto 0;
+  transition: 0.3s;
   text-decoration: none;
+}
+#cta .cta-btn .cta-btn__el :hover {
+  opacity: 0.8;
+  transition: 0.3s;
 }
 @media screen and (max-width: 767px) {
   #cta .cta-btn .cta-btn__el {
