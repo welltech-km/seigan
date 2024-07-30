@@ -193,7 +193,7 @@ header nav .contact-info .contact-button img {
   display: block;
   width: min(50%, 1066px);
   margin: 0 auto;
-  padding: 0.5em;
+  padding-bottom: 0.5em;
 }
 @media screen and (max-width: 767px) {
   #cta .cta-price img {
