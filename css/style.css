@@ -1634,23 +1634,35 @@ header nav .contact-info .contact-button img {
   margin: 15px auto 60px;
   font-family: "Yu Gothic";
   font-weight: bold;
+  font-size: 16px;
   color: #5a3736;
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  #step .step-container__el p {
+    height: 155px;
+  }
+}
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
+  #step .step-container__el p {
+    height: 165px;
+  }
 }
 @media screen and (min-width: 1440px) {
   #step .step-container__el p {
-    height: 140px;
+    height: 145px;
   }
 }
 @media screen and (min-width: 1920px) {
   #step .step-container__el p {
     font-size: 20px;
+    height: 215px;
   }
 }
 #step .step-container__el p span {
   font-size: 0.85em;
   color: #706a6a;
   display: block;
-  margin-top: 15px;
+  margin-top: 5px;
 }
 
 #careful {
