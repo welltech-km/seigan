@@ -1,20 +1,107 @@
-$main-color: #b1382b; // 深みのある茶色
-$secondary-color: #fcfafa; // ソフトなオフホワイト
-$accent-color: #fff; // 純白
-$text-color: #282828; // ダークグレー
-$background-color: #fcfafa; // ソフトなオフホワイト
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap');
 
-$heading-font: 'DNPShueiMinPr6';
-$body-font: 'DNPShueiMinPr6';
-
-$gradient-start: #8c4130;
-$gradient-end: lighten(#8c4130, 10%);
-
+$main-color: #09489E; // ja
+$secondary-color: #fff; // ja
+$text-color: #002E67; // ja
+$cta-bg-color: linear-gradient(to right, #003893, #0092FF 50%, #003893); // ja
+$line-height-main:1.6; // ja
+$font-weight-main:500; // ja
+$font-size-main:15px;
+$body-font: 'Noto Sans JP'; // ja
+$section-padding-top: 90px;
+$section-padding-bottom: 90px;
+$section-padding-y: 90px 0;
+$section-padding-top-sp: 60px;
+$section-padding-top-sp: 60px;
+$section-padding-y-sp: 60px 0;
 $font-stack: Arial, sans-serif;
-$primary-color: #f8f8f8;
-$header-padding: 10px 0;
-$container-padding: 20px;
-$price-font-size: 1.5em;
-$text-center: center;
-$left-content-width: 48%;
-$right-content-width: 48%;
+$content-max-width:1100px;
+$content-margin-top:60px;
+$content-margin-bototm:60px;
+$content-margin-y:60px 0;
+$conetnt-padding-y:5rem 0;
+
+
+.welltech-en{
+  width: 255px;
+  height: 54px;
+  aspect-ratio: 255/54;
+  padding-right: 0.5rem;
+}
+.content-title{
+  background-color: $main-color;
+  padding: 4rem 0;
+}
+.content-title__ja{
+  font-size: 3rem;
+  font-weight: 700;
+  color: #fff;
+  text-align: center;
+  line-height: 1.4;
+}
+.bigger{
+  font-size: 1.5em;
+  padding: 0 0.1em;
+}
+.bigger-figure{
+  font-size: 2em;
+  padding: 0 0.05em;
+}
+.content-title__en{
+  color: #6F92C1;
+  border-bottom: 2px solid #6F92C1;
+  font-size: 1.4rem;
+  text-align: center;
+  max-width: 350px;
+  margin: 0 auto 1rem;
+}
+@media(min-width:768px){
+.br-sp{
+  display: none;
+}
+}
+
+
+@media(min-width:768px) and (max-width:1023px){
+  .content-title{
+    padding: 2.5rem 0;
+  }
+  .content-title__ja{
+    font-size: 2rem;
+  }
+  .bigger{
+    font-size: 1.25em;
+  }
+  .content-title__en{
+    width: 50%;
+  }
+  .br-pc{
+    display: none;
+  }
+  .welltech-en{
+    width: 191px;
+    height: 40px;
+  }
+}
+
+@media(max-width:767px){
+  .content-title{
+    padding: 2.5rem 0;
+  }
+  .content-title__ja{
+    font-size: 1.85rem;
+  }
+  .bigger{
+    font-size: 1.25em;
+  }
+  .content-title__en{
+    width: 50%;
+  }
+  .br-pc{
+    display: none;
+  }
+  .welltech-en{
+    width: 191px;
+    height: 40px;
+  }
+}
